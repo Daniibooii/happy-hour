@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
  /* start of index.html css  */
 
@@ -55,4 +56,20 @@
 .random-btn {
   width: 250px;
   height: 70px;
+=======
+.resultsImages {
+  width: 150px;
+  height: 150px;
+  float: left;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.resultsInfo {
+
+}
+
+.resultsCol {
+
+>>>>>>> f14cb1eb630cd05a22b0c550b831bd388584ecb9
 }
