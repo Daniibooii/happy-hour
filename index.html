@@ -2,19 +2,81 @@
  <html>
    <head>
      <!--Import Google Icon Font-->
+     <link rel="stylesheet" href="assets/css/reset.css">
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-     <!--Import materialize.css-->
-     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-
+     <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
      <!--Let browser know website is optimized for mobile-->
      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     <link rel="stylesheet" href="assets/css/style.css">
    </head>
 
    <body>
+
+
+     <div class="container">
+      <div class="row booze-row">
+        <div class="col">
+          <button id="beer-btn" type="button" name="beer-button"> <img src="assets/images/beer-blue-circle.png" alt="beer logo" class="booze-btn"> </button>
+          <button id="wine-btn" type="button" name="wine-button"> <img src="assets/images/wine-yellow-circle.png" alt="wine logo" class="booze-btn"> </button>
+          <button id="cocktail-btn" type="button" name="cocktail-button"> <img src="assets/images/cocktail-pink-circle.png" alt="cocktail logo" class="booze-btn"> </button>
+        </div>
+      </div>
+      <div class="row food-sel-row">
+        <div class="col">
+          <!-- <label>Browser Select</label> -->
+          <select id="cuisine-selector" class="browser-default cuisine-sel">
+            <option value="" disabled selected>Choose your Cuisine</option>
+            <option value="1">Asian</option>
+            <option value="2">American</option>
+            <option value="3">European</option>
+            <option value="4">French</option>
+            <option value="5">Gluten Free</option>
+            <option value="6">Health Food</option>
+            <option value="7">Indian</option>
+            <option value="8">Irish</option>
+            <option value="9">Italian</option>
+            <option value="10">Mexican</option>
+            <option value="11">Seafood</option>
+            <option value="12">Spanish/Tapas</option>
+            <option value="13">Southern/Soul Food</option>
+            <option value="14">Vegetarian/Vegan</option>
+          </select>
+        </div>
+      </div>
+      <div class="row neighborhood-sel-row">
+        <div class="col">
+          <!-- <label>Browser Select</label> -->
+          <select id="neighborhood-selector" class="browser-default neighborhood-sel">
+            <option value="" disabled selected>Choose your Cuisine</option>
+            <option value="1">Adams Morgan</option>
+            <option value="2">Capital Hill</option>
+            <option value="3">Columbia Heights</option>
+            <option value="4">Dupont Circle</option>
+            <option value="5">Eastern Market</option>
+            <option value="6">Friendship Heights / Tenley Town</option>
+            <option value="7">Georgetown</option>
+            <option value="8">H Street</option>
+            <option value="9">Logan Circle</option>
+            <option value="10">NoMa</option>
+            <option value="11">Petworth</option>
+            <option value="12">Shaw / U Street</option>
+            <option value="13">Southwest / Waterfront</option>
+          </select>
+        </div>
+      </div>
+
+
+     </div>
+
+
+
+
      <!--Import jQuery before materialize.js-->
      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-     <script type="text/javascript" src="js/materialize.min.js"></script>
-     <script type="text/javascript" src="assets.">
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+     <script type="text/javascript" src="assets/javascript/script.js">
 
      </script>
    </body>
