@@ -1,33 +1,53 @@
-  <!DOCTYPE html>
-  <html lang ="en-us">
-    <head>
-      <meta charset="UTF-8">
-      <title>Kingfisher</title>
-      <!--Import Google Icon Font-->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!-- Compiled and minified CSS -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <style>
-          .menu {
-              text-align: center;
-          }
+<!DOCTYPE html>
+<html lang ="en-us">
+<head>
+    <meta charset="UTF-8">
+    <title>Kingfisher</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--Linking Leaflet CSS-->
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    <!--Linking Leaflet Java-->
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 
-          .hours {
-              float: right;
-          }
-
-          h3 {
-              font-size: 36px;
-          }
-
-          h4 {
-              font-size: 22px;
-              font-weight: bold;
-          }
-          
+    <style>
+    body {
+        border-style: groove;
+        border-color: gray;
+    }
+    .menu {
+        text-align: center;
+        padding: 15px;
+        border-style: groove;
+        border-color: gray;
+        background-color: #ee6e73;
+        color: whitesmoke;
+    }
+    .hours {
+        float: right;
+    }
+    h2 {
+        text-align: center;
+    }
+    h3 {
+        font-size: 36px;
+    }
+    h4 {
+        font-size: 22px;
+        font-weight: bold;
+    }    
+    #map {
+        width: 960px;
+        height: 500px;
+        border-style: solid;
+        border-color: #ee6e73;
+    } 
     </style>
+
 </head>
 <body>
 <nav>
@@ -39,14 +59,13 @@
     </div>
 </nav>
 
-        
 <div class="container">
     <div class= "row">
         <div class="col s2"></div>
         <div class="col s8">
-            <div class="menu">
             <!--Restaurant Name-->
             <h2>Kingfisher</h2>
+            <div class="menu">
             <br>
             <h3><u>Happy Hour Menu</u></h3>
             <p>$2 off all beers, ciders, rail drinks, and select wines</p>
@@ -68,14 +87,15 @@
 
     <div class= "row">
         <div class="col s3"></div>
-        <div class="col s3">
-            <p>Kingfisher</p>
-            <ul>
-                <li>1414 14th St NW</li>
-                <li>In the Basement</li>
-                <li>Washington, DC 20005</li>
-            </ul>
-            <p>(202)750-6600</p>
+        <div class="info">
+            <div class="col s3">
+                <p>Kingfisher</p>
+                <ul>
+                    <li>1414 14th St NW</li>
+                    <li>In the Basement</li>
+                    <li>Washington, DC 20005</li>
+                </ul>
+                <p>(202)750-6600</p>
             <p>http://www.kingfisherdc.com/</p>
         </div>
         <div class="col s3">
@@ -93,6 +113,21 @@
         </div>
         <div class="col s3"></div>
     </div>
+
+
+    <div id="map"></div>
+
+    <script>
+        var map = L.map('map',{
+        center: [43.64701, -79.39425],
+        zoom: 15
+        });
+
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+    </script>
+    <br><br><br>
 </div>
 
 <!-- Compiled and minified JavaScript -->
