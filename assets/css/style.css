@@ -1,0 +1,75 @@
+<<<<<<< HEAD
+
+ /* start of index.html css  */
+
+ body {
+   background-color: #ffd900;
+   font-family: sans-serif;
+ }
+
+ .container {
+   margin-top: 90px;
+ }
+
+.booze-row {
+  height: 150px;
+}
+
+.booze-icon-col {
+  display: flex;
+  justify-content: space-between;
+}
+
+.booze-btn {
+  height: 150px;
+}
+
+.cuisine-sel {
+  background-color: pink;
+  height: 70px;
+}
+
+.neighborhood-sel {
+  background-color: lightblue;
+  height: 70px;
+}
+
+.price-col {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-point-btn {
+  height: 150px;
+}
+
+.submit-col {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-btn {
+  width: 250px;
+  height: 70px;
+}
+
+.random-btn {
+  width: 250px;
+  height: 70px;
+=======
+.resultsImages {
+  width: 150px;
+  height: 150px;
+  float: left;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.resultsInfo {
+
+}
+
+.resultsCol {
+
+>>>>>>> f14cb1eb630cd05a22b0c550b831bd388584ecb9
+}
