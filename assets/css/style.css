@@ -1,7 +1,22 @@
 
  /* start of index.html css  */
+
+ body {
+   background-color: #ffd900;
+   font-family: sans-serif;
+ }
+
+ .container {
+   margin-top: 90px;
+ }
+
 .booze-row {
   height: 150px;
+}
+
+.booze-icon-col {
+  display: flex;
+  justify-content: space-between;
 }
 
 .booze-btn {
@@ -9,9 +24,35 @@
 }
 
 .cuisine-sel {
-  width: 600px;
+  background-color: pink;
+  height: 70px;
 }
 
 .neighborhood-sel {
-  width: 600px;
+  background-color: lightblue;
+  height: 70px;
+}
+
+.price-col {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-point-btn {
+  height: 150px;
+}
+
+.submit-col {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-btn {
+  width: 250px;
+  height: 70px;
+}
+
+.random-btn {
+  width: 250px;
+  height: 70px;
 }
