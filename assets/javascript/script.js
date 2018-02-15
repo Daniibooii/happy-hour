@@ -1,9 +1,5 @@
 // JAVASCRIPT FOR HAPPY HOUR PROJECT
 
-// THE BELOW CODE is under construction to work with Firebase
-
-// Venues object literal
-
 // Declare restaurant objects
 //GEORGETOWN
 var jPauls = {listing: 0,name: "J. Paul’s", location: "georgetown",foodType: "american",price: 2,cocktail: true,beer: true,wine: true};
@@ -33,69 +29,87 @@ var firefly = {listing: 17,name: "Firefly",location:"duPont",foodType: "american
 var sette = {listing: 18,name: "Sette Osteria",location:"duPont",foodType: "italian",price: 2,cocktail: true,beer: true,wine: true};	
 var beacon = {listing: 19,name: "Beacon Bar & Grill",location:"duPont",foodType: "american",price: 2,cocktail: true,beer: true,wine: true};	
 
-// SOUTHWEST WATERFRONT
-var hanksSW = {listing: 20,name: "Hank's Oysters Waterfront",location:"wharf",foodType: "seafood",price: 2,cocktail: true,beer: true,wine:true};
-var jennys = {listing: 21,name: "Jenny's at the Wharf",location:"wharf",foodType: "asian",price: 2,cocktail: true,beer: true,wine: true};
-var masalaArt = {listing: 22,name: "Masala Art",location:"wharf",foodType: "indian",price: 2,cocktail: true,beer: true,wine: true};
-var stationFour = {listing: 23,name: "Station 4",location:"wharf",foodType: "american",price: 2,cocktail: true,beer: true,wine: true};
-var cityBar = {listing: 24,name: "City Bar",location:"wharf",foodType: "american",price: 3,cocktail: true,beer: true,wine: true};
-
-// PETWORTH
-var airedale = {listing: 25,name: "The Airedale",location:"petworth",foodType: "american",price: 1,cocktail: true,beer: true,wine: true};
-var lookingGlass = {listing: 26,name: "Looking Glass",location:"petworth",foodType: "american",price: 1,cocktail: true,beer: true,wine: true};
-var tenTigers = {listing: 27,name: "Ten Tigers",location:"petworth",foodType: "asian",price: 1,cocktail: true,beer: true,wine: true};
-var reynolds = {listing: 28,name: "DC Reynolds",location:"petworth",foodType: "american",price: 1,cocktail: true,beer: true,wine: true};
-var thePitch = {listing: 29,name: "The Pitch",location:"petworth",foodType: "american",price: 1,cocktail: true,beer: true,wine: true};
-
-//CAPTIOL HILL
-var boxcar = {listing: 30,name: "Boxcar Tavern",location:"capHill",foodType: "american",price: 2,cocktail: true,beer: true,wine: true};
-var hawkDove = {listing: 31,name: "Hawk 'n' Dove",location:"capHill",foodType: "american",price: 2,cocktail: true,beer: true,wine: true};
-var lavagna = {listing: 32,name: "Lavagna",location:"capHill",foodType: "italian",price: 2,cocktail: true,beer: true,wine: true};
-var uglyMug = {listing: 33,name: "The Ugly Mug",location:"capHill",foodType: "american",price: 1,cocktail: true,beer: true,wine: true};
-var ambar = {listing: 34,name: "Ambar",location:"capHill",foodType: "european",price: 1,cocktail: true,beer: true,wine: true};
-
-// H STREET
-var bigBoard = {listing: 35,name: "The Big Board",location:"hstreet",foodType: "american",price: 2,cocktail: false,beer: true,wine: true};
-var smith = {listing: 36,name: "Smith Commons",location:"hstreet",foodType: "american",price: 2,cocktail: true,beer: true,wine: true};
-var biergarten = {listing: 37,name: "Biergarten House",location:"hstreet",foodType: "european",price: 2,cocktail: true,beer: true,wine: true};
-var hCC = {listing: 38,name: "H St Country Club",location:"hstreet",foodType: "mexican",price: 2,cocktail: true,beer: true,wine: false};
-var pursuit = {listing: 39,name: "Pursuit Wine Bar",location:"hstreet",foodType: "european",price: 3,cocktail: true,beer: true,wine: true};
-
-// LOGAN CIRCLE
-var kingFisher = {listing: 40,name: "Kingfisher",location:"logan",foodType: "american",price: 2,cocktail: false,beer: true,wine: false};
-var churchKey = {listing: 41,name: "Church Key",location:"logan",foodType: "american",price: 2,cocktail: false,beer: true,wine: false};
-var draftTable = {listing: 42,name: "Draft Table",location:"logan",foodType: "american",price: 2,cocktail: true,beer: true,wine: true};
-var loganTavern = {listing: 43,name: "Logan Tavern",location:"logan",foodType: "european",price: 3,cocktail: true,beer: true,wine: true};
-var sotto = {listing: 44,name: "Sotto",location:"logan",foodType: "american",price: 2,cocktail: true,beer: true,wine: true};
-
-// SHAW && U ST
-var brixton = {listing: 45,name: "The Brixton",location:"shaw",foodType: "irish",price: 2,cocktail: true,beer: true,wine: true};
-var chaplins = {listing: 46,name: "Chaplin's",location:"shaw",foodType: "asian",price: 2,cocktail: true,beer: true,wine: true};
-var dacha = {listing: 47,name: "Dacha Beer Garden",location:"shaw",foodType: "european",price: 2,cocktail: true,beer: true,wine: true};
-var drift = {listing: 48,name: "Drift on 7th",location:"shaw",foodType: "seafood",price: 2,cocktail: true,beer: true,wine: true};
-var shawsTavern = {listing: 49,name: "Shaw's Tavern",location:"shaw",foodType: "american",price: 2,cocktail: true,beer: true,wine: true};
-
-// EASTERN MARKET
-var belga = {listing: 50,name: "Belga Cafe",location:"eastMkt",foodType: "european",price: 2,cocktail: true,beer: true,wine: true};
-var placitas = {listing: 51,name: "Las Placitas",location:"eastMkt",foodType: "mexican",price: 2,cocktail: true,beer: true,wine: true};
-var mrHenrys = {listing: 52,name: "Mr. Henry's",location:"eastMkt",foodType: "american",price: 2,cocktail: true,beer: true,wine: true};
-var radici = {listing: 53,name: "Radici",location:"eastMkt",foodType: "italian",price: 2,cocktail: false,beer: true,wine: true};
-var uglyMug = {listing: 54,name: "The Ugly Mug",location:"eastMkt",foodType: "american",price: 2,cocktail: true,beer: true,wine: true};
-
-// COLUMBIA HEIGHTS
-var bravo = {listing: 55,name: "BravoBar",location:"coHi",foodType: "american",price: 2,cocktail: true,beer: true,wine: true};
-var celticHouse = {listing: 56,name: "The Celtic House",location:"coHi",foodType: "irish",price: 2,cocktail: false,beer: true,wine: false};
-var elChucho = {listing: 57,name: "El Chucho",location:"coHi",foodType: "mexican",price: 2,cocktail: true,beer: true,wine: false};
-var theHeights = {listing: 58,name: "The Heights",location:"coHi",foodType: "american",price: 2,cocktail: true,beer: true,wine: true};
-var wonderland = {listing: 59,name: "Wonderland Ballroom",location:"coHi",foodType: "american",price: 2,cocktail: true,beer: true,wine: true};
-
-// venues for georgetown, friendship, admo and dupont
-var venues = 
+var venueArray = 
 [jPauls,paradiso,oldGlory,sovereign,theTombs,
 chefGeoffs, chatter, casaLuca, frontPage, yosaku,
 madamsOrgan, johnnys, smokeBarrel, roofers, shenanigans,
 mission, hanksDP, firefly, sette, beacon,
 ]
+
+var venues = TAFFY([]);
+var convertDB =  function (){
+for (var i =0; i<venueArray.length; i++){
+    venues.insert({name: venueArray[i].name, location: venueArray[i].location, foodType: venueArray[i].foodType, cocktail: venueArray[i].cocktail, beer: venueArray[i].beer, wine: venueArray[i].wine})
+}
+venues = venues().stringify();
+console.log(venues);
+}
+convertDB ();
+var beerFetch = venues()
+
+
+
+
+// // SOUTHWEST WATERFRONT
+// var hanksSW = {listing: 20,name: "Hank's Oysters Waterfront",location:"wharf",foodType: "seafood",price: 2,cocktail: true,beer: true,wine:true};
+// var jennys = {listing: 21,name: "Jenny's at the Wharf",location:"wharf",foodType: "asian",price: 2,cocktail: true,beer: true,wine: true};
+// var masalaArt = {listing: 22,name: "Masala Art",location:"wharf",foodType: "indian",price: 2,cocktail: true,beer: true,wine: true};
+// var stationFour = {listing: 23,name: "Station 4",location:"wharf",foodType: "american",price: 2,cocktail: true,beer: true,wine: true};
+// var cityBar = {listing: 24,name: "City Bar",location:"wharf",foodType: "american",price: 3,cocktail: true,beer: true,wine: true};
+
+// // PETWORTH
+// var airedale = {listing: 25,name: "The Airedale",location:"petworth",foodType: "american",price: 1,cocktail: true,beer: true,wine: true};
+// var lookingGlass = {listing: 26,name: "Looking Glass",location:"petworth",foodType: "american",price: 1,cocktail: true,beer: true,wine: true};
+// var tenTigers = {listing: 27,name: "Ten Tigers",location:"petworth",foodType: "asian",price: 1,cocktail: true,beer: true,wine: true};
+// var reynolds = {listing: 28,name: "DC Reynolds",location:"petworth",foodType: "american",price: 1,cocktail: true,beer: true,wine: true};
+// var thePitch = {listing: 29,name: "The Pitch",location:"petworth",foodType: "american",price: 1,cocktail: true,beer: true,wine: true};
+
+// //CAPTIOL HILL
+// var boxcar = {listing: 30,name: "Boxcar Tavern",location:"capHill",foodType: "american",price: 2,cocktail: true,beer: true,wine: true};
+// var hawkDove = {listing: 31,name: "Hawk 'n' Dove",location:"capHill",foodType: "american",price: 2,cocktail: true,beer: true,wine: true};
+// var lavagna = {listing: 32,name: "Lavagna",location:"capHill",foodType: "italian",price: 2,cocktail: true,beer: true,wine: true};
+// var uglyMug = {listing: 33,name: "The Ugly Mug",location:"capHill",foodType: "american",price: 1,cocktail: true,beer: true,wine: true};
+// var ambar = {listing: 34,name: "Ambar",location:"capHill",foodType: "european",price: 1,cocktail: true,beer: true,wine: true};
+
+// // H STREET
+// var bigBoard = {listing: 35,name: "The Big Board",location:"hstreet",foodType: "american",price: 2,cocktail: false,beer: true,wine: true};
+// var smith = {listing: 36,name: "Smith Commons",location:"hstreet",foodType: "american",price: 2,cocktail: true,beer: true,wine: true};
+// var biergarten = {listing: 37,name: "Biergarten House",location:"hstreet",foodType: "european",price: 2,cocktail: true,beer: true,wine: true};
+// var hCC = {listing: 38,name: "H St Country Club",location:"hstreet",foodType: "mexican",price: 2,cocktail: true,beer: true,wine: false};
+// var pursuit = {listing: 39,name: "Pursuit Wine Bar",location:"hstreet",foodType: "european",price: 3,cocktail: true,beer: true,wine: true};
+
+// // LOGAN CIRCLE
+// var kingFisher = {listing: 40,name: "Kingfisher",location:"logan",foodType: "american",price: 2,cocktail: false,beer: true,wine: false};
+// var churchKey = {listing: 41,name: "Church Key",location:"logan",foodType: "american",price: 2,cocktail: false,beer: true,wine: false};
+// var draftTable = {listing: 42,name: "Draft Table",location:"logan",foodType: "american",price: 2,cocktail: true,beer: true,wine: true};
+// var loganTavern = {listing: 43,name: "Logan Tavern",location:"logan",foodType: "european",price: 3,cocktail: true,beer: true,wine: true};
+// var sotto = {listing: 44,name: "Sotto",location:"logan",foodType: "american",price: 2,cocktail: true,beer: true,wine: true};
+
+// // SHAW && U ST
+// var brixton = {listing: 45,name: "The Brixton",location:"shaw",foodType: "irish",price: 2,cocktail: true,beer: true,wine: true};
+// var chaplins = {listing: 46,name: "Chaplin's",location:"shaw",foodType: "asian",price: 2,cocktail: true,beer: true,wine: true};
+// var dacha = {listing: 47,name: "Dacha Beer Garden",location:"shaw",foodType: "european",price: 2,cocktail: true,beer: true,wine: true};
+// var drift = {listing: 48,name: "Drift on 7th",location:"shaw",foodType: "seafood",price: 2,cocktail: true,beer: true,wine: true};
+// var shawsTavern = {listing: 49,name: "Shaw's Tavern",location:"shaw",foodType: "american",price: 2,cocktail: true,beer: true,wine: true};
+
+// // EASTERN MARKET
+// var belga = {listing: 50,name: "Belga Cafe",location:"eastMkt",foodType: "european",price: 2,cocktail: true,beer: true,wine: true};
+// var placitas = {listing: 51,name: "Las Placitas",location:"eastMkt",foodType: "mexican",price: 2,cocktail: true,beer: true,wine: true};
+// var mrHenrys = {listing: 52,name: "Mr. Henry's",location:"eastMkt",foodType: "american",price: 2,cocktail: true,beer: true,wine: true};
+// var radici = {listing: 53,name: "Radici",location:"eastMkt",foodType: "italian",price: 2,cocktail: false,beer: true,wine: true};
+// var uglyMug = {listing: 54,name: "The Ugly Mug",location:"eastMkt",foodType: "american",price: 2,cocktail: true,beer: true,wine: true};
+
+// // COLUMBIA HEIGHTS
+// var bravo = {listing: 55,name: "BravoBar",location:"coHi",foodType: "american",price: 2,cocktail: true,beer: true,wine: true};
+// var celticHouse = {listing: 56,name: "The Celtic House",location:"coHi",foodType: "irish",price: 2,cocktail: false,beer: true,wine: false};
+// var elChucho = {listing: 57,name: "El Chucho",location:"coHi",foodType: "mexican",price: 2,cocktail: true,beer: true,wine: false};
+// var theHeights = {listing: 58,name: "The Heights",location:"coHi",foodType: "american",price: 2,cocktail: true,beer: true,wine: true};
+// var wonderland = {listing: 59,name: "Wonderland Ballroom",location:"coHi",foodType: "american",price: 2,cocktail: true,beer: true,wine: true};
+
+// // venues for georgetown, friendship, admo and dupont
+
+
+
 
 // Tutoring notes
 // set event listener to snapshot the argument
