@@ -1,12 +1,16 @@
 <!DOCTYPE html>
  <html>
    <head>
+      <title>Happy Hour Options</title>
      <link rel="stylesheet" href="assets\css\reset.css">
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
      <link rel="stylesheet" href="assets\css\style.css">
+
    </head>
+
+   <link rel="icon" href="assets\images\fiveoclock.png">
 
    <body>
      <style>
@@ -14,17 +18,28 @@
      body {
      background-color: #ffd900;
      font-family: sans-serif;
-   }
+    }
 
      .container {
        background-color: rgba(255, 255, 255, 0.5);
+     }
+
+     .resultsImages:hover
+     {
+     	opacity:0.6;
+     	text-align:left;
+     	color:#000000;
+     	font-size:20px;
+     	font-weight:700;
+     	font-family:"Times New Roman", Times, serif;
+     	padding:5px;
      }
 
      </style>
 
      <nav>
        <div class="nav-wrapper">
-         <center class="brand-logo center" href="index.html">It's Five O'Clock</center>
+         <center class="brand-logo center"><a href="index.html">It's Five O'Clock</a></center>
        </div>
      </nav>
      <div class="container">
@@ -33,11 +48,12 @@
          <!-- here we will need to use JavaScript to plug results into left/right columns; odd vs. even? or even+0 vs. odd? -->
          <div class="col s6 resultsCol1">
            <div class="resultsBox resultsBox1">
-             <img class="resultsImages resultsImages1" src="assets\images\beer-tall-glass.PNG">
+             <a href="restaurant.html">
+             <img class="resultsImages resultsImages1" src="assets\images\beer-tall-glass.PNG"></a>
              <p class="resultsInfo resultsInfo1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
            </div>
           <div class="resultsBox resultsBox3">
-            <img class="resultsImages resultsImages2" src="assets\images\beer-tall-glass.PNG">
+            <img class="resultsImages resultsImages" src="assets\images\beer-tall-glass.PNG">
             <p class="resultsInfo resultsInfo2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
          </div>
        </div>
@@ -52,9 +68,15 @@
         </div>
        </div>
      </div>
+     <!-- below = where the restaurant info blurb div is; actual blurbs can be found: -->
+     <!-- @ results-blurbs.html, unless we send it over to .js -->
+     <!-- must add active link, new tab, to Chris' page -->
+
      <!--Import jQuery before materialize.js-->
      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-     <script type="text/javascript" src="js/materialize.min.js"></script>
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+     <!-- may need to add a listener here -->
     </div>
    </body>
  </html>

@@ -101,5 +101,5 @@ position: relative;
 .resultsImages {
   width: 30%;
   height: 75%;
-}
+  z-index: 1;
 }
