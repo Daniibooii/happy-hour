@@ -1,6 +1,6 @@
-<<<<<<< HEAD
 
  /* start of index.html css  */
+ /*-------------------------*/
 
  body {
    background-color: #ffd900;
@@ -11,6 +11,10 @@
    margin-top: 90px;
  }
 
+ .five-oclock {
+   font-size: 64px;
+ }
+
 .booze-row {
   height: 150px;
 }
@@ -18,30 +22,73 @@
 .booze-icon-col {
   display: flex;
   justify-content: space-between;
+  width: 550px;
+  margin: 0;
+  padding: 0;
 }
 
 .booze-btn {
+  background-color: #ffd900;
+  border: none;
+  border-radius: 50%;
+}
+.booze-btn img {
   height: 150px;
 }
 
-.cuisine-sel {
-  background-color: pink;
-  height: 70px;
+.booze-instruction p {
+  color: white;
+  font-size: 1px;
+  text-align: center;
+  width: 500px;
 }
 
+.selector-col {
+  text-align: center;
+  width: 480px;
+}
+
+.cuisine-sel {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid #ee6e73;
+  color: #ee6e73;
+  display: none;
+  font-size: 34px;
+  height: 1200px;
+  width: 1200px;
+  margin: 0;
+  padding: 0;
+}
+  .cuisine-sel option p {
+    text-align: center;
+  }
+
 .neighborhood-sel {
-  background-color: lightblue;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid #ee6e73;
+  color: #ee6e73;
+  font-size: 34px;
   height: 70px;
+  width: 500px;
+  padding: 0;
+  margin; 0;
 }
 
 .price-col {
   display: flex;
   justify-content: space-between;
+  width: 550px;
 }
 
 .price-point-btn {
+  background-color: #ffd900;
+  border: none;
+  border-radius: 50%;
   height: 150px;
 }
+  .price-point-btn img {
+    height: 150px;
+  }
 
 .submit-col {
   display: flex;
@@ -49,13 +96,25 @@
 }
 
 .list-btn {
+  background-color: #ee6e73;
+  border-radius: 50%;
+  font-size: 20px;
+  font-family: 'roboto', sans-serif;
   width: 250px;
-  height: 70px;
+  height: 250px;
+  padding: 0;
 }
 
 .random-btn {
+  background-color: #ee6e73;
+  border-radius: 50%;
+  font-size: 20px;
+  font-family: 'roboto', sans-serif;
   width: 250px;
-  height: 70px;
+  height: 250px;
+  padding: 0;
+
+
 =======
 .resultsImages {
   width: 150px;

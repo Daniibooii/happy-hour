@@ -14,40 +14,45 @@
    <body>
      <nav>
         <div class="nav-wrapper">
-          <center class="brand-logo center" href="index.html">It's Five O'Clock</center>
+          <center class="brand-logo center five-oclock" href="index.html">It's Five O'Clock</center>
         </div>
       </nav>
        <div class="container">
         <div class="row booze-row">
           <div class="col m3"></div>
-          <div class="col m6 booze-icon-col center-align">
-            <button id="cocktail-btn" type="button" name="cocktail-button"> <img src="assets/images/cocktail-pink-circle.png" alt="cocktail logo" class="booze-btn"> </button>
-            <button id="beer-btn" type="button" name="beer-button"> <img src="assets/images/beer-red-circle.png" alt="beer logo" class="booze-btn"> </button>
-            <button id="wine-btn" type="button" name="wine-button"> <img src="assets/images/wine-blue-circle.png" alt="wine logo" class="booze-btn"> </button>
+          <div class="col m6 booze-icon-col center-align" align=center>
+            <button id="cocktail-btn"  class="booze-btn" type="button" name="cocktail-button"> <img src="assets/images/cocktail-pink-circle.png" alt="cocktail logo"> </button>
+            <button id="beer-btn"  class="booze-btn" type="button" name="beer-button"> <img src="assets/images/beer-red-circle.png" alt="beer logo" > </button>
+            <button id="wine-btn"  class="booze-btn" type="button" name="wine-button"> <img src="assets/images/wine-blue-circle.png" alt="wine logo"> </button>
           </div>
           <div class="col m3"></div>
-
+        </div>
+        <div id="choose-your-booze-row" class="row center-align">
+          <div class="col m3"></div>
+          <div class="col m6 booze-instruction">
+            <p id="cyb" class="center-align">Choose Your Booze</p>
+          </div>
+          <!-- <div class="col m3"></div> -->
         </div>
         <div class="row food-sel-row">
           <div class="col m3"></div>
-          <div class="col m6">
+          <div class="col selector-col m6">
             <!-- <label>Browser Select</label> -->
             <select id="cuisine-selector" class="browser-default cuisine-sel">
-              <option value="" disabled selected>Choose your Cuisine</option>
-              <option value="1">Asian</option>
-              <option value="2">American</option>
-              <option value="3">European</option>
-              <option value="4">French</option>
-              <option value="5">Gluten Free</option>
-              <option value="6">Health Food</option>
-              <option value="7">Indian</option>
-              <option value="8">Irish</option>
-              <option value="9">Italian</option>
-              <option value="10">Mexican</option>
-              <option value="11">Seafood</option>
-              <option value="12">Spanish/Tapas</option>
-              <option value="13">Southern/Soul Food</option>
-              <option value="14">Vegetarian/Vegan</option>
+              <option value="" disabled selected><p>Choose your cuisine</p></option>
+              <option id="selectAsian" value="Asian">Asian</option>
+              <option id="selectAmerican" value="american">American</option>
+              <option id="selectEuropean" value="european">European</option>
+              <option id="selectFrench" value="french">French</option>
+              <option id="selectHealth" value="health">Health Food</option>
+              <option id="selectIndian" value="indian">Indian</option>
+              <option id="selectIrish" value="irish">Irish</option>
+              <option id="selectItalian" value="italian">Italian</option>
+              <option id="selectMexican" value="mexican">Mexican</option>
+              <option id="selectSeafood" value="seafood">Seafood</option>
+              <option id="selectSpanish" value="spanish">Spanish / Tapas</option>
+              <option id="selectSouthern" value="southern">Southern / Soul Food</option>
+              <option id="selectVegetarian" value="vegetarian">Vegetarian / Vegan</option>
             </select>
           </div>
           <div class="col m3"></div>
@@ -57,39 +62,38 @@
           <div class="col m6">
             <!-- <label>Browser Select</label> -->
             <select id="neighborhood-selector" class="browser-default neighborhood-sel">
-              <option value="" disabled selected>Neighborhood</option>
-              <option value="1">Adams Morgan</option>
-              <option value="2">Capital Hill</option>
-              <option value="3">Columbia Heights</option>
-              <option value="4">Dupont Circle</option>
-              <option value="5">Eastern Market</option>
-              <option value="6">Friendship Heights / Tenley Town</option>
-              <option value="7">Georgetown</option>
-              <option value="8">H Street</option>
-              <option value="9">Logan Circle</option>
-              <option value="10">NoMa</option>
-              <option value="11">Petworth</option>
-              <option value="12">Shaw / U Street</option>
-              <option value="13">Southwest / Waterfront</option>
+              <option value="" disabled selected>Choose your neighborhood</option>
+              <option id="selectAdmo" value="admo">Adams Morgan</option>
+              <option id="selectCapHill" value="capitalHill">Capital Hill</option>
+              <option id="selectCoHi" value="coHi">Columbia Heights</option>
+              <option id="selectDupont" value="dupont">Dupont Circle</option>
+              <option id="selecteastMart" value="eastMart">Eastern Market</option>
+              <option id="selectFriendship" value="friendship">Friendship Heights / Tenley Town</option>
+              <option id="selectGTown" value="georgetown">Georgetown</option>
+              <option id="selectHSt" value="hSt">H Street</option>
+              <option id="selectLogan" value="logan">Logan Circle</option>
+              <option id="selectNoMa" value="noma">NoMa</option>
+              <option id="selectPetworth" value="petworth">Petworth</option>
+              <option id="selectShaw" value="shaw">Shaw / U Street</option>
+              <option id="selectWaterfront" value="waterfront">Southwest / Waterfront</option>
             </select>
           </div>
           <div class="col m3"></div>
         </div>
-        <div class="row price-row">
+        <div id="price-row" class="row">
           <div class="col m3"></div>
           <div class="col m6 price-col">
-            <button id="one-dollar-sign-btn" type="button" name="one-dollar-button"> <img src="assets/images/dollar-sign-sparkle.gif" alt="dollar sign gif" class="price-point-btn"> </button>
-            <button id="two-dollar-signs-btn" type="button" name="two-dollar-button"> <img src="assets/images/dollar-sign-sparkle.gif" alt="dollar sign gif" class="price-point-btn"> </button>
-            <button id="three-dollar-signs-btn" type="button" name="three-dollar-button"> <img src="assets/images/dollar-sign-sparkle.gif" alt="dollar sign gif" class="price-point-btn"> </button>
+            <button id="one-dollar-sign-btn" class="price-point-btn" type="button" name="one-dollar-button"> <img src="assets/images/one-dollar-sign.png" alt="dollar sign gif"> </button>
+            <button id="two-dollar-signs-btn" class="price-point-btn" type="button" name="two-dollar-button"> <img src="assets/images/two-dollar-signs.png" alt="dollar sign gif"> </button>
+            <button id="three-dollar-signs-btn" class="price-point-btn" type="button" name="three-dollar-button"> <img src="assets/images/three-dollar-signs.png" alt="dollar sign gif"> </button>
           </div>
           <div class="col m3"></div>
         </div>
-        <div class="row submit-row">
+        <div id="submit-row" class="row submit-row">
           <div class="col m3"></div>
           <div class="col m6 submit-col">
-            <button id="get-restaurant-list" class="list-btn" type="button" name="list-btn">Choose From List</button>
-            <button id="get-random-result" class="random-btn" type="button" name="random-btn">Get Random Result</button>
-          <div class="col m3"></div>
+            <button id="get-restaurant-list" class="btn list-btn" type="submit" name="action">Choose<br>From<br>List</button>
+            <button id="get-random-result" class="btn random-btn" type="submit" name="action">Get<br>Random<br>Result</button>
         </div>
        </div>
 
