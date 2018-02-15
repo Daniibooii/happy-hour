@@ -87,6 +87,17 @@ var elChucho = {listing: 57,name: "El Chucho",location:"coHi",foodType: "mexican
 var theHeights = {listing: 58,name: "The Heights",location:"coHi",foodType: "american",price: 2,cocktail: true,beer: true,wine: true}
 var wonderland = {listing: 59,name: "Wonderland Ballroom",location:"coHi",foodType: "american",price: 2,cocktail: true,beer: true,wine: true}
 
+/////////////////////////////////////
+////////////////////////////////////
+///////////////////////////////////
+
+var hasBeer = false;
+var hasWine = false;
+var hasCocktails = false;
+
+var drinkType = "";
+var foodType = "";
+var location = "";
 
 /////////////////////////////////
 /// Javascrit for index.html ///
@@ -94,7 +105,6 @@ var wonderland = {listing: 59,name: "Wonderland Ballroom",location:"coHi",foodTy
 
 // to slide the booze icons in from the sides and top //
 var animateBoozeIcons = function(){
-
   $("#cocktail-btn").css({right:-2000,position:'relative'});
       $("#cocktail-btn").animate({left:0}, 1500);
   $("#beer-btn").css({bottom:2000,position:'relative'});
@@ -102,7 +112,6 @@ var animateBoozeIcons = function(){
   $("#wine-btn").css({right:2000,position:'relative'});
       $("#wine-btn").animate({right:0}, 1500);
   $('#cyb').animate({'font-size':'42px'}, 1800);
-
 } // end of animateZBoozeIcons functo=ion
 animateBoozeIcons();
 
@@ -114,16 +123,25 @@ $("#submit-row").hide();
 
 // this animates the cuisine selector on clicks of the Icons, hides the instruction to choose your booze //
 var afterChoosingBooze = function(){
-
   $("#choose-your-booze-row").hide();
   $("#cuisine-selector").show();
   $("#cuisine-selector").animate({height: "70px", width: "500px"});
-
 } // end of afterChoosingBooze function
+
+var animatePriceIcons = function(){
+  $("#one-dollar-sign-btn").css({right:-2000,position:'relative'});
+      $("#one-dollar-sign-btn").animate({left:0}, 1500);
+  $("#two-dollar-signs-btn").css({bottom:-2000,position:'relative'});
+      $("#two-dollar-signs-btn").animate({top:0}, 1500);
+  $("#three-dollar-signs-btn").css({right:2000,position:'relative'});
+      $("#three-dollar-signs-btn").animate({right:0}, 1500);
+} // end of animateZBoozeIcons functo=ion
+animatePriceIcons();
 
 // when you choose what type of drinks you want, it calls the funcrtion afterChoosingBooze
 $("#cocktail-btn").click(function(){
   afterChoosingBooze();
+  hasCocktails = true;
 });
 $("#beer-btn").click(function(){
   afterChoosingBooze();
@@ -132,31 +150,36 @@ $("#wine-btn").click(function(){
   afterChoosingBooze();
 });
 
+// end of afterSelectingCuisine function
 
-var afterSelectingCuisine = function(){
-
-  $("#neighborhood-selector").show(), 1000;
-
-} // end of afterSelectingCuisine function
-
-$("#selectAsian").trigger(function(){
-
-  afterSelectingCuisine();
-  alert("you've selected asian");
+// after choosing a cuisine, .show(); the neighborhood selector and animate from left;
+$( "#cuisine-selector" ).change(function () {
+  $( "select option:selected" ).each(function() {
+    $("#neighborhood-selector").show();
+    $("#neighborhood-selector").css({right:2000,position:'relative'});
+        $("#neighborhood-selector").animate({right:0}, 1500);
+  })
 })
+// register the selection for later comparison to our database
 
-var animatePriceIcons = function(){
+// after choosing a neighborhood, .show(); the price point icons and animate like the booze icons.
+$( "#neighborhood-selector" ).change(function () {
+  $( "select option:selected" ).each(function() {
+    $("#price-row").show();
+    animatePriceIcons();
+  })
+})
+// register selection for later comparison
 
-  $("#one-dollar-sign-btn").css({right:-2000,position:'relative'});
-      $("#one-dollar-sign-btn").animate({left:0}, 1500);
-  $("#two-dollar-signs-btn").css({bottom:2000,position:'relative'});
-      $("#two-dollar-signs-btn").animate({top:0}, 1500);
-  $("#three-dollar-signs-btn").css({right:2000,position:'relative'});
-      $("#three-dollar-signs-btn").animate({right:0}, 1500);
-} // end of animateZBoozeIcons functo=ion
-animatePriceIcons();
+// after choosing your price point, make all selections disappear maybe .hide(); and .show the two submit buttons for see list or random results.
+// if list, take user to results.html
+// if random, choose random restaurant and take them to chris' Page
 
-$("#")
+// comparing user selections to our database //
+//////////////////////////////////////////////
+
+// if beer is true
+for (i=0; i<)
 
 
 

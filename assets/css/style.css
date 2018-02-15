@@ -7,7 +7,7 @@
    font-family: sans-serif;
  }
 
- .container {
+ .main-index-container {
    margin-top: 90px;
  }
 
@@ -111,24 +111,59 @@
   font-size: 20px;
   font-family: 'roboto', sans-serif;
   width: 250px;
+<<<<<<< HEAD
   height: 250px;
   padding: 0;
 
 
 =======
+=======
+  height: 70px;
+}
+
+>>>>>>> 85ce7091b48e74210a751c74b3c20eba4db458f4
 .resultsImages {
   width: 150px;
-  height: 150px;
+  height: 100%;
+  vertical-align: middle;
   float: left;
-  margin-top: 30px;
-  margin-bottom: 30px;
+
 }
 
 .resultsInfo {
-
+width: 400px;
+height: 200px;
+padding-right: 10px;
+padding-top: 10px;
 }
 
-.resultsCol {
+.resultsCol1 {
+position: relative;
+}
 
->>>>>>> f14cb1eb630cd05a22b0c550b831bd388584ecb9
+.resultsCol2 {
+position: relative;
+}
+
+.resultsBox {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  width: 100%;
+  height: 200px;
+}
+
+@media only screen and (min-width: 414px) {
+.resultsCol1 {
+  width: 30%;
+}
+.resultsCol2 {
+  width: 30%;
+}
+.resultsInfo {
+  width: 100%;
+}
+.resultsImages {
+  width: 30%;
+  height: 75%;
+}
 }

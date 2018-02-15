@@ -17,13 +17,13 @@
           <center class="brand-logo center five-oclock" href="index.html">It's Five O'Clock</center>
         </div>
       </nav>
-       <div class="container">
+       <div class="container main-index-container">
         <div class="row booze-row">
           <div class="col m3"></div>
           <div class="col m6 booze-icon-col center-align" align=center>
-            <button id="cocktail-btn"  class="booze-btn" type="button" name="cocktail-button"> <img src="assets/images/cocktail-pink-circle.png" alt="cocktail logo"> </button>
-            <button id="beer-btn"  class="booze-btn" type="button" name="beer-button"> <img src="assets/images/beer-red-circle.png" alt="beer logo" > </button>
-            <button id="wine-btn"  class="booze-btn" type="button" name="wine-button"> <img src="assets/images/wine-blue-circle.png" alt="wine logo"> </button>
+            <button id="cocktail-btn"  class="booze-btn" type="button" name="cocktail-button" value="cocktail"> <img src="assets/images/cocktail-pink-circle.png" alt="cocktail logo"> </button>
+            <button id="beer-btn"  class="booze-btn" type="button" name="beer-button" value="beer"> <img src="assets/images/beer-red-circle.png" alt="beer logo" > </button>
+            <button id="wine-btn"  class="booze-btn" type="button" name="wine-button" value="wine"> <img src="assets/images/wine-blue-circle.png" alt="wine logo"> </button>
           </div>
           <div class="col m3"></div>
         </div>
@@ -40,19 +40,19 @@
             <!-- <label>Browser Select</label> -->
             <select id="cuisine-selector" class="browser-default cuisine-sel">
               <option value="" disabled selected><p>Choose your cuisine</p></option>
-              <option id="selectAsian" value="Asian">Asian</option>
+              <option  id="selectAsian" value="Asian">Asian</option>
               <option id="selectAmerican" value="american">American</option>
               <option id="selectEuropean" value="european">European</option>
-              <option id="selectFrench" value="french">French</option>
-              <option id="selectHealth" value="health">Health Food</option>
-              <option id="selectIndian" value="indian">Indian</option>
+              <!-- <option id="selectFrench" value="french">French</option> -->
+              <!-- <option id="selectHealth" value="health">Health Food</option> -->
+              <!-- <option id="selectIndian" value="indian">Indian</option> -->
               <option id="selectIrish" value="irish">Irish</option>
               <option id="selectItalian" value="italian">Italian</option>
               <option id="selectMexican" value="mexican">Mexican</option>
               <option id="selectSeafood" value="seafood">Seafood</option>
-              <option id="selectSpanish" value="spanish">Spanish / Tapas</option>
+              <!-- <option id="selectSpanish" value="spanish">Spanish / Tapas</option> -->
               <option id="selectSouthern" value="southern">Southern / Soul Food</option>
-              <option id="selectVegetarian" value="vegetarian">Vegetarian / Vegan</option>
+              <!-- <option id="selectVegetarian" value="vegetarian">Vegetarian / Vegan</option> -->
             </select>
           </div>
           <div class="col m3"></div>
@@ -64,18 +64,18 @@
             <select id="neighborhood-selector" class="browser-default neighborhood-sel">
               <option value="" disabled selected>Choose your neighborhood</option>
               <option id="selectAdmo" value="admo">Adams Morgan</option>
-              <option id="selectCapHill" value="capitalHill">Capital Hill</option>
-              <option id="selectCoHi" value="coHi">Columbia Heights</option>
+              <!-- <option id="selectCapHill" value="capitalHill">Capital Hill</option>
+              <option id="selectCoHi" value="coHi">Columbia Heights</option> -->
               <option id="selectDupont" value="dupont">Dupont Circle</option>
-              <option id="selecteastMart" value="eastMart">Eastern Market</option>
+              <!-- <option id="selecteastMart" value="eastMart">Eastern Market</option> -->
               <option id="selectFriendship" value="friendship">Friendship Heights / Tenley Town</option>
               <option id="selectGTown" value="georgetown">Georgetown</option>
-              <option id="selectHSt" value="hSt">H Street</option>
+              <!-- <option id="selectHSt" value="hSt">H Street</option>
               <option id="selectLogan" value="logan">Logan Circle</option>
               <option id="selectNoMa" value="noma">NoMa</option>
               <option id="selectPetworth" value="petworth">Petworth</option>
               <option id="selectShaw" value="shaw">Shaw / U Street</option>
-              <option id="selectWaterfront" value="waterfront">Southwest / Waterfront</option>
+              <option id="selectWaterfront" value="waterfront">Southwest / Waterfront</option> -->
             </select>
           </div>
           <div class="col m3"></div>
@@ -105,8 +105,34 @@
      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
      <!-- Compiled and minified JavaScript -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-     <script type="text/javascript" src="assets/javascript/script.js">
+     <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+      <script>
+        // Initialize Firebase
+        // TODO: Replace with your project's customized code snippet
+        var config = {
+          apiKey: "<API_KEY>",
+          authDomain: "<PROJECT_ID>.firebaseapp.com",
+          databaseURL: "https://<DATABASE_NAME>.firebaseio.com",
+          storageBucket: "<BUCKET>.appspot.com",
+          messagingSenderId: "<SENDER_ID>",
+        };
+        firebase.initializeApp(config);
+      </script>
+      <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-database.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-firestore.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-messaging.js"></script>
 
-     </script>
+      <!-- Leave out Storage -->
+      <!-- <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-storage.js"></script> -->
+
+      <script>
+        var config = {
+          // ...
+        };
+        firebase.initializeApp(config);
+      </script>
+     <script type="text/javascript" src="assets/javascript/script.js"></script>
    </body>
  </html>
