@@ -115,12 +115,19 @@
   padding: 0;
 }
 
+<<<<<<< HEAD
+=======
+
+.nav-wrapper {
+  z-index: 1;
+}
+
+>>>>>>> 058eac60e104780f1434d2984f2c61cf54a64373
 .resultsImages {
   width: 150px;
   height: 100%;
   vertical-align: middle;
   float: left;
-
 }
 
 .resultsInfo {
@@ -148,7 +155,9 @@ position: relative;
 @media only screen and (min-width: 414px) {
 .resultsCol1 {
   width: 30%;
+  position: relative;
 }
+
 .resultsCol2 {
   width: 30%;
 }
@@ -159,4 +168,17 @@ position: relative;
   width: 30%;
   height: 75%;
   z-index: 1;
+}
+
+#left-side {
+  float: left;
+  width: 230px;
+}
+.side-nav {
+  position: absolute;
+  width: 230px;
+  z-index: -1;
+  margin-right: 1px;
+  float: left;
+}
 }
