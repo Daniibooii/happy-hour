@@ -16,8 +16,15 @@
 
     <style>
     body {
-        border-style: groove;
-        border-color: gray;
+        background: url("https://image.freepik.com/free-vector/yellow-background-design_1102-173.jpg")no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    }
+    img {
+        width: 480px;
+        height: 250px;
     }
     .menu {
         text-align: center;
@@ -52,10 +59,7 @@
 <body>
 <nav>
     <div class="nav-wrapper">
-        <center class="brand-logo center">It's Five O'Clock</center>
-        <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <li><a href="index.html"></a>Home</li>
-        </ul>
+        <center class="brand-logo center" href="index.html">It's Five O'Clock</center>
     </div>
 </nav>
 
@@ -66,6 +70,7 @@
             <!--Restaurant Name-->
             <h2>Kingfisher</h2>
             <div class="menu">
+            <img src="assets/images/kingFisherImg.webp" alt="picture of kingfisher">
             <br>
             <h3><u>Happy Hour Menu</u></h3>
             <p>$2 off all beers, ciders, rail drinks, and select wines</p>
@@ -119,13 +124,22 @@
 
     <script>
         var map = L.map('map',{
-        center: [43.64701, -79.39425],
+        center: [38.9094011,-77.0321500],
         zoom: 15
         });
-
+       
         L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
+
+        L.tileLayer.wms("http://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r.cgi", {
+    	layers: 'nexrad-n0r-900913',
+        format: 'image/png',
+        transparent: true,
+        attribution: "Weather data © 2012 IEM Nexrad"
+        }).addTo(map);
+
+        var marker = L.marker([38.9094011,-77.0321500]).addTo(map);
     </script>
     <br><br><br>
 </div>
@@ -134,4 +148,3 @@
  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     </body>
   </html>
-        
