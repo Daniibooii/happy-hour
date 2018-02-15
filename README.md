@@ -4,8 +4,7 @@ Existing apps were found severely-lacking in their UI elements.
 The app was developed by a four-person team over one week.
 The total time spent on the project is estimated at ["a lot"].
 We utilized HTML, CSS with Materialize, JavaScript with JQuery, and Firebase.
-Significant time was devoted to design elements, as well as ensuring mobile-
-compatibility.
+Significant time was devoted to design elements, as well as ensuring mobile-compatibility.
 Internally, we // add info on inner workings with databases, arrays, etc. //
 
 Look for our deployed and fully-usable app at: [werule.com]
