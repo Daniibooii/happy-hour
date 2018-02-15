@@ -3,7 +3,7 @@ $(document).ready(function(){
 
 // Declare restaurant objects
 //GEORGETOWN
-var jPauls = {listing: 0,name: "J. Paul’s", location: "georgetown",foodType: "american",price: "$$",cocktail: true,beer: true,wine: true};
+var jPauls = {listing: 0,name: "J. Pauls", location: "georgetown",foodType: "american",price: "$$",cocktail: true,beer: true,wine: true};
 var paradiso = {listing: 1,name: "Pizzeria Paradiso",location:"georgetown",foodType: "italian",price: "$$",cocktail: false,beer: true,wine: true};	
 var oldGlory = {listing: 2,name: "Old Glory BBQ",location:"georgetown",foodType: "southern",price: "$$",cocktail: true,beer: true,wine: true};	
 var sovereign = {listing: 3,name: "The Sovereign",location:"georgetown",foodType: "european",price: "$$",cocktail: true,beer: true,wine: true};	
@@ -89,23 +89,57 @@ brixton, chaplins, dacha, drift, shawsTavern,
 belga, placitas, mrHenrys, radici, uglyMug,
 bravo, celticHouse, elChucho, theHeights,wonderland]
 
+var locationFiltered = [];
+
 var checkLocation = function (place){
-    $(".resultBox").empty();
     for (var i =0; i<venueArray.length; i++){
-        if (venueArray[i].location ==place){
-            var newName = venueArray[i].name;
-            var newFoodType = venueArray[i].foodType;
-            var newPrice = venueArray[i].price;
-            $(".resultBox").append("<p class='result'>"+newName+" | "+newFoodType+" | " +newPrice+"</p>");
-            console.log()
+        if (venueArray[i].location ===place){
+            // var newName = venueArray[i].name;
+            // var newFoodType = venueArray[i].foodType;
+            // var newPrice = venueArray[i].price;
+            // $(".resultBox").append("<p class='result'>"+newName+" | "+newFoodType+" | " +newPrice+"</p>");
+            locationFiltered.push(venueArray[i]);
     }
 }
+console.log(locationFiltered);
 }
-
 $("#neighborhood-selector").change(function() {
+    locationFiltered = [];
     var selectedVal = $(this).find(':selected').val();
     checkLocation (selectedVal);
 });
+var printResult = function (looper){
+    var newName = locationFiltered[looper].name;
+    var newFoodType = locationFiltered[looper].foodType;
+    var newPrice = locationFiltered[looper].price;
+    $(".resultBox").append("<p class='result'>"+newName+" | "+newFoodType+" | " +newPrice+"</p>");
+    console.log(newName);
+}
+var checkBeer = function (){
+    for (var j=0; j<locationFiltered.length; j++){
+        if (locationFiltered[j].beer==true){
+            printResult (j);
+        }
+    }
+}
+var checkWine = function (){
+    for (var j=0; j<locationFiltered.length; j++){
+        if (locationFiltered[j].wine==true){
+            printResult (j);
+        }
+    }
+}
+var checkCocktail = function (){
+    for (var j=0; j<locationFiltered.length; j++){
+        if (locationFiltered[j].cocktail==true){
+            printResult (j);
+        }
+    }
+}
+
+
+
+
 
 /////////////////////////////////////
 ////////////////////////////////////
@@ -138,10 +172,10 @@ var animateBoozeIcons = function(){
 animateBoozeIcons();
 
 // hide theses select element until on of the booze icons, cuisine selected, neighborhood selected and price points are clicked
-$("#cuisine-selector").hide();
-$("#neighborhood-selector").hide();
-$("#price-row").hide();
-$("#submit-row").hide();
+// $("#cuisine-selector").hide();
+// $("#neighborhood-selector").hide();
+// $("#price-row").hide();
+// $("#submit-row").hide();
 
 // this animates the cuisine selector on clicks of the Icons, hides the instruction to choose your booze //
 var afterChoosingBooze = function(){
@@ -154,13 +188,19 @@ var afterChoosingBooze = function(){
 
 // when you choose what type of drinks you want, it calls the funcrtion afterChoosingBooze
 $("#cocktail-btn").click(function(){
-  afterChoosingBooze();
+//   afterChoosingBooze();
+    $(".resultBox").empty();
+    checkCocktail();
 });
 $("#beer-btn").click(function(){
-  afterChoosingBooze();
+//   afterChoosingBooze();
+    $(".resultBox").empty();
+    checkBeer();
 });
 $("#wine-btn").click(function(){
-  afterChoosingBooze();
+//   afterChoosingBooze();
+    $(".resultBox").empty();
+    checkWine();
 });
 
 // end of afterSelectingCuisine function
