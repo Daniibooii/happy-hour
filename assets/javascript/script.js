@@ -4,7 +4,6 @@ $(document).ready(function(){
 
 // Declare restaurant objects
 //GEORGETOWN
-<<<<<<< HEAD
 var jPauls = {listing: 0,name: "J. Paul’s", location: "georgetown",foodType: "american",price: 2,cocktail: true,beer: true,wine: true}
 var paradiso = {listing: 1,name: "Pizzeria Paradiso",location:"georgetown",foodType: "italian",price: 2,cocktail: false,beer: true,wine: true}
 var oldGlory = {listing: 2,name: "Old Glory BBQ",location:"georgetown",foodType: "southern",price: 2,cocktail: true,beer: true,wine: true}
@@ -100,6 +99,8 @@ var drinkType = "";
 var foodType = "";
 var location = "";
 
+var userSelection = "";
+
 /////////////////////////////////
 /// Javascrit for index.html ///
 ///////////////////////////////
@@ -129,20 +130,11 @@ var afterChoosingBooze = function(){
   $("#cuisine-selector").animate({height: "70px", width: "500px"});
 } // end of afterChoosingBooze function
 
-var animatePriceIcons = function(){
-  $("#one-dollar-sign-btn").css({right:-2000,position:'relative'});
-      $("#one-dollar-sign-btn").animate({left:0}, 1500);
-  $("#two-dollar-signs-btn").css({bottom:-2000,position:'relative'});
-      $("#two-dollar-signs-btn").animate({top:0}, 1500);
-  $("#three-dollar-signs-btn").css({right:2000,position:'relative'});
-      $("#three-dollar-signs-btn").animate({right:0}, 1500);
-} // end of animateZBoozeIcons functo=ion
-animatePriceIcons();
+
 
 // when you choose what type of drinks you want, it calls the funcrtion afterChoosingBooze
 $("#cocktail-btn").click(function(){
   afterChoosingBooze();
-  hasCocktails = true;
 });
 $("#beer-btn").click(function(){
   afterChoosingBooze();
@@ -158,19 +150,62 @@ $( "#cuisine-selector" ).change(function () {
   $( "select option:selected" ).each(function() {
     $("#neighborhood-selector").show();
     $("#neighborhood-selector").css({right:2000,position:'relative'});
-        $("#neighborhood-selector").animate({right:0}, 1500);
+        $("#neighborhood-selector").animate({right:0}, 500);
+  })
+})
+
+$( "#cuisine-selector" ).change(function () {
+  $( "select option:selected" ).select(function() {
   })
 })
 // register the selection for later comparison to our database
+var animatePriceIcons = function(){
+  $("#one-dollar-sign-btn").css({right:-2000,position:'relative'});
+      $("#one-dollar-sign-btn").animate({left:0}, 1500);
+  $("#two-dollar-signs-btn").css({bottom:-2000,position:'relative'});
+      $("#two-dollar-signs-btn").animate({top:0}, 1500);
+  $("#three-dollar-signs-btn").css({right:2000,position:'relative'});
+      $("#three-dollar-signs-btn").animate({right:0}, 1500);
+} // end of animateZBoozeIcons functo=ion
+animatePriceIcons();
 
 // after choosing a neighborhood, .show(); the price point icons and animate like the booze icons.
 $( "#neighborhood-selector" ).change(function () {
   $( "select option:selected" ).each(function() {
     $("#price-row").show();
-    animatePriceIcons();
+    // animatePriceIcons();
   })
 })
+
+var afterChoosingPricePoint = function(){
+
+  $(".booze-row").hide();
+  $("#choose-your-booze-row").hide();
+  $(".food-sel-row").hide();
+  $("#cuisine-selector").hide();
+  $("#neighborhood-sel-row").hide();
+  $("#neighborhood-selector").hide();
+  $("#price-row").hide();
+  $("#submit-row").show();
+  $("#get-restaurant-list").css({bottom:-2000,position:'relative'});
+      $("#get-restaurant-list").animate({top:0}, 500);
+      $("#get-random-result").css({bottom:-2000,position:'relative'});
+          $("#get-random-result").animate({top:0}, 500);
+}
 // register selection for later comparison
+
+$("#one-dollar-sign-btn").click(function(){
+  afterChoosingPricePoint();
+})
+$("#two-dollar-signs-btn").click(function(){
+  afterChoosingPricePoint();
+})
+$("#three-dollar-signs-btn").click(function(){
+  afterChoosingPricePoint();
+})
+
+
+
 
 // after choosing your price point, make all selections disappear maybe .hide(); and .show the two submit buttons for see list or random results.
 // if list, take user to results.html
@@ -180,40 +215,38 @@ $( "#neighborhood-selector" ).change(function () {
 //////////////////////////////////////////////
 
 // if beer is true
-for (i=0; i<)
 
 
 
 });  // end of docuent ready
-=======
 var jPauls = {listing: 0,name: "J. Paul’s", location: "georgetown",foodType: "american",price: 2,cocktail: true,beer: true,wine: true};
-var paradiso = {listing: 1,name: "Pizzeria Paradiso",location:"georgetown",foodType: "italian",price: 2,cocktail: false,beer: true,wine: true};	
-var oldGlory = {listing: 2,name: "Old Glory BBQ",location:"georgetown",foodType: "southern",price: 2,cocktail: true,beer: true,wine: true};	
-var sovereign = {listing: 3,name: "The Sovereign",location:"georgetown",foodType: "european",price: 2,cocktail: true,beer: true,wine: true};	
-var theTombs = {listing: 4,name: "The Tombs",location:"georgetown",foodType: "american",price: 1,cocktail: false,beer: true,wine: true};	
+var paradiso = {listing: 1,name: "Pizzeria Paradiso",location:"georgetown",foodType: "italian",price: 2,cocktail: false,beer: true,wine: true};
+var oldGlory = {listing: 2,name: "Old Glory BBQ",location:"georgetown",foodType: "southern",price: 2,cocktail: true,beer: true,wine: true};
+var sovereign = {listing: 3,name: "The Sovereign",location:"georgetown",foodType: "european",price: 2,cocktail: true,beer: true,wine: true};
+var theTombs = {listing: 4,name: "The Tombs",location:"georgetown",foodType: "american",price: 1,cocktail: false,beer: true,wine: true};
 
 // FRIENDSHIP-TENLEYTOWN
-var chefGeoffs = {listing: 5,name: "Chef Geoff's",location:"friendship",foodType: "american",price: 2,cocktail: true,beer: true,wine: true};	
+var chefGeoffs = {listing: 5,name: "Chef Geoff's",location:"friendship",foodType: "american",price: 2,cocktail: true,beer: true,wine: true};
 var chatter = {listing: 6,name: "Chatter",location:"friendship",foodType: "american",price: 2,cocktail: true,beer: true,wine: true};
-var casaLuca = {listing: 7,name: "Casa Luca",location:"friendship",foodType: "italian",price: 2,cocktail: true,beer: true,wine: true};	
-var frontPage = {listing: 8,name: "Front Page DC",location:"friendship",foodType: "american",price: 2,cocktail: true,beer: true,wine: true};	
-var yosaku = {listing: 9,name: "Yosaku Japanese",location:"friendship",foodType: "asian",price: 2,cocktail: true,beer: true,wine: true};	
+var casaLuca = {listing: 7,name: "Casa Luca",location:"friendship",foodType: "italian",price: 2,cocktail: true,beer: true,wine: true};
+var frontPage = {listing: 8,name: "Front Page DC",location:"friendship",foodType: "american",price: 2,cocktail: true,beer: true,wine: true};
+var yosaku = {listing: 9,name: "Yosaku Japanese",location:"friendship",foodType: "asian",price: 2,cocktail: true,beer: true,wine: true};
 
 // ADAM'S MORGAN
-var madamsOrgan = {listing: 10,name: "Madam's Organ",location:"adMo",foodType: "southern",price: 2,cocktail: true,beer: true,wine: true};	
-var johnnys = {listing: 11,name: "Johnny's Half Shell",location:"adMo",foodType: "seafood",price: 2,cocktail: true,beer: true,wine: true};	
+var madamsOrgan = {listing: 10,name: "Madam's Organ",location:"adMo",foodType: "southern",price: 2,cocktail: true,beer: true,wine: true};
+var johnnys = {listing: 11,name: "Johnny's Half Shell",location:"adMo",foodType: "seafood",price: 2,cocktail: true,beer: true,wine: true};
 var smokeBarrel = {listing: 12,name: "Madam's Organ",location:"adMo",foodType: "southern",price: 2,cocktail: true,beer: true,wine: false};
-var roofers = {listing: 13,name: "Roofer's Union",location:"adMo",foodType: "american",price: 3,cocktail: true,beer: true,wine: true};	
-var shenanigans = {listing: 14,name: "Shenanigan's Irish Pub",location:"adMo",foodType: "irish",price: 2,cocktail: true,beer: true,wine: true};	
+var roofers = {listing: 13,name: "Roofer's Union",location:"adMo",foodType: "american",price: 3,cocktail: true,beer: true,wine: true};
+var shenanigans = {listing: 14,name: "Shenanigan's Irish Pub",location:"adMo",foodType: "irish",price: 2,cocktail: true,beer: true,wine: true};
 
 // DUPONT CIRCLE
-var mission = {listing: 15,name: "Mission",location:"duPont",foodType: "mexican",price: 2,cocktail: true,beer: true,wine: true};	
-var hanksDP = {listing: 16,name: "Hank's Oysters DuPont",location:"duPont",foodType: "seafood",price: 3,cocktail: true,beer: true,wine: true};	
+var mission = {listing: 15,name: "Mission",location:"duPont",foodType: "mexican",price: 2,cocktail: true,beer: true,wine: true};
+var hanksDP = {listing: 16,name: "Hank's Oysters DuPont",location:"duPont",foodType: "seafood",price: 3,cocktail: true,beer: true,wine: true};
 var firefly = {listing: 17,name: "Firefly",location:"duPont",foodType: "american",price: 3,cocktail: true,beer: true,wine: true};
-var sette = {listing: 18,name: "Sette Osteria",location:"duPont",foodType: "italian",price: 2,cocktail: true,beer: true,wine: true};	
-var beacon = {listing: 19,name: "Beacon Bar & Grill",location:"duPont",foodType: "american",price: 2,cocktail: true,beer: true,wine: true};	
+var sette = {listing: 18,name: "Sette Osteria",location:"duPont",foodType: "italian",price: 2,cocktail: true,beer: true,wine: true};
+var beacon = {listing: 19,name: "Beacon Bar & Grill",location:"duPont",foodType: "american",price: 2,cocktail: true,beer: true,wine: true};
 
-var venueArray = 
+var venueArray =
 [jPauls,paradiso,oldGlory,sovereign,theTombs,
 chefGeoffs, chatter, casaLuca, frontPage, yosaku,
 madamsOrgan, johnnys, smokeBarrel, roofers, shenanigans,
@@ -231,7 +264,8 @@ console.log(venues);
 convertDB ();
 var beerFetch = venues()
 
-
+var drinksType = ["beer", "cocktail", "wine"];
+var location = [""]
 
 
 // // SOUTHWEST WATERFRONT
@@ -300,20 +334,20 @@ var beerFetch = venues()
 // snapshot val and name of property
 // snaphot.val().bravo.name
 
-// NOTES 
+// NOTES
 // Detecting contents in objects/arrays
-// Using the map() function - way to go from values in one domain 
+// Using the map() function - way to go from values in one domain
 // Using the 'in' function - determines if a given property exists
 
-// Array editing 
+// Array editing
 // push and pop - add and remove items from the end of an array, respectively
 // shift and unshift - add and remove items from the beginning of an array, respectively
-// slice - returns the elements of the array 
+// slice - returns the elements of the array
 
 // Array searching
 // forEach(array, function()}) will run a function at each index of the array
 
-// To be able to go from a parent’s name to the actual object that represents this person, 
+// To be able to go from a parent’s name to the actual object that represents this person,
 // we first build up an object that associates names with people.
 // var byName = {};
 // ancestry.forEach(function(person) {
@@ -322,10 +356,3 @@ var beerFetch = venues()
 
 // constructor way of declaring new objects - should I go back in and change this?
 // prototypes - what are these and should I be using them?
-
-
-
-
-
-
->>>>>>> 42d489a5aea82fcbe9cfeb00148b0a4f1def7310
