@@ -111,7 +111,6 @@
   font-size: 20px;
   font-family: 'roboto', sans-serif;
   width: 250px;
-<<<<<<< HEAD
   height: 250px;
   padding: 0;
 
@@ -121,13 +120,16 @@
   height: 70px;
 }
 
->>>>>>> 85ce7091b48e74210a751c74b3c20eba4db458f4
+
+.nav-wrapper {
+  z-index: 1;
+}
+
 .resultsImages {
   width: 150px;
   height: 100%;
   vertical-align: middle;
   float: left;
-
 }
 
 .resultsInfo {
@@ -155,7 +157,9 @@ position: relative;
 @media only screen and (min-width: 414px) {
 .resultsCol1 {
   width: 30%;
+  position: relative;
 }
+
 .resultsCol2 {
   width: 30%;
 }
@@ -166,4 +170,17 @@ position: relative;
   width: 30%;
   height: 75%;
   z-index: 1;
+}
+
+#left-side {
+  float: left;
+  width: 230px;
+}
+.side-nav {
+  position: absolute;
+  width: 230px;
+  z-index: -1;
+  margin-right: 1px;
+  float: left;
+}
 }
