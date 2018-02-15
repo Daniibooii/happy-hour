@@ -13,9 +13,13 @@ We hope you enjoy our work.
 # cheers
 
 Project members:
+
 Adrian Kyzer; Github:https://github.com/ASKyzer
+
 Adam Specker; Github: https://github.com/aspecker
+
 Chris Crawford; Github: https://github.com/ccrawford90
+
 Daniel Mace; Github: https://github.com/Daniibooii
 
 // please edit as y'all desire; feedback welcome //
