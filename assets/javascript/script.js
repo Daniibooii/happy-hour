@@ -11,12 +11,12 @@ var paradiso = {listing: 1,name: "Pizzeria Paradiso",location:"Georgetown",foodT
 var oldGlory = {listing: 2,name: "Old Glory BBQ",location:"Georgetown",foodType: "Southern",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.oldglorybbq.com/menus/happy-hour"};
 var sovereign = {listing: 3,name: "The Sovereign",location:"Georgetown",foodType: "European",price: "$$",cocktail: true,beer: true,wine: true,source:"http://thesovereigndc.com/#menus"};
 var theTombs = {listing: 4,name: "The Tombs",location:"Georgetown",foodType: "American",price: "$",cocktail: false,beer: true,wine: true,source:"http://www.tombs.com/#!menu"};
-// Friendship/Tenleytown
-var chefGeoffs = {listing: 5,name: "Chef Geoff's",location:"Friendship/Tenleytown",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.chefgeoff.com/menu/chef-geoffs"};
-var chatter = {listing: 6,name: "Chatter",location:"Friendship/Tenleytown",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"https://docs.wixstatic.com/ugd/c2a145_505cbb0822af4f6994c566de5806ad6a.pdf"};
-var casaLuca = {listing: 7,name: "Casa Luca",location:"Friendship/Tenleytown",foodType: "Italian",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.casalucadc.com/menus/"};
-var frontPage = {listing: 8,name: "Front Page DC",location:"Friendship/Tenleytown",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.frontpagedc.com/happy-hour/"};
-var yosaku = {listing: 9,name: "Yosaku Japanese",location:"Friendship/Tenleytown",foodType: "Asian",price: "$$",cocktail: true,beer: true,wine: true,source:"https://www.yosakusushi.com/menu"};
+// Friendship / Tenleytown
+var chefGeoffs = {listing: 5,name: "Chef Geoff's",location:"Friendship / Tenleytown",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.chefgeoff.com/menu/chef-geoffs"};
+var chatter = {listing: 6,name: "Chatter",location:"Friendship / Tenleytown",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"https://docs.wixstatic.com/ugd/c2a145_505cbb0822af4f6994c566de5806ad6a.pdf"};
+var casaLuca = {listing: 7,name: "Casa Luca",location:"Friendship / Tenleytown",foodType: "Italian",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.casalucadc.com/menus/"};
+var frontPage = {listing: 8,name: "Front Page DC",location:"Friendship / Tenleytown",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.frontpagedc.com/happy-hour/"};
+var yosaku = {listing: 9,name: "Yosaku Japanese",location:"Friendship / Tenleytown",foodType: "Asian",price: "$$",cocktail: true,beer: true,wine: true,source:"https://www.yosakusushi.com/menu"};
 // ADAM'S MORGAN
 var madamsOrgan = {listing: 10,name: "Madam's Organ",location:"Adam's Morgan",foodType: "Southern",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.madamsorgan.com/menu.html"};
 var johnnys = {listing: 11,name: "Johnny's Half Shell",location:"Adam's Morgan",foodType: "Seafood",price: "$$",cocktail: true,beer: true,wine: true,source:"https://www.johnnyshalfshell.net/menu"};
@@ -59,12 +59,12 @@ var churchKey = {listing: 41,name: "Church Key",location:"Logan Circle",foodType
 var draftTable = {listing: 42,name: "Draft Table",location:"Logan Circle",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.draftingtabledc.com/menu/"};
 var loganTavern = {listing: 43,name: "Logan Circle Tavern",location:"Logan Circle",foodType: "European",price:"$$$",cocktail: true,beer: true,wine: true,source:"http://Logan Circletavern.com/menu/"};
 var sotto = {listing: 44,name: "Sotto",location:"Logan Circle",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.sottodc.com/dinner/"};
-// SHAW && U ST
-var brixton = {listing: 45,name: "The Brixton",location:"Shaw/U. Street",foodType: "Irish",price: "$$",cocktail: true,beer: true,wine: true,source:"http://brixtondc.com/#/menu"};
-var chaplins = {listing: 46,name: "Chaplin's",location:"Shaw/U. Street",foodType: "Asian",price: "$$",cocktail: true,beer: true,wine: true,source:"http://chaplinsdc.com/chaplins-desserts_in_dc/"};
-var dacha = {listing: 47,name: "Dacha Beer Garden",location:"Shaw/U. Street",foodType: "European",price: "$$",cocktail: true,beer: true,wine: true,source:"https://dachadc.com/beergarden/"};
-var drift = {listing: 48,name: "Drift on 7th",location:"Shaw/U. Street",foodType: "Seafood",price: "$$",cocktail: true,beer: true,wine: true,source:"http://drifton7th.com/images/menus/Drift-Happy-Hour-Menu.pdf"};
-var shawsTavern = {listing: 49,name: "Shaw's Tavern",location:"Shaw/U. Street",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.shawstavern.com/menu/dinner-menu/"};
+// SHAW   && U ST
+var brixton = {listing: 45,name: "The Brixton",location:"Shaw / U. Street",foodType: "Irish",price: "$$",cocktail: true,beer: true,wine: true,source:"http://brixtondc.com/#/menu"};
+var chaplins = {listing: 46,name: "Chaplin's",location:"Shaw / U. Street",foodType: "Asian",price: "$$",cocktail: true,beer: true,wine: true,source:"http://chaplinsdc.com/chaplins-desserts_in_dc/"};
+var dacha = {listing: 47,name: "Dacha Beer Garden",location:"Shaw / U. Street",foodType: "European",price: "$$",cocktail: true,beer: true,wine: true,source:"https://dachadc.com/beergarden/"};
+var drift = {listing: 48,name: "Drift on 7th",location:"Shaw / U. Street",foodType: "Seafood",price: "$$",cocktail: true,beer: true,wine: true,source:"http://drifton7th.com/images/menus/Drift-Happy-Hour-Menu.pdf"};
+var shawsTavern = {listing: 49,name: "Shaw ' s Tavern",location:"Shaw / U. Street",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.shaw s tavern.com/menu/dinner-menu/"};
 // EASTERN MARKET
 var belga = {listing: 50,name: "Belga Cafe",location:"Eastern Market",foodType: "European",price: "$$",cocktail: true,beer: true,wine: true,source:"https://cdn-assets.indigenous.io/account_1346/Happy_Hour_food_2017_06_27_JZ_1515530138399.pdf"};
 var placitas = {listing: 51,name: "Las Placitas",location:"Eastern Market",foodType: "Mexican",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.lasplacitasrestaurant.com/8th_Menu.html"};
