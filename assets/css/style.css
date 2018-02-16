@@ -3,6 +3,10 @@
  /*-------------------------*/
 
  body {
+   font-family: 'Aldrich', sans-serif;
+ }
+
+ #indexBody {
    background-image: url(../images/yellowbackground.jpg);
    background-position: center;
    background-size: cover;
@@ -20,12 +24,14 @@
   text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
   font-weight:600;
   text-shadow: 0px 0px 3px #000;
+  font-family: 'Aldrich', sans-serif;
 }
 #locationBanner{
   margin-top: 30px;
   color: #ee6e73;
   font-size: 3em;
   font-weight: 500;
+  font-family: 'Aldrich', sans-serif;
 }
 #resetBtn{
   background-color: #ee6e73;
@@ -36,7 +42,7 @@
    font-size: 64px;
  }
 .booze-row {
-  margin-top: 200px;
+  margin-top: 10%;
   margin-bottom: 80px;
 }
 .booze-icon-col {
@@ -51,15 +57,18 @@
   border-radius: 50%;
 }
 .booze-btn img {
-  height: 200px;
-  width: 200px;
+  height: 300px;
+  width: 300px;
 }
 .booze-instruction p {
   color: #ee6e73;
+  font-family: 'Aldrich', sans-serif;
   font-size: 60px;
   font-weight: bold;
   text-align: center;
   text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+  margin: 0 0 50px 0;
+  padding: 0;
 }
 .neighborhood-sel-row {
   height: 80vh;
@@ -68,10 +77,9 @@
   background-color: rgba(255, 255, 255, 0.3);
   border: 1px solid #ee6e73;
   color: #ee6e73;
+  font-family: 'Aldrich', sans-serif;
   font-size: 34px;
   height: 100px;
-  padding: 0;
-  margin: 0;
 }
 .browser-default option {
   text-align: center;
@@ -103,6 +111,8 @@ position: relative;
   width: 100%;
   height: 200px;
 }
+
+/*  start of @media query for smaller screen and phone sizes  */
 @media  only screen and (max-width: 375px) {
 
   .brand-logo{
@@ -115,11 +125,8 @@ position: relative;
   }
 
   .booze-instruction p {
-    color: white;
     font-size: 34px;
-    padding-left: 22px;
     text-align: center;
-    text-outline: 2px 2px black;
   }
 
   .booze-row {
@@ -128,9 +135,14 @@ position: relative;
     margin-left: 7px;
   }
 
+  .neighborhood-selector {
+    font-size: 16px;
+  }
+
 }
 /* end of @media for max width 375px for iphone 7 or less */
 
+/* @media for iphones 8-10 portrait mode */
 @media only screen and  (min-width: 376px) and (max-width: 414px){
 
   .brand-logo{
@@ -143,9 +155,7 @@ position: relative;
   }
 
   .booze-instruction p {
-    color: white;
     font-size: 38px;
-    padding-left: 26px;
     text-align: center;
   }
 
@@ -155,9 +165,47 @@ position: relative;
     margin-left: 7px;
   }
 
-  #choose-your-booze-row {
-    padding: 0;
+  .neighborhood-selector {
+    font-size: 16px;
   }
 
 }
   /* end of @media for min 375 max 414 for iphones 8-10 */
+
+/* @media for ipads portrait mode */
+@media only screen and  (min-width: 415px) and (max-width: 812px){
+
+  .booze-row {
+    margin-top: 120px;
+    margin-bottom: 120px;
+  }
+
+  .booze-btn img {
+    height: 150px;
+    width: 150px;
+  }
+
+  .neighborhood-selector {
+    font-size: 26px;
+  }
+
+}
+
+/*  @media for ipads landscape modes*/
+@media only screen and  (min-width: 813px) and (max-width: 1366px){
+
+  .booze-row {
+    margin-top: 200px;
+    margin-bottom: 80px;
+  }
+
+  .booze-btn img {
+    height: 250px;
+    width: 250px;
+  }
+
+  .neighborhood-selector {
+    font-size: 36px;
+  }
+
+}

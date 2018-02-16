@@ -119,7 +119,7 @@ var printResult = function (looper){
     $("#choose-your-booze-row").hide();
     $(".result-row").show();
     $("#map").show();
-    $(".resultBox").append("<p class='result'>"+newName+" | "+newFoodType+" food | " +newPrice+ " | <a target='_blank' href='"+ newSrc+"'>Menu</a></p>");
+    $(".resultBox").append("<p class='result'>"+newName+" | "+newFoodType+" | " +newPrice+ " | <a target='_blank' href='"+ newSrc+"'>Menu</a></p>");
 }
 var showLocation = function (){
     var newLocation= locationFiltered[0].location;
@@ -169,6 +169,7 @@ var animateBoozeIcons = function(){
 animateBoozeIcons();
 
 // hide theses select element until on of the booze icons, cuisine selected, neighborhood selected and price points are clicked
+$(".booze-wrapper").hide();
 $(".booze-row").hide();
 $("#choose-your-booze-row").hide();
 $(".result-row").hide();
@@ -207,6 +208,7 @@ $("#resetBtn").click(function(){
 $( "#neighborhood-selector" ).change(function () {
   $( "select option:selected" ).each(function() {
     $(".neighborhood-sel-row").hide();
+    $(".booze-wrapper").show();
     $(".booze-row").show();
     $("#choose-your-booze-row").show();
     $("#cyb").show();
