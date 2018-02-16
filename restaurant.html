@@ -2,9 +2,11 @@
 <html lang ="en-us">
 <head>
     <meta charset="UTF-8">
-    <title>Kingfisher</title>
+    <title>It's Five O'Clock</title>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Linking Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <!--Let browser know website is optimized for mobile-->
@@ -16,7 +18,7 @@
 
     <style>
     body {
-        background: url("https://image.freepik.com/free-vector/yellow-background-design_1102-173.jpg")no-repeat center center fixed; 
+         background: url("assets/images/yellowbackground.jpg")no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -39,6 +41,7 @@
     }
     h2 {
         text-align: center;
+        font-family: 'Anton', sans-serif;
     }
     h3 {
         font-size: 36px;
@@ -59,7 +62,7 @@
 <body>
 <nav>
     <div class="nav-wrapper">
-        <center class="brand-logo center" href="index.html">It's Five O'Clock</center>
+        <center class="brand-logo center"><a href="index.html">It's Five O'Clock</a></center>
     </div>
 </nav>
 
@@ -68,51 +71,52 @@
         <div class="col s2"></div>
         <div class="col s8">
             <!--Restaurant Name-->
-            <h2>Kingfisher</h2>
+            <h2><span id= "restaurantName"></span></h2>
             <div class="menu">
             <img src="assets/images/kingFisherImg.webp" alt="picture of kingfisher">
             <br>
             <h3><u>Happy Hour Menu</u></h3>
-            <p>$2 off all beers, ciders, rail drinks, and select wines</p>
+            <p><span id= "happyHourInfo"></span></p>
             <ul>
             <h4>Food Highlights</h4>
-            <p>FREE Popcorn</p>
-            <p>Jerkface Artisinal Beef Jerky</p>
-            <p>Fancy Ramen</p>
+            <p><span id= "food1"></span></p>
+            <p><span id= "food2"></span></p>
+            <p><span id= "food3"></span></p>
             <h4>The Recommendations</h4>
-                <li>Chris's Selection: Austin City Limits</li>
-                <li>Adrian Likes: Gold Rush</li>
-                <li>Daniel Digs: Drop That Zero and Get With the Hero</li>
-                <li>Adams Choice: Campfire Old Fashion</li>
+                <li>Chris's Selection: <span id= "chris"></span></li>
+                <li>Adrian Likes: <span id = "adrian"></span></li>
+                <li>Daniel Digs: <span id = "daniel"></span></li>
+                <li>Adams Choice: <span id= "adam"></span></li>
             </ul>
             </div>
         </div>
         <div class="col s2"></div>
     </div>
 
-    <div class= "row">
+    <div class= "row">   
         <div class="col s3"></div>
         <div class="info">
             <div class="col s3">
-                <p>Kingfisher</p>
+                <p><u><span id= "restaurantInfo"></u></span></p>
                 <ul>
-                    <li>1414 14th St NW</li>
-                    <li>In the Basement</li>
-                    <li>Washington, DC 20005</li>
+                    <li><span id= "address1"></span></li>
+                    <li><span id= "address2"></span></li>
+                    <li><span id= "address3"></span></li>
                 </ul>
-                <p>(202)750-6600</p>
-            <p>http://www.kingfisherdc.com/</p>
+                <p><span id= "phone"></span></p>
+                <p><span id= "website"></span></p>
         </div>
         <div class="col s3">
             <div class="hours">
             <p><u>Happy Hour Hours:</u></p>
-            <p>Until 8:00pm everyday!</p>
-            <p>Restaurant Hours</p>
+            <p><span id= "happyHours"></span></p>
+            <p><u>Restaurant Hours</u></p>
             <ul>
-                <li>M-Th: 4p-2a</li>
-                <li>F:    4p-3a</li>
-                <li>Sa:   5p-3a</li>
-                <li>Su:   5p-2a</li>
+                <li><span id= "hours1"></span></li>
+                <li><span id= "hours2"></span></li>
+                <li><span id= "hours3"></span></li>
+                <li><span id= "hours4"></span></li>
+                <li><span id= "hours5"></li>
             </ul>
             </div>
         </div>
@@ -144,7 +148,12 @@
     <br><br><br>
 </div>
 
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+<script type="text/javascript" src="assets/javascript/jPauls.js"></script>
+
 <!-- Compiled and minified JavaScript -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    </body>
-  </html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+</body>
+</html>
