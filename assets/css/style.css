@@ -47,18 +47,6 @@
   text-align: center;
   width: 480px;
 }
-
-.cuisine-sel {
-  background-color: rgba(255, 255, 255, 0.5);
-  border: 1px solid #ee6e73;
-  color: #ee6e73;
-  display: none;
-  font-size: 34px;
-  height: 1200px;
-  width: 1200px;
-  margin: 0;
-  padding: 0;
-}
   .cuisine-sel option p {
     text-align: center;
   }
@@ -71,7 +59,7 @@
   height: 70px;
   width: 500px;
   padding: 0;
-  margin; 0;
+  margin: 0;
 }
 
 .price-col {
