@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <!--Linking Leaflet CSS-->
-    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
-    <!--Linking Leaflet Java-->
-    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <!--Linking Leaflet-->
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
 
     <style>
     body {
@@ -122,30 +122,173 @@
         </div>
         <div class="col s3"></div>
     </div>
-
-
-    <div id="map"></div>
-
+    
+    <div id='map'></div>
     <script>
-        var map = L.map('map',{
-        center: [38.9094011,-77.0321500],
-        zoom: 15
-        });
-       
-        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
+    mapboxgl.accessToken = 'pk.eyJ1IjoiY2hydXN0IiwiYSI6ImNqZHE2NmlpcDBuZ2YyeHFsMGw4cWlubHQifQ.yVPR_ekkoTim3eEElQt76w';
+    var map = new mapboxgl.Map({
+    style: 'mapbox://styles/mapbox/light-v9',
+    center: [-77.02, 38.89],
+    zoom: 15.5,
+    pitch: 60,
+    bearing: -17.6,
+    hash: true,
+    container: 'map'
+    });
 
-        L.tileLayer.wms("http://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r.cgi", {
-    	layers: 'nexrad-n0r-900913',
-        format: 'image/png',
-        transparent: true,
-        attribution: "Weather data © 2012 IEM Nexrad"
-        }).addTo(map);
+    // The 'building' layer in the mapbox-streets vector source contains building-height
+    // data from OpenStreetMap.
+    map.on('load', function() {
+    // Insert the layer beneath any symbol layer.
+    var layers = map.getStyle().layers;
 
-        var marker = L.marker([38.9094011,-77.0321500]).addTo(map);
+    var labelLayerId;
+    for (var i = 0; i < layers.length; i++) {
+        if (layers[i].type === 'symbol' && layers[i].layout['text-field']) {
+            labelLayerId = layers[i].id;
+            break;
+        }
+    }
+
+    map.addLayer({
+        'id': '3d-buildings',
+        'source': 'composite',
+        'source-layer': 'building',
+        'filter': ['==', 'extrude', 'true'],
+        'type': 'fill-extrusion',
+        'minzoom': 15,
+        'paint': {
+            'fill-extrusion-color': '#aaa',
+
+            // use an 'interpolate' expression to add a smooth transition effect to the
+            // buildings as the user zooms in
+            'fill-extrusion-height': [
+                "interpolate", ["linear"], ["zoom"],
+                15, 0,
+                15.05, ["get", "height"]
+            ],
+            'fill-extrusion-base': [
+                "interpolate", ["linear"], ["zoom"],
+                15, 0,
+                15.05, ["get", "min_height"]
+            ],
+            'fill-extrusion-opacity': .6
+        }
+    }, labelLayerId);
+    });
+    //End of 3D Extrapulation//
+
+    //Beginning Icon Di//
+    map.on('load', function () {
+    // Add a layer showing the places.
+    map.addLayer({
+        "id": "places",
+        "type": "symbol",
+        "source": {
+            "type": "geojson",
+            "data": {
+                "type": "FeatureCollection",
+                "features": [{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Madam's Organ</strong><p><a href=\"http://www.madamsorgan.com/menu.html\" target=\"_blank\" title=\"Opens in a new window\">Madams Organ</a> Lively blues bar offers comfort food & drinks in mason jars along with music, dancing & a roof deck.</p>",
+                        "icon": "music"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-77.0421372,38.922032]
+                    }
+                }, {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Johnny's Half Shell</strong><p><a href=\"https://www.johnnyshalfshell.net/menu\" target=\"_blank\" title=\"Opens in a new window\">Johnny's Half Shell</a> Fried oysters, gumbo & chef-y seafood dishes in warm surrounds with a sociable bar & maritime feel.</p>",
+                        "icon": "bar"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-77.0435031,38.9218514]
+                    }
+                }, {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Smoke and Barrel</strong><p><a href=\"https://smokeandbarreldc.com/menu/\" target=\"_blank\" title=\"Opens in a new window\">Smoke and Barrel</a> Barbecue chow with vegan options & a rotating beer list with rare brews in a dramatic space.</p>",
+                        "icon": "bar"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-77.0422128,38.9223012]
+                    }
+                }, {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Roofers Union</strong><p><a href=\"https://roofersuniondc.com/dinner-menu/\" target=\"_blank\" title=\"Opens in a new window\">Roofers Union</a> Unique American fare & craft cocktails draw fans to this rustic, 3-story tavern with rooftop views.</p>",
+                        "icon": "bar"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-77.0427305,38.9218512]
+                    }
+                }, {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Shenanign's Irish Pub</strong><p><a href=\"http://www.shenaniganspubdc.com/menu\" target=\"_blank\" title=\"Opens in a new window\">Shenanign's Irish Pub</a> Bi-level game day spot doling out burgers, sandwiches & other pub fare, plus many Irish beers.</p>",
+                        "icon": "bar"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-77.04266433, 38.92193781]
+                    }
+                
+                }]
+            }
+        },
+        "layout": {
+            "icon-image": "{icon}-15",
+            "icon-allow-overlap": true
+        }
+    });
+
+    // When a click event occurs on a feature in the places layer, open a popup at the
+    // location of the feature, with description HTML from its properties.
+    map.on('click', 'places', function (e) {
+        var coordinates = e.features[0].geometry.coordinates.slice();
+        var description = e.features[0].properties.description;
+
+        // Ensure that if the map is zoomed out such that multiple
+        // copies of the feature are visible, the popup appears
+        // over the copy being pointed to.
+        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+        }
+
+        new mapboxgl.Popup()
+            .setLngLat(coordinates)
+            .setHTML(description)
+            .addTo(map);
+    });
+
+    // Change the cursor to a pointer when the mouse is over the places layer.
+    map.on('mouseenter', 'places', function () {
+        map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'places', function () {
+        map.getCanvas().style.cursor = '';
+    });
+    });
+
+    //Shows Neighborhood Circle//
+    var circle = L.circle([51.508, -0.11], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 500
+    }).addTo(mymap);
+
     </script>
-    <br><br><br>
+    
+
 </div>
 
 
