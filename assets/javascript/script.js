@@ -160,6 +160,7 @@ var animateBoozeIcons = function(){
 animateBoozeIcons();
 
 // hide theses select element until on of the booze icons, cuisine selected, neighborhood selected and price points are clicked
+$(".booze-wrapper").hide();
 $(".booze-row").hide();
 $("#choose-your-booze-row").hide();
 
@@ -191,6 +192,7 @@ $("#wine-btn").click(function(){
 $( "#neighborhood-selector" ).change(function () {
   $( "select option:selected" ).each(function() {
     $(".neighborhood-sel-row").hide();
+    $(".booze-wrapper").show();
     $(".booze-row").show();
     $("#choose-your-booze-row").show();
     $("#cyb").show();

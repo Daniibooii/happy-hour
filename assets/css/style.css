@@ -3,6 +3,10 @@
  /*-------------------------*/
 
  body {
+   font-family: 'Oxygen', sans-serif;
+ }
+
+ #indexBody {
    background-image: url(../images/yellowbackground.jpg);
    background-position: center;
    background-size: cover;
@@ -19,8 +23,9 @@
    font-size: 64px;
  }
 
+
 .booze-row {
-  margin-top: 200px;
+  margin-top: 10%;
   margin-bottom: 80px;
 }
 
@@ -47,6 +52,8 @@
   font-weight: bold;
   text-align: center;
   text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+  margin: 0 0 50px 0;
+  padding: 0;
 }
 
 .neighborhood-sel-row {
@@ -59,8 +66,6 @@
   color: #ee6e73;
   font-size: 34px;
   height: 100px;
-  padding: 0;
-  margin: 0;
 }
 
 
@@ -105,6 +110,7 @@ position: relative;
   height: 200px;
 }
 
+/*  start of @media query for smaller screen and phone sizes  */
 @media  only screen and (max-width: 375px) {
 
   .brand-logo{
@@ -117,11 +123,8 @@ position: relative;
   }
 
   .booze-instruction p {
-    color: white;
     font-size: 34px;
-    padding-left: 22px;
     text-align: center;
-    text-outline: 2px 2px black;
   }
 
   .booze-row {
@@ -130,9 +133,14 @@ position: relative;
     margin-left: 7px;
   }
 
+  .neighborhood-selector {
+    font-size: 17px;
+  }
+
 }
 /* end of @media for max width 375px for iphone 7 or less */
 
+/* @media for iphones 8-10 portrait mode */
 @media only screen and  (min-width: 376px) and (max-width: 414px){
 
   .brand-logo{
@@ -145,9 +153,7 @@ position: relative;
   }
 
   .booze-instruction p {
-    color: white;
     font-size: 38px;
-    padding-left: 26px;
     text-align: center;
   }
 
@@ -157,9 +163,29 @@ position: relative;
     margin-left: 7px;
   }
 
-  #choose-your-booze-row {
-    padding: 0;
+  .neighborhood-selector {
+    font-size: 17px;
   }
 
 }
   /* end of @media for min 375 max 414 for iphones 8-10 */
+
+/* @media for ipads portrait mode */
+@media only screen and  (min-width: 415px) and (max-width: 812px){
+
+  .booze-row {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+
+}
+
+/*  @media for ipads landscape modes*/
+@media only screen and  (min-width: 813px) and (max-width: 1366px){
+
+  .booze-row {
+    margin-top: 200px;
+    margin-bottom: 80px;
+  }
+
+}
