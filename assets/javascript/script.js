@@ -34,7 +34,7 @@ var hanksDP = {listing: 16,name: "Hank's Oysters DuPont",location:"duPont",foodT
 var firefly = {listing: 17,name: "Firefly",location:"duPont",foodType: "american",price:"$$$",cocktail: true,beer: true,wine: true};
 var sette = {listing: 18,name: "Sette Osteria",location:"duPont",foodType: "italian",price: "$$",cocktail: true,beer: true,wine: true};
 var beacon = {listing: 19,name: "Beacon Bar & Grill",location:"duPont",foodType: "american",price: "$$",cocktail: true,beer: true,wine: true};
-=======
+
 // Data handling and sorting
 // Declare restaurant objects
 //GEORGETOWN
@@ -62,8 +62,8 @@ var firefly = {listing: 17,name: "Firefly",location:"duPont",foodType: "American
 var sette = {listing: 18,name: "Sette Osteria",location:"duPont",foodType: "Italian",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.setteosteria.com/dupont-menu.html"};
 var beacon = {listing: 19,name: "Beacon Bar & Grill",location:"duPont",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://bbgwdc.com/happy-hour-bar-menu/"};
 
-  // separate 
-  
+  // separate
+
 // SOUTHWEST WATERFRONT
 var hanksSW = {listing: 20,name: "Hank's Oysters Waterfront",location:"wharf",foodType: "Seafood",price: "$$",cocktail: true,beer: true,wine:true,source:"https://hanksoysterbar.com/the-wharf/menus/"};
 var jennys = {listing: 21,name: "Jenny's at the Wharf",location:"wharf",foodType: "Asian",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.jennysdc.com/media/docs/JennysMenuMay2015.pdf"};
@@ -107,14 +107,14 @@ var mrHenrys = {listing: 52,name: "Mr. Henry's",location:"eastMkt",foodType: "Am
 var radici = {listing: 53,name: "Radici",location:"eastMkt",foodType: "Italian",price: "$$",cocktail: false,beer: true,wine: true,source:"http://www.radici-market.com/pranzo-lunch/"};
 var uglyMug = {listing: 54,name: "The Ugly Mug",location:"eastMkt",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.uglymugdc.com/food-drink/"};
 // COLUMBIA HEIGHTS
-  
-  /// review 
+
+  /// review
 var bravo = {listing: 55,name: "BravoBar",location:"coHi",foodType: "american",price: "$$",cocktail: true,beer: true,wine: true};
 var celticHouse = {listing: 56,name: "The Celtic House",location:"coHi",foodType: "irish",price: "$$",cocktail: false,beer: true,wine: false};
 var elChucho = {listing: 57,name: "El Chucho",location:"coHi",foodType: "mexican",price: "$$",cocktail: true,beer: true,wine: false};
 var theHeights = {listing: 58,name: "The Heights",location:"coHi",foodType: "american",price: "$$",cocktail: true,beer: true,wine: true};
 var wonderland = {listing: 59,name: "Wonderland Ballroom",location:"coHi",foodType: "american",price: "$$",cocktail: true,beer: true,wine: true};
-// review 
+// review
 var bravo = {listing: 55,name: "BravoBar",location:"coHi",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"https://www.facebook.com/Bravo-Bar-247126958778878/"};
 var theCoupe = {listing: 56,name: "The Coupe",location:"coHi",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.thecoupedc.com/menudinner/happy-hour/"};
 var elChucho = {listing: 57,name: "El Chucho",location:"coHi",foodType: "mexican",price: "$$",cocktail: true,beer: true,wine: false,source:"https://www.elchuchodc.com/"};
@@ -200,11 +200,8 @@ var animateBoozeIcons = function(){
 animateBoozeIcons();
 
 // hide theses select element until on of the booze icons, cuisine selected, neighborhood selected and price points are clicked
-$("#neighborhood-name").hide();
 $(".booze-row").hide();
 $("#choose-your-booze-row").hide();
-$("#results-row").hide();
-$(".results-modal").hide();
 
 
 

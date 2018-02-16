@@ -46,7 +46,7 @@
   font-size: 60px;
   font-weight: bold;
   text-align: center;
-  text-shadow: 2px 2px rgba(255, 217, 0, 0.5);
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 .neighborhood-sel-row {
@@ -158,7 +158,7 @@ position: relative;
   }
 
   #choose-your-booze-row {
-    padding: 0; 
+    padding: 0;
   }
 
 }
