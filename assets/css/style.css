@@ -10,27 +10,41 @@
    font-family: sans-serif;
    height: 100vh;
  }
-
+.resultBox{
+  /* background-color: #ee6e73; */
+  background-image: url("../images/bar-background.jpg");
+  background-position: center;
+  margin-top: 15px;
+  color: whitesmoke;
+  line-height: 150%;
+  text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
+  font-weight:600;
+  text-shadow: 0px 0px 3px #000;
+}
+#locationBanner{
+  margin-top: 30px;
+  color: #ee6e73;
+  font-size: 3em;
+  font-weight: 500;
+}
+#resetBtn{
+  background-color: #ee6e73;
+}
  /* min css for LetterFX */
  .letterfx{display:inline-block;margin:0;padding:0;transition:all 1s;-ms-transition:all 1s;-webkit-transition:all 1s}.letterfx-spin-before{transform:rotate(3600deg);-ms-transform:rotate(3600deg);-webkit-transform:rotate(3600deg)}.letterfx-spin-after{transform:none}.letterfx-fade-before{opacity:0}.letterfx-grow-before{transform:scale(0,0);-ms-transform:scale(0,0);-webkit-transform:scale(0,0)}.letterfx-grow-after{transform:none}.letterfx-smear-before{color:transparent;text-shadow:-1px -1px 25px transparent}.letterfx-smear-after{color:inherit;text-shadow:0 0 #333}.letterfx-fall-before{visibility:hidden;transform:scale(3,3);-ms-transform:scale(3,3);-webkit-transform:scale(3,3)}.letterfx-fall-after{transform:scale(1,1);-ms-transform:scale(1,1);-webkit-transform:scale(1,1);text-shadow:0}.letterfx-swirl-before{visibility:hidden;transform:scale(3,3) rotate(3600deg);-ms-transform:scale(3,3) rotate(3600deg);-webkit-transform:scale(3,3) rotate(3600deg)}.letterfx-swirl-after{transform:none text-shadow:0}.letterfx-wave-container .letterfx{position:relative}.letterfx-wave-before{bottom:0}.letterfx-wave-after{bottom:15px}.letterfx-fly-left-container .letterfx,.letterfx-fly-right-container .letterfx,.letterfx-fly-top-container .letterfx,.letterfx-fly-bottom-container .letterfx{position:relative}.letterfx-fly-left-before{left:-50em}.letterfx-fly-left-after{left:0}.letterfx-fly-right-before{right:-50em}.letterfx-fly-right-after{right:0}.letterfx-fly-top-before{top:-20em}.letterfx-fly-top-after{top:0}.letterfx-fly-bottom-before{bottom:-20em}.letterfx-fly-bottom-after{bottom:0}
-
-
  .five-oclock {
    font-size: 64px;
  }
-
 .booze-row {
   margin-top: 200px;
   margin-bottom: 80px;
 }
-
 .booze-icon-col {
   display: flex;
   justify-content: space-around;
   margin: 0;
   padding: 0;
 }
-
 .booze-btn {
   background-color: transparent;
   border: none;
@@ -40,7 +54,6 @@
   height: 200px;
   width: 200px;
 }
-
 .booze-instruction p {
   color: #ee6e73;
   font-size: 60px;
@@ -48,11 +61,9 @@
   text-align: center;
   text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
 }
-
 .neighborhood-sel-row {
   height: 80vh;
 }
-
 .neighborhood-selector {
   background-color: rgba(255, 255, 255, 0.3);
   border: 1px solid #ee6e73;
@@ -62,49 +73,36 @@
   padding: 0;
   margin: 0;
 }
-
-
 .browser-default option {
   text-align: center;
 }
-
-
-//////////////////////////////////////
-
-
 .nav-wrapper {
   z-index: 1;
 }
-
 .resultsImages {
   width: 150px;
   height: 100%;
   vertical-align: middle;
   float: left;
 }
-
 .resultsInfo {
 width: 400px;
 height: 200px;
 padding-right: 10px;
 padding-top: 10px;
 }
-
 .resultsCol1 {
 position: relative;
 }
-
 .resultsCol2 {
 position: relative;
 }
-
 .resultsBox {
   margin-bottom: 10px;
   margin-top: 10px;
   width: 100%;
   height: 200px;
 }
-
 @media  only screen and (max-width: 375px) {
 
   .brand-logo{

@@ -20,9 +20,9 @@
       </nav>
         <div class="row booze-row valign-wrapper">
           <div class="col m10 offset-m1 booze-icon-col center-align" >
-            <button id="cocktail-btn"  class="booze-btn" type="button" name="cocktail-button" value="cocktail"> <img src="assets/images/cocktail-pink-circle.png" alt="cocktail logo"> </button>
-            <button id="beer-btn"  class="booze-btn" type="button" name="beer-button" value="beer"> <img src="assets/images/beer-red-circle.png" alt="beer logo" > </button>
-            <button id="wine-btn"  class="booze-btn" type="button" name="wine-button" value="wine"> <img src="assets/images/wine-blue-circle.png" alt="wine logo"> </button>
+            <button id="cocktail-btn" class="booze-btn" type="button" name="cocktail-button" value="cocktail"> <img src="assets/images/cocktail-pink-circle.png" alt="cocktail logo"> </button>
+            <button id="beer-btn" class="booze-btn" type="button" name="beer-button" value="beer"> <img src="assets/images/beer-red-circle.png" alt="beer logo" > </button>
+            <button id="wine-btn" class="booze-btn" type="button" name="wine-button" value="wine"> <img src="assets/images/wine-blue-circle.png" alt="wine logo"> </button>
           </div>
         </div>
         <div id="choose-your-booze-row" class="row center-align">
@@ -36,21 +36,33 @@
             <!-- <label>Browser Select</label> -->
             <select id="neighborhood-selector" class="browser-default neighborhood-selector">
               <option value="" disabled selected>Choose Your Hood</option>
-              <option id="selectAdmo" value="adMo">Adams Morgan</option>
-              <option id="selectCapHill" value="capHill">Capital Hill</option>
-              <option id="selectCoHi" value="coHi">Columbia Heights</option>
-              <option id="selectDupont" value="duPont">Dupont Circle</option>
-              <option id="selecteastMart" value="eastMkt">Eastern Market</option>
-              <option id="selectFriendship" value="friendship">Friendship Heights / Tenley Town</option>
-              <option id="selectGTown" value="georgetown">Georgetown</option>
-              <option id="selectHSt" value="hstreet">H Street</option>
-              <option id="selectLogan" value="logan">Logan Circle</option>
-              <option id="selectPetworth" value="petworth">Petworth</option>
-              <option id="selectShaw" value="shaw">Shaw / U Street</option>
-              <option id="selectWaterfront" value="wharf">Southwest / Waterfront</option>
+              <option id="selectAdmo" value="Adam's Morgan">Adams Morgan</option>
+              <option id="selectCapHill" value="Capitol Hill">Capitol Hill</option>
+              <option id="selectCoHi" value="Columbia Heights">Columbia Heights</option>
+              <option id="selectDupont" value="DuPont Circle">Dupont Circle</option>
+              <option id="selecteastMart" value="Eastern Market">Eastern Market</option>
+              <option id="selectFriendship" value="Friendship/Tenleytown">Friendship Heights / Tenleytown</option>
+              <option id="selectGTown" value="Georgetown">Georgetown</option>
+              <option id="selectHSt" value="H. Street">H Street</option>
+              <option id="selectLogan" value="Logan Circle">Logan Circle</option>
+              <option id="selectPetworth" value="Petworth">Petworth</option>
+              <option id="selectShaw" value="Shaw/U. Street">Shaw / U Street</option>
+              <option id="selectWaterfront" value="Southwest Waterfront">Southwest Waterfront</option>
             </select>
           </div>
         </div>
+        <div id ="locationBanner"class="row result-row center-align">
+
+        </div>
+        <div class="row result-row">
+          <div class="resultBox col m6 offset-m3 flow-text center-align"></div>
+        </div>
+
+        <div class="valign-wrapper row result-row">
+          <button class="waves-effect waves-light btn center-align col m2 offset-m5 pulse" id="resetBtn" type="button">Choose again?</button>
+        </div>  
+
+        <div id="map"></div>
 
 
 
