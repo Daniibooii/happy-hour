@@ -1,6 +1,7 @@
 <!DOCTYPE html>
  <html>
    <head>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
      <!--Import Google Icon Font-->
      <link rel="stylesheet" href="assets/css/reset.css">
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -17,52 +18,24 @@
           <center class="brand-logo center five-oclock" href="index.html">It's Five O'Clock</center>
         </div>
       </nav>
-       <div class="container main-index-container">
-        <div class="row booze-row">
-          <div class="col m3"></div>
-          <div class="col m6 booze-icon-col center-align" align=center>
+        <div class="row booze-row valign-wrapper">
+          <div class="col m10 offset-m1 booze-icon-col center-align" >
             <button id="cocktail-btn"  class="booze-btn" type="button" name="cocktail-button" value="cocktail"> <img src="assets/images/cocktail-pink-circle.png" alt="cocktail logo"> </button>
             <button id="beer-btn"  class="booze-btn" type="button" name="beer-button" value="beer"> <img src="assets/images/beer-red-circle.png" alt="beer logo" > </button>
             <button id="wine-btn"  class="booze-btn" type="button" name="wine-button" value="wine"> <img src="assets/images/wine-blue-circle.png" alt="wine logo"> </button>
           </div>
-          <div class="col m3"></div>
         </div>
         <div id="choose-your-booze-row" class="row center-align">
-          <div class="col m3"></div>
-          <div class="col m6 booze-instruction">
+          <div class="col m10 offset-m1 booze-instruction">
             <p id="cyb" class="center-align">Choose Your Booze</p>
           </div>
-          <!-- <div class="col m3"></div> -->
         </div>
-        <div class="row food-sel-row">
-          <div class="col m3"></div>
-          <div class="col selector-col m6">
+
+        <div class="row neighborhood-sel-row valign-wrapper">
+          <div class="col m10 offset-m1 center-align ">
             <!-- <label>Browser Select</label> -->
-            <select id="cuisine-selector" class="browser-default cuisine-sel">
-              <option value="" disabled selected><p>Choose your cuisine</p></option>
-              <option  id="selectAsian" value="Asian">Asian</option>
-              <option id="selectAmerican" value="american">American</option>
-              <option id="selectEuropean" value="european">European</option>
-              <!-- <option id="selectFrench" value="french">French</option> -->
-              <!-- <option id="selectHealth" value="health">Health Food</option> -->
-              <!-- <option id="selectIndian" value="indian">Indian</option> -->
-              <option id="selectIrish" value="irish">Irish</option>
-              <option id="selectItalian" value="italian">Italian</option>
-              <option id="selectMexican" value="mexican">Mexican</option>
-              <option id="selectSeafood" value="seafood">Seafood</option>
-              <!-- <option id="selectSpanish" value="spanish">Spanish / Tapas</option> -->
-              <option id="selectSouthern" value="southern">Southern / Soul Food</option>
-              <!-- <option id="selectVegetarian" value="vegetarian">Vegetarian / Vegan</option> -->
-            </select>
-          </div>
-          <div class="col m3"></div>
-        </div>
-        <div class="row neighborhood-sel-row">
-          <div class="col m3"></div>
-          <div class="col m6">
-            <!-- <label>Browser Select</label> -->
-            <select id="neighborhood-selector" class="browser-default neighborhood-sel">
-              <option value="" disabled selected>Choose your neighborhood</option>
+            <select id="neighborhood-selector" class="browser-default neighborhood-selector">
+              <option value="" disabled selected>Choose Your Hood</option>
               <option id="selectAdmo" value="adMo">Adams Morgan</option>
               <option id="selectCapHill" value="capHill">Capital Hill</option>
               <option id="selectCoHi" value="coHi">Columbia Heights</option>
@@ -77,27 +50,7 @@
               <option id="selectWaterfront" value="wharf">Southwest / Waterfront</option>
             </select>
           </div>
-          <div class="col m3"></div>
         </div>
-        <div id="price-row" class="row">
-          <!-- <div class="col m3"></div>
-          <div class="col m6 price-col">
-            <button id="one-dollar-sign-btn" class="price-point-btn" type="button" name="one-dollar-button"> <img src="assets/images/one-dollar-sign.png" alt="dollar sign gif"> </button>
-            <button id="two-dollar-signs-btn" class="price-point-btn" type="button" name="two-dollar-button"> <img src="assets/images/two-dollar-signs.png" alt="dollar sign gif"> </button>
-            <button id="three-dollar-signs-btn" class="price-point-btn" type="button" name="three-dollar-button"> <img src="assets/images/three-dollar-signs.png" alt="dollar sign gif"> </button>
-          </div>
-          <div class="col m3"></div> -->
-          <div class ="resultBox"></div>
-        </div>
-        <div id="submit-row" class="row submit-row">
-          <div class="col m3"></div>
-          <div class="col m6 submit-col">
-            <button id="get-restaurant-list" class="btn list-btn" type="submit" name="action">Choose<br>From<br>List</button>
-            <button id="get-random-result" class="btn random-btn" type="submit" name="action">Get<br>Random<br>Result</button>
-        </div>
-       </div>
-
-
 
 
 
@@ -106,33 +59,7 @@
      <!-- Compiled and minified JavaScript -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
      <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
-      <script>
-        // Initialize Firebase
-        // TODO: Replace with your project's customized code snippet
-        var config = {
-          apiKey: "<API_KEY>",
-          authDomain: "<PROJECT_ID>.firebaseapp.com",
-          databaseURL: "https://<DATABASE_NAME>.firebaseio.com",
-          storageBucket: "<BUCKET>.appspot.com",
-          messagingSenderId: "<SENDER_ID>",
-        };
-        firebase.initializeApp(config);
-      </script>
-      <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-app.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-auth.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-database.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-firestore.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-messaging.js"></script>
 
-      <!-- Leave out Storage -->
-      <!-- <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-storage.js"></script> -->
-
-      <script>
-        var config = {
-          // ...
-        };
-        firebase.initializeApp(config);
-      </script>
      <script type="text/javascript" src="assets/javascript/script.js"></script>
    </body>
  </html>

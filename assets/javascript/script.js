@@ -1,31 +1,42 @@
 $(document).ready(function(){
 // JAVASCRIPT FOR HAPPY HOUR PROJECT
 
+
+// Initialize materialize select javascript
+$('select').material_select();
+// Initialize materialize modal javascript
+ $('.modal').modal();
+
+ // min js for text animation LetterFX
+ (function($){"use strict";var LetterFx=function(element,options){this.options=$.extend({},$.fn.letterfx.defaults,options);this.num_completed_fx=0;this.is_done=false;this.monitor_timer=null;this.killswitch=null;this.$element=$(element);if(this.options.restore)this.original_html=this.$element.html();this.init()};LetterFx.prototype.init=function(){this.new_html=this.$element.text().replace(this.options.pattern,this.options.replacement);this.$element.addClass(this.options.css.element.base).addClass(this.options.css.element.before);this.$element.html(this.new_html);this.$letters=this.$element.find(this.options.selector);this.$letters.css("transition-duration",this.options.fx_duration).addClass(this.options.css.letters.base).addClass(this.options.css.letters.before);this.bindLetterFxEnd();this.num_letters=this.$letters.length;this.fx();return this};LetterFx.prototype.bindLetterFxEnd=function(){var options=this.options;var lfx=this;this.$letters.bind("transitionend",function(){options.onLetterComplete($(this),lfx.$element,lfx);lfx.notifyFXEnd();switch(options.letter_end){case"destroy":$(this).remove();break;case"rewind":lfx.applyLetterFx($(this),options.timing,options.css.letters.after,options.css.letters.before);break;case"stay":break;default:$(this).replaceWith($(this).text())}});return lfx};LetterFx.prototype.terminate=function(){this.is_done=true;this.options.onElementComplete(this.$element,this);clearTimeout(this.killswitch);switch(this.options.element_end){case"destroy":this.$element.remove();break;case"stay":break;default:this.$element.html(this.original_html);this.$element.removeClass(this.options.css.element.base).removeClass(this.options.css.element.after);break}};LetterFx.prototype.notifyFXEnd=function(){clearTimeout(this.monitor_timer);this.num_completed_fx++;var lfx=this;this.monitor_timer=setTimeout(function(){if(lfx.num_completed_fx%lfx.num_letters===0){lfx.terminate()}},Math.max(this.options.timing+10,50));return this};LetterFx.prototype.startKillWatch=function(){var fx_duration=this.options.fx_duration.match(/\d+s/)?parseInt(this.options.fx_duration):1;var time=Math.ceil(1.5*this.num_letters*this.options.timing*fx_duration);var lfx=this;this.killswitch=window.setTimeout(function(){if(!lfx.isDone()){lfx.terminate()}},time)};LetterFx.prototype.fx=function(){var lfx=this;this.startKillWatch();this.$element.removeClass(this.options.css.element.before).addClass(this.options.css.element.after);var $letters=this.options.sort(this.$letters);var options=this.options;$letters.each(function(i,letter){lfx.applyLetterFx($(letter),(i+1)*options.timing,options.css.letters.before,options.css.letters.after)});return this};LetterFx.prototype.applyLetterFx=function($letter,timing,css_before,css_after){var options=this.options;window.setTimeout(function(){$letter.removeClass(css_before).addClass(css_after)},timing);return this};LetterFx.prototype.isDone=function(){return this.is_done};var LetterFxConfig=function(conf){this.config=$.extend({},$.fn.letterfx.defaults,conf);this.buildCss(this.config.backwards);if(this.config.words)this.config.pattern=/(\S+)/g};LetterFxConfig.prototype.buildCss=function(flip){var options=this.config;var before=flip?"after":"before";var after=flip?"before":"after";var css={element:{},letters:{}};css.element.base=options.element_class+"-container "+options.fx.replace(/(\S+)/g,options.element_class+"-$1-container");css.element[before]=options.fx.replace(/(\S+)/g,options.element_class+"-$1-before-container");css.element[after]=options.fx.replace(/(\S+)/g,options.element_class+"-$1-after-container");css.letters.base=options.element_class;css.letters[before]=options.fx.replace(/(\S+)/g,options.element_class+"-$1-before");css.letters[after]=options.fx.replace(/(\S+)/g,options.element_class+"-$1-after");this.config=$.extend(options,{css:css})};LetterFxConfig.prototype.getConfig=function(){return this.config};LetterFxConfig.parse=function(config){return new LetterFxConfig(config).getConfig()};$.fn.letterfx=function(config){config=LetterFxConfig.parse(config);return $(this).each(function(){var $element=$(this);if(!$element.data("letterfx-obj")||$element.data("letterfx-obj").isDone()){$element.data("letterfx-obj",new LetterFx($element,config))}})};$.fn.letterfx.sort={random:function(array){var currentIndex=array.length,temporaryValue,randomIndex;while(0!==currentIndex){randomIndex=Math.floor(Math.random()*currentIndex);currentIndex-=1;temporaryValue=array[currentIndex];array[currentIndex]=array[randomIndex];array[randomIndex]=temporaryValue}return array},reverse:function($array){return $array.toArray().reverse()}};$.fn.letterfx.patterns={letters:/(\S)/gi};$.fn.letterfx.defaults={fx:"spin fly-top",pattern:/(\S)/gi,word:false,backwards:false,replacement:"<span>$1</span>",selector:"span",timing:50,fx_duration:"1s",sort:function($letters){return $letters},onLetterComplete:function($letter,$element,LetterFXObj){},onElementComplete:function($element,LetterFXObj){},letter_end:"restore",element_end:"restore",restore:true,destroy:false,element_class:"letterfx",css:{element:{base:"",before:"",after:""},letters:{base:"",before:"",after:""}}}})(jQuery);
+
+
+
 // Declare restaurant objects
 //GEORGETOWN
 var jPauls = {listing: 0,name: "J. Pauls", location: "georgetown",foodType: "american",price: "$$",cocktail: true,beer: true,wine: true};
-var paradiso = {listing: 1,name: "Pizzeria Paradiso",location:"georgetown",foodType: "italian",price: "$$",cocktail: false,beer: true,wine: true};	
-var oldGlory = {listing: 2,name: "Old Glory BBQ",location:"georgetown",foodType: "southern",price: "$$",cocktail: true,beer: true,wine: true};	
-var sovereign = {listing: 3,name: "The Sovereign",location:"georgetown",foodType: "european",price: "$$",cocktail: true,beer: true,wine: true};	
-var theTombs = {listing: 4,name: "The Tombs",location:"georgetown",foodType: "american",price: "$",cocktail: false,beer: true,wine: true};	
+var paradiso = {listing: 1,name: "Pizzeria Paradiso",location:"georgetown",foodType: "italian",price: "$$",cocktail: false,beer: true,wine: true};
+var oldGlory = {listing: 2,name: "Old Glory BBQ",location:"georgetown",foodType: "southern",price: "$$",cocktail: true,beer: true,wine: true};
+var sovereign = {listing: 3,name: "The Sovereign",location:"georgetown",foodType: "european",price: "$$",cocktail: true,beer: true,wine: true};
+var theTombs = {listing: 4,name: "The Tombs",location:"georgetown",foodType: "american",price: "$",cocktail: false,beer: true,wine: true};
 // FRIENDSHIP-TENLEYTOWN
-var chefGeoffs = {listing: 5,name: "Chef Geoff's",location:"friendship",foodType: "american",price: "$$",cocktail: true,beer: true,wine: true};	
+var chefGeoffs = {listing: 5,name: "Chef Geoff's",location:"friendship",foodType: "american",price: "$$",cocktail: true,beer: true,wine: true};
 var chatter = {listing: 6,name: "Chatter",location:"friendship",foodType: "american",price: "$$",cocktail: true,beer: true,wine: true};
-var casaLuca = {listing: 7,name: "Casa Luca",location:"friendship",foodType: "italian",price: "$$",cocktail: true,beer: true,wine: true};	
-var frontPage = {listing: 8,name: "Front Page DC",location:"friendship",foodType: "american",price: "$$",cocktail: true,beer: true,wine: true};	
-var yosaku = {listing: 9,name: "Yosaku Japanese",location:"friendship",foodType: "asian",price: "$$",cocktail: true,beer: true,wine: true};	
+var casaLuca = {listing: 7,name: "Casa Luca",location:"friendship",foodType: "italian",price: "$$",cocktail: true,beer: true,wine: true};
+var frontPage = {listing: 8,name: "Front Page DC",location:"friendship",foodType: "american",price: "$$",cocktail: true,beer: true,wine: true};
+var yosaku = {listing: 9,name: "Yosaku Japanese",location:"friendship",foodType: "asian",price: "$$",cocktail: true,beer: true,wine: true};
 // ADAM'S MORGAN
-var madamsOrgan = {listing: 10,name: "Madam's Organ",location:"adMo",foodType: "southern",price: "$$",cocktail: true,beer: true,wine: true};	
-var johnnys = {listing: 11,name: "Johnny's Half Shell",location:"adMo",foodType: "seafood",price: "$$",cocktail: true,beer: true,wine: true};	
+var madamsOrgan = {listing: 10,name: "Madam's Organ",location:"adMo",foodType: "southern",price: "$$",cocktail: true,beer: true,wine: true};
+var johnnys = {listing: 11,name: "Johnny's Half Shell",location:"adMo",foodType: "seafood",price: "$$",cocktail: true,beer: true,wine: true};
 var smokeBarrel = {listing: 12,name: "Madam's Organ",location:"adMo",foodType: "southern",price: "$$",cocktail: true,beer: true,wine: false};
-var roofers = {listing: 13,name: "Roofer's Union",location:"adMo",foodType: "american",price:"$$$",cocktail: true,beer: true,wine: true};	
-var shenanigans = {listing: 14,name: "Shenanigan's Irish Pub",location:"adMo",foodType: "irish",price: "$$",cocktail: true,beer: true,wine: true};	
+var roofers = {listing: 13,name: "Roofer's Union",location:"adMo",foodType: "american",price:"$$$",cocktail: true,beer: true,wine: true};
+var shenanigans = {listing: 14,name: "Shenanigan's Irish Pub",location:"adMo",foodType: "irish",price: "$$",cocktail: true,beer: true,wine: true};
 // DUPONT CIRCLE
-var mission = {listing: 15,name: "Mission",location:"duPont",foodType: "mexican",price: "$$",cocktail: true,beer: true,wine: true};	
-var hanksDP = {listing: 16,name: "Hank's Oysters DuPont",location:"duPont",foodType: "seafood",price:"$$$",cocktail: true,beer: true,wine: true};	
+var mission = {listing: 15,name: "Mission",location:"duPont",foodType: "mexican",price: "$$",cocktail: true,beer: true,wine: true};
+var hanksDP = {listing: 16,name: "Hank's Oysters DuPont",location:"duPont",foodType: "seafood",price:"$$$",cocktail: true,beer: true,wine: true};
 var firefly = {listing: 17,name: "Firefly",location:"duPont",foodType: "american",price:"$$$",cocktail: true,beer: true,wine: true};
-var sette = {listing: 18,name: "Sette Osteria",location:"duPont",foodType: "italian",price: "$$",cocktail: true,beer: true,wine: true};	
-var beacon = {listing: 19,name: "Beacon Bar & Grill",location:"duPont",foodType: "american",price: "$$",cocktail: true,beer: true,wine: true};	
+var sette = {listing: 18,name: "Sette Osteria",location:"duPont",foodType: "italian",price: "$$",cocktail: true,beer: true,wine: true};
+var beacon = {listing: 19,name: "Beacon Bar & Grill",location:"duPont",foodType: "american",price: "$$",cocktail: true,beer: true,wine: true};
 // SOUTHWEST WATERFRONT
 var hanksSW = {listing: 20,name: "Hank's Oysters Waterfront",location:"wharf",foodType: "seafood",price: "$$",cocktail: true,beer: true,wine:true};
 var jennys = {listing: 21,name: "Jenny's at the Wharf",location:"wharf",foodType: "asian",price: "$$",cocktail: true,beer: true,wine: true};
@@ -75,7 +86,7 @@ var elChucho = {listing: 57,name: "El Chucho",location:"coHi",foodType: "mexican
 var theHeights = {listing: 58,name: "The Heights",location:"coHi",foodType: "american",price: "$$",cocktail: true,beer: true,wine: true};
 var wonderland = {listing: 59,name: "Wonderland Ballroom",location:"coHi",foodType: "american",price: "$$",cocktail: true,beer: true,wine: true};
 
-var venueArray = 
+var venueArray =
 [jPauls,paradiso,oldGlory,sovereign,theTombs,
 chefGeoffs, chatter, casaLuca, frontPage, yosaku,
 madamsOrgan, johnnys, smokeBarrel, roofers, shenanigans,
@@ -161,21 +172,25 @@ var userSelection = "";
 
 // to slide the booze icons in from the sides and top //
 var animateBoozeIcons = function(){
-  $("#cocktail-btn").css({right:-2000,position:'relative'});
-      $("#cocktail-btn").animate({left:0}, 1500);
-  $("#beer-btn").css({bottom:2000,position:'relative'});
-      $("#beer-btn").animate({top:0}, 1500);
+  $("#cocktail-btn").css({left:2000,position:'relative'});
+      $("#cocktail-btn").animate({left:0}, 1200);
+  $("#beer-btn").css({top:2000,position:'relative'});
+      $("#beer-btn").animate({top:0}, 1200);
   $("#wine-btn").css({right:2000,position:'relative'});
-      $("#wine-btn").animate({right:0}, 1500);
-  $('#cyb').animate({'font-size':'42px'}, 1800);
-} // end of animateZBoozeIcons functo=ion
+      $("#wine-btn").animate({right:0}, 1200);
+      $("#cyb").letterfx({"fx":"swirl fly_bottom","fly_bottom":"forward"});
+
+} // end of animateZBoozeIcons function
 animateBoozeIcons();
 
 // hide theses select element until on of the booze icons, cuisine selected, neighborhood selected and price points are clicked
-// $("#cuisine-selector").hide();
-// $("#neighborhood-selector").hide();
-// $("#price-row").hide();
-// $("#submit-row").hide();
+$("#neighborhood-name").hide();
+$(".booze-row").hide();
+$("#choose-your-booze-row").hide();
+$("#results-row").hide();
+$(".results-modal").hide();
+
+
 
 // this animates the cuisine selector on clicks of the Icons, hides the instruction to choose your booze //
 var afterChoosingBooze = function(){
@@ -201,68 +216,21 @@ $("#wine-btn").click(function(){
 //   afterChoosingBooze();
     $(".resultBox").empty();
     checkWine();
-});
+}); // end of booze choice on clicks
 
-// end of afterSelectingCuisine function
-
-// after choosing a cuisine, .show(); the neighborhood selector and animate from left;
-$( "#cuisine-selector" ).change(function () {
-  $( "select option:selected" ).each(function() {
-    $("#neighborhood-selector").show();
-    $("#neighborhood-selector").css({right:2000,position:'relative'});
-        $("#neighborhood-selector").animate({right:0}, 500);
-  })
-})
-
-$( "#cuisine-selector" ).change(function () {
-  $( "select option:selected" ).select(function() {
-  })
-})
-// register the selection for later comparison to our database
-var animatePriceIcons = function(){
-  $("#one-dollar-sign-btn").css({right:-2000,position:'relative'});
-      $("#one-dollar-sign-btn").animate({left:0}, 1500);
-  $("#two-dollar-signs-btn").css({bottom:-2000,position:'relative'});
-      $("#two-dollar-signs-btn").animate({top:0}, 1500);
-  $("#three-dollar-signs-btn").css({right:2000,position:'relative'});
-      $("#three-dollar-signs-btn").animate({right:0}, 1500);
-} // end of animateZBoozeIcons functo=ion
-animatePriceIcons();
 
 // after choosing a neighborhood, .show(); the price point icons and animate like the booze icons.
 $( "#neighborhood-selector" ).change(function () {
   $( "select option:selected" ).each(function() {
-    $("#price-row").show();
-    // animatePriceIcons();
+    $(".neighborhood-sel-row").hide();
+    $(".booze-row").show();
+    $("#choose-your-booze-row").show();
+    $("#cyb").show();
+    animateBoozeIcons();
   })
 })
 
-var afterChoosingPricePoint = function(){
 
-  $(".booze-row").hide();
-  $("#choose-your-booze-row").hide();
-  $(".food-sel-row").hide();
-  $("#cuisine-selector").hide();
-  $("#neighborhood-sel-row").hide();
-  $("#neighborhood-selector").hide();
-  $("#price-row").hide();
-  $("#submit-row").show();
-  $("#get-restaurant-list").css({bottom:-2000,position:'relative'});
-      $("#get-restaurant-list").animate({top:0}, 500);
-      $("#get-random-result").css({bottom:-2000,position:'relative'});
-          $("#get-random-result").animate({top:0}, 500);
-}
-// register selection for later comparison
-
-$("#one-dollar-sign-btn").click(function(){
-  afterChoosingPricePoint();
-})
-$("#two-dollar-signs-btn").click(function(){
-  afterChoosingPricePoint();
-})
-$("#three-dollar-signs-btn").click(function(){
-  afterChoosingPricePoint();
-})
 // after choosing your price point, make all selections disappear maybe .hide(); and .show the two submit buttons for see list or random results.
 // if list, take user to results.html
 // if random, choose random restaurant and take them to chris' Page
@@ -272,7 +240,7 @@ $("#three-dollar-signs-btn").click(function(){
 
 // if beer is true
 
-});  // end of docuent ready
+});  // end of $(document).ready(function())
 
 
 // Tutoring notes
