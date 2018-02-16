@@ -2,7 +2,7 @@
  /* start of index.html css  */
  /*-------------------------*/
 
- body {
+ body html {
    font-family: 'Aldrich', sans-serif;
  }
 
@@ -176,8 +176,8 @@ position: relative;
 @media only screen and  (min-width: 415px) and (max-width: 812px){
 
   .booze-row {
-    margin-top: 120px;
-    margin-bottom: 120px;
+    margin-top: 100px;
+    margin-bottom: 100px;
   }
 
   .booze-btn img {
@@ -195,7 +195,7 @@ position: relative;
 @media only screen and  (min-width: 813px) and (max-width: 1366px){
 
   .booze-row {
-    margin-top: 200px;
+    margin-top: 180px;
     margin-bottom: 80px;
   }
 
