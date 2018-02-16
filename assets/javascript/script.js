@@ -5,28 +5,28 @@ $(document).ready(function(){
 // Declare restaurant objects
 //GEORGETOWN
 var jPauls = {listing: 0,name: "J. Pauls", location: "georgetown",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://jpaulsdc.com/menus/"};
-var paradiso = {listing: 1,name: "Pizzeria Paradiso",location:"georgetown",foodType: "Italian",price: "$$",cocktail: false,beer: true,wine: true, source:"https://www.eatyourpizza.com/happy-hour/"};	
-var oldGlory = {listing: 2,name: "Old Glory BBQ",location:"georgetown",foodType: "Southern",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.oldglorybbq.com/menus/happy-hour"};	
-var sovereign = {listing: 3,name: "The Sovereign",location:"georgetown",foodType: "European",price: "$$",cocktail: true,beer: true,wine: true,source:"http://thesovereigndc.com/#menus"};	
+var paradiso = {listing: 1,name: "Pizzeria Paradiso",location:"georgetown",foodType: "Italian",price: "$$",cocktail: false,beer: true,wine: true, source:"https://www.eatyourpizza.com/happy-hour/"};
+var oldGlory = {listing: 2,name: "Old Glory BBQ",location:"georgetown",foodType: "Southern",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.oldglorybbq.com/menus/happy-hour"};
+var sovereign = {listing: 3,name: "The Sovereign",location:"georgetown",foodType: "European",price: "$$",cocktail: true,beer: true,wine: true,source:"http://thesovereigndc.com/#menus"};
 var theTombs = {listing: 4,name: "The Tombs",location:"georgetown",foodType: "American",price: "$",cocktail: false,beer: true,wine: true,source:"http://www.tombs.com/#!menu"};
 // FRIENDSHIP-TENLEYTOWN
-var chefGeoffs = {listing: 5,name: "Chef Geoff's",location:"friendship",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.chefgeoff.com/menu/chef-geoffs"};	
+var chefGeoffs = {listing: 5,name: "Chef Geoff's",location:"friendship",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.chefgeoff.com/menu/chef-geoffs"};
 var chatter = {listing: 6,name: "Chatter",location:"friendship",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"https://docs.wixstatic.com/ugd/c2a145_505cbb0822af4f6994c566de5806ad6a.pdf"};
-var casaLuca = {listing: 7,name: "Casa Luca",location:"friendship",foodType: "Italian",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.casalucadc.com/menus/"};	
-var frontPage = {listing: 8,name: "Front Page DC",location:"friendship",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.frontpagedc.com/happy-hour/"};	
-var yosaku = {listing: 9,name: "Yosaku Japanese",location:"friendship",foodType: "Asian",price: "$$",cocktail: true,beer: true,wine: true,source:"https://www.yosakusushi.com/menu"};	
+var casaLuca = {listing: 7,name: "Casa Luca",location:"friendship",foodType: "Italian",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.casalucadc.com/menus/"};
+var frontPage = {listing: 8,name: "Front Page DC",location:"friendship",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.frontpagedc.com/happy-hour/"};
+var yosaku = {listing: 9,name: "Yosaku Japanese",location:"friendship",foodType: "Asian",price: "$$",cocktail: true,beer: true,wine: true,source:"https://www.yosakusushi.com/menu"};
 // ADAM'S MORGAN
-var madamsOrgan = {listing: 10,name: "Madam's Organ",location:"adMo",foodType: "Southern",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.madamsorgan.com/menu.html"};	
-var johnnys = {listing: 11,name: "Johnny's Half Shell",location:"adMo",foodType: "Seafood",price: "$$",cocktail: true,beer: true,wine: true,source:"https://www.johnnyshalfshell.net/menu"};	
+var madamsOrgan = {listing: 10,name: "Madam's Organ",location:"adMo",foodType: "Southern",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.madamsorgan.com/menu.html"};
+var johnnys = {listing: 11,name: "Johnny's Half Shell",location:"adMo",foodType: "Seafood",price: "$$",cocktail: true,beer: true,wine: true,source:"https://www.johnnyshalfshell.net/menu"};
 var smokeBarrel = {listing: 12,name: "Smoke and Barrel",location:"adMo",foodType: "Southern",price: "$$",cocktail: true,beer: true,wine: false,source:"https://smokeandbarreldc.com/menu/"};
-var roofers = {listing: 13,name: "Roofer's Union",location:"adMo",foodType: "American",price:"$$$",cocktail: true,beer: true,wine: true,source:"https://roofersuniondc.com/dinner-menu/"};	
-var shenanigans = {listing: 14,name: "Shenanigan's Irish Pub",location:"adMo",foodType: "irish",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.shenaniganspubdc.com/menu"};	
+var roofers = {listing: 13,name: "Roofer's Union",location:"adMo",foodType: "American",price:"$$$",cocktail: true,beer: true,wine: true,source:"https://roofersuniondc.com/dinner-menu/"};
+var shenanigans = {listing: 14,name: "Shenanigan's Irish Pub",location:"adMo",foodType: "irish",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.shenaniganspubdc.com/menu"};
 // DUPONT CIRCLE
-var mission = {listing: 15,name: "Mission",location:"duPont",foodType: "mexican",price: "$$",cocktail: true,beer: true,wine: true,source:"https://www.missiondupont.com/menus/#happy-hour"};	
-var hanksDP = {listing: 16,name: "Hank's Oysters DuPont",location:"duPont",foodType: "Seafood",price:"$$$",cocktail: true,beer: true,wine: true,source:"https://hanksoysterbar.com/dupont-circle/menus/#happy-hour"};	
+var mission = {listing: 15,name: "Mission",location:"duPont",foodType: "mexican",price: "$$",cocktail: true,beer: true,wine: true,source:"https://www.missiondupont.com/menus/#happy-hour"};
+var hanksDP = {listing: 16,name: "Hank's Oysters DuPont",location:"duPont",foodType: "Seafood",price:"$$$",cocktail: true,beer: true,wine: true,source:"https://hanksoysterbar.com/dupont-circle/menus/#happy-hour"};
 var firefly = {listing: 17,name: "Firefly",location:"duPont",foodType: "American",price:"$$$",cocktail: true,beer: true,wine: true,source:"http://www.firefly-dc.com/en-us/menus/food-drinks.htm"};
-var sette = {listing: 18,name: "Sette Osteria",location:"duPont",foodType: "Italian",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.setteosteria.com/dupont-menu.html"};	
-var beacon = {listing: 19,name: "Beacon Bar & Grill",location:"duPont",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://bbgwdc.com/happy-hour-bar-menu/"};	
+var sette = {listing: 18,name: "Sette Osteria",location:"duPont",foodType: "Italian",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.setteosteria.com/dupont-menu.html"};
+var beacon = {listing: 19,name: "Beacon Bar & Grill",location:"duPont",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://bbgwdc.com/happy-hour-bar-menu/"};
 // SOUTHWEST WATERFRONT
 var hanksSW = {listing: 20,name: "Hank's Oysters Waterfront",location:"wharf",foodType: "Seafood",price: "$$",cocktail: true,beer: true,wine:true,source:"https://hanksoysterbar.com/the-wharf/menus/"};
 var jennys = {listing: 21,name: "Jenny's at the Wharf",location:"wharf",foodType: "Asian",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.jennysdc.com/media/docs/JennysMenuMay2015.pdf"};
@@ -77,7 +77,7 @@ var theHeights = {listing: 58,name: "The Heights",location:"coHi",foodType: "Ame
 var wonderland = {listing: 59,name: "Wonderland Ballroom",location:"coHi",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.thewonderlandballroom.com/menu/"};
 
 // Array of venues - target for search algorithm
-var venueArray = 
+var venueArray =
 [jPauls,paradiso,oldGlory,sovereign,theTombs,
 chefGeoffs, chatter, casaLuca, frontPage, yosaku,
 madamsOrgan, johnnys, smokeBarrel, roofers, shenanigans,
@@ -91,7 +91,7 @@ brixton, chaplins, dacha, drift, shawsTavern,
 belga, placitas, mrHenrys, radici, uglyMug,
 bravo, theCoupe, elChucho, theHeights, wonderland]
 
-// Pushes venues from chosen location from venueArray into a new array 
+// Pushes venues from chosen location from venueArray into a new array
 var locationFiltered = [];
 var checkLocation = function (place){
     for (var i =0; i<venueArray.length; i++){
@@ -118,7 +118,7 @@ var printResult = function (looper){
 var checkBeer = function (){
     for (var j=0; j<locationFiltered.length; j++){
         if (locationFiltered[j].beer==true){
-            printResult (j);         
+            printResult (j);
         }
     }
 }
@@ -136,16 +136,6 @@ var checkCocktail = function (){
         }
     }
 }
-///////////////////////////////////
-var hasBeer = false;
-var hasWine = false;
-var hasCocktails = false;
-
-var drinkType = "";
-var foodType = "";
-var location = "";
-
-var userSelection = "";
 
 /////////////////////////////////
 /// Javascrit for index.html ///
@@ -253,14 +243,7 @@ $("#two-dollar-signs-btn").click(function(){
 $("#three-dollar-signs-btn").click(function(){
   afterChoosingPricePoint();
 })
-// after choosing your price point, make all selections disappear maybe .hide(); and .show the two submit buttons for see list or random results.
-// if list, take user to results.html
-// if random, choose random restaurant and take them to chris' Page
 
-// comparing user selections to our database //
-//////////////////////////////////////////////
-
-// if beer is true
 
 });  // end of docuent ready
 
