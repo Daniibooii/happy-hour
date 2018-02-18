@@ -1,4 +1,13 @@
 # happy-hour
+
+## HAPPY HOUR TO DOs
+* change menu link color to salmon
+* figure out how to get dropdown box to scale correctly in mobile
+* clean up github repo to remove files we did not get to use
+* adjust padding on results box to look better
+
+
+## Project Description
 This project is an attempt to create a DC-specific happy hour app.
 Existing apps were found severely-lacking in their UI elements.
 The project was conceived and organized by Adrian Kyzer.

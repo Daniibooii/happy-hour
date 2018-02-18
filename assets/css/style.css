@@ -3,7 +3,7 @@
  /*-------------------------*/
 
  body html {
-   font-family: 'Aldrich', sans-serif;
+   font-family: 'Oxygen', sans-serif;
  }
 
  #indexBody {
@@ -14,28 +14,48 @@
    font-family: sans-serif;
    height: 100vh;
  }
-
+.resultBox{
+  /* background-color: #ee6e73; */
+  background-image: url("../images/bar-background.jpg");
+  background-position: center;
+  background-size: cover;
+  margin-top: 15px;
+  color: whitesmoke;
+  line-height: 175%;
+  text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
+  font-weight:600;
+  text-shadow: 0px 0px 3px #000;
+  font-family: 'Oxygen', sans-serif;
+  padding: 30px 0px 30px 0px;
+}
+#locationBanner{
+  margin-top: 30px;
+  color: #ee6e73;
+  font-size: 3em;
+  font-weight: 500;
+  font-family: 'Oxygen', sans-serif;
+}
+#resetBtn{
+  background-color: #ee6e73;
+}
  /* min css for LetterFX */
  .letterfx{display:inline-block;margin:0;padding:0;transition:all 1s;-ms-transition:all 1s;-webkit-transition:all 1s}.letterfx-spin-before{transform:rotate(3600deg);-ms-transform:rotate(3600deg);-webkit-transform:rotate(3600deg)}.letterfx-spin-after{transform:none}.letterfx-fade-before{opacity:0}.letterfx-grow-before{transform:scale(0,0);-ms-transform:scale(0,0);-webkit-transform:scale(0,0)}.letterfx-grow-after{transform:none}.letterfx-smear-before{color:transparent;text-shadow:-1px -1px 25px transparent}.letterfx-smear-after{color:inherit;text-shadow:0 0 #333}.letterfx-fall-before{visibility:hidden;transform:scale(3,3);-ms-transform:scale(3,3);-webkit-transform:scale(3,3)}.letterfx-fall-after{transform:scale(1,1);-ms-transform:scale(1,1);-webkit-transform:scale(1,1);text-shadow:0}.letterfx-swirl-before{visibility:hidden;transform:scale(3,3) rotate(3600deg);-ms-transform:scale(3,3) rotate(3600deg);-webkit-transform:scale(3,3) rotate(3600deg)}.letterfx-swirl-after{transform:none text-shadow:0}.letterfx-wave-container .letterfx{position:relative}.letterfx-wave-before{bottom:0}.letterfx-wave-after{bottom:15px}.letterfx-fly-left-container .letterfx,.letterfx-fly-right-container .letterfx,.letterfx-fly-top-container .letterfx,.letterfx-fly-bottom-container .letterfx{position:relative}.letterfx-fly-left-before{left:-50em}.letterfx-fly-left-after{left:0}.letterfx-fly-right-before{right:-50em}.letterfx-fly-right-after{right:0}.letterfx-fly-top-before{top:-20em}.letterfx-fly-top-after{top:0}.letterfx-fly-bottom-before{bottom:-20em}.letterfx-fly-bottom-after{bottom:0}
 
-
 nav {
   height: 75px;
+  margin-bottom: 90px;
 }
-
 
 .booze-row {
   margin-top: 10%;
   margin-bottom: 80px;
 }
-
 .booze-icon-col {
   display: flex;
   justify-content: space-around;
   margin: 0;
   padding: 0;
 }
-
 .booze-btn {
   background-color: transparent;
   border: none;
@@ -45,10 +65,9 @@ nav {
   height: 300px;
   width: 300px;
 }
-
 .booze-instruction p {
   color: #ee6e73;
-  font-family: 'Aldrich', sans-serif;
+  font-family: 'Oxygen', sans-serif;
   font-size: 60px;
   font-weight: bold;
   text-align: center;
@@ -56,55 +75,41 @@ nav {
   margin: 0 0 50px 0;
   padding: 0;
 }
-
 .neighborhood-sel-row {
   height: 80vh;
 }
-
 .neighborhood-selector {
   background-color: rgba(255, 255, 255, 0.3);
   border: 1px solid #ee6e73;
   color: #ee6e73;
-  font-family: 'Aldrich', sans-serif;
+  font-family: 'Oxygen', sans-serif;
   font-size: 34px;
   height: 100px;
 }
-
-
 .browser-default option {
   text-align: center;
 }
-
-
-//////////////////////////////////////
-
-
 .nav-wrapper {
   z-index: 1;
 }
-
 .resultsImages {
   width: 150px;
   height: 100%;
   vertical-align: middle;
   float: left;
 }
-
 .resultsInfo {
 width: 400px;
 height: 200px;
 padding-right: 10px;
 padding-top: 10px;
 }
-
 .resultsCol1 {
 position: relative;
 }
-
 .resultsCol2 {
 position: relative;
 }
-
 .resultsBox {
   margin-bottom: 10px;
   margin-top: 10px;
@@ -114,98 +119,75 @@ position: relative;
 
 /*  start of @media query for smaller screen and phone sizes  */
 @media  only screen and (max-width: 375px) {
-
   .brand-logo{
     font-size: 30px;
   }
-
   .booze-btn img {
     height: 100px;
     width: 100px;
   }
-
   .booze-instruction p {
     font-size: 34px;
     text-align: center;
   }
-
   .booze-row {
     margin-top: 150px;
     margin-bottom: 50px;
     margin-left: 7px;
   }
-
   .neighborhood-selector {
     font-size: 16px;
   }
-
 }
 /* end of @media for max width 375px for iphone 7 or less */
-
 /* @media for iphones 8-10 portrait mode */
 @media only screen and  (min-width: 376px) and (max-width: 414px){
-
   .brand-logo{
     font-size: 30px;
   }
-
   .booze-btn img {
     height: 110px;
     width: 110px;
   }
-
   .booze-instruction p {
     font-size: 38px;
     text-align: center;
   }
-
   .booze-row {
     margin-top: 150px;
     margin-bottom: 50px;
     margin-left: 7px;
   }
-
   .neighborhood-selector {
     font-size: 16px;
   }
-
 }
   /* end of @media for min 375 max 414 for iphones 8-10 */
-
 /* @media for ipads portrait mode */
 @media only screen and  (min-width: 415px) and (max-width: 812px){
-
   .booze-row {
     margin-top: 100px;
     margin-bottom: 100px;
   }
-
   .booze-btn img {
     height: 150px;
     width: 150px;
   }
-
   .neighborhood-selector {
     font-size: 26px;
   }
-
 }
-
 /*  @media for ipads landscape modes*/
 @media only screen and  (min-width: 813px) and (max-width: 1366px){
-
   .booze-row {
     margin-top: 180px;
     margin-bottom: 80px;
   }
-
   .booze-btn img {
     height: 250px;
     width: 250px;
   }
-
   .neighborhood-selector {
     font-size: 36px;
   }
-
 }

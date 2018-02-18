@@ -38,21 +38,33 @@
             <!-- <label>Browser Select</label> -->
             <select id="neighborhood-selector" class="browser-default neighborhood-selector">
               <option value="" disabled selected>Where do you want to go for happy hour?</option>
-              <option id="selectAdmo" value="adMo">Adams Morgan</option>
-              <option id="selectCapHill" value="capHill">Capital Hill</option>
-              <option id="selectCoHi" value="coHi">Columbia Heights</option>
-              <option id="selectDupont" value="duPont">Dupont Circle</option>
-              <option id="selecteastMart" value="eastMkt">Eastern Market</option>
-              <option id="selectFriendship" value="friendship">Friendship Heights / Tenley Town</option>
-              <option id="selectGTown" value="georgetown">Georgetown</option>
-              <option id="selectHSt" value="hstreet">H Street</option>
-              <option id="selectLogan" value="logan">Logan Circle</option>
-              <option id="selectPetworth" value="petworth">Petworth</option>
-              <option id="selectShaw" value="shaw">Shaw / U Street</option>
-              <option id="selectWaterfront" value="wharf">Southwest / Waterfront</option>
+              <option id="selectAdmo" value="Adam's Morgan">Adams Morgan</option>
+              <option id="selectCapHill" value="Capitol Hill">Capitol Hill</option>
+              <option id="selectCoHi" value="Columbia Heights">Columbia Heights</option>
+              <option id="selectDupont" value="DuPont Circle">Dupont Circle</option>
+              <option id="selecteastMart" value="Eastern Market">Eastern Market</option>
+              <option id="selectFriendship" value="Friendship / Tenleytown">Friendship Heights / Tenleytown</option>
+              <option id="selectGTown" value="Georgetown">Georgetown</option>
+              <option id="selectHSt" value="H. Street">H Street</option>
+              <option id="selectLogan" value="Logan Circle">Logan Circle</option>
+              <option id="selectPetworth" value="Petworth">Petworth</option>
+              <option id="selectShaw" value="Shaw / U. Street">Shaw / U Street</option>
+              <option id="selectWaterfront" value="Southwest Waterfront">Southwest Waterfront</option>
             </select>
           </div>
         </div>
+        <div id ="locationBanner"class="row result-row center-align">
+
+        </div>
+        <div class="row result-row">
+          <div class="resultBox col m6 s12 offset-m3 flow-text center-align"></div>
+        </div>
+
+        <div class="valign-wrapper row result-row">
+          <button class="waves-effect waves-light btn center-align col m2 offset-m5 s8 offset-s2" id="resetBtn" type="button">Choose again?</button>
+        </div>  
+
+        <div id="map"></div>
 
      <!--Import jQuery before materialize.js-->
      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
