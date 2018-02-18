@@ -49,6 +49,7 @@ nav {
 .booze-row {
   margin-top: 10%;
   margin-bottom: 80px;
+  z-index: -1;
 }
 .booze-icon-col {
   display: flex;
