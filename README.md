@@ -8,17 +8,18 @@
 
 
 ## Project Description
-This project is an attempt to create a DC-specific happy hour app.
+This project represents a group effort to create a DC-specific happy hour app.
 Existing apps were found severely-lacking in their UI elements.
 The project was conceived and organized by Adrian Kyzer.
 The app was developed by a four-person team over one week.
-The total time spent on the project, including time spent learning new tools, is estimated at ["a lot"].
+The total time spent developing our app, including time spent learning new tools, is estimated at 80+.
 
-We utilized HTML, CSS with Materialize, JavaScript with JQuery, and Firebase.
+We utilized HTML, CSS with Materialize, JavaScript with JQuery, and Mapbox.
 Significant time was devoted to design elements, as well as ensuring mobile-compatibility.
-Internally, we // add info on inner workings with databases, arrays, etc. //
+Internally, we created objects for each restaurant or bar, then added details such as GPS location, url, menu, and happy hour schedule. A map was created to give users the ability to select restaurants directly from it.
 
-Look for our deployed and fully-usable app at: [werule.com]
+Look for our deployed app at: https://askyzer.github.io/happy-hour/
+We anticipate continuing to work on and improve our app; please look for additions relating to use of API and databases.
 We hope you enjoy our work.
 # cheers
 
