@@ -123,6 +123,7 @@ position: relative;
   height: 500px;
   border-style: solid;
   border-color: #ee6e73;
+  margin-left: 100px;
 }
 .map-overlay {
 font:bold 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;

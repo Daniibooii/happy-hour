@@ -145,7 +145,7 @@ $(document).ready(function(){
     var checkBeer = function (){
         for (var j=0; j<locationFiltered.length; j++){
             if (locationFiltered[j].beer==true){
-                // centerMap();
+                centerMap();
                 printResult (j);
             }
         }
@@ -154,7 +154,7 @@ $(document).ready(function(){
     var checkWine = function (){
         for (var j=0; j<locationFiltered.length; j++){
             if (locationFiltered[j].wine==true){
-                // centerMap();
+                centerMap();
                 printResult (j);
             }
         }
@@ -163,16 +163,21 @@ $(document).ready(function(){
     var checkCocktail = function (){
         for (var j=0; j<locationFiltered.length; j++){
             if (locationFiltered[j].cocktail==true){
-                // centerMap();
+                centerMap();
                 printResult (j);
             }
         }
         showLocation();
     }
-    //center map function
-    // var centerMap = function (){
-    //     map.center = [locationFiltered[0].coordsX,locationFiltered[0].coordsY];
-    // }
+    // center map function
+    var centerMap = function (){
+        map.flyTo({
+            center: [locationFiltered[0].coordsX,locationFiltered[0].coordsY],
+            zoom: 15,
+            pitch: 20,
+            bearing: -17.6,
+        });
+    }
 
 // Button dynamics javascript
     // to slide the booze icons in from the sides and top //
