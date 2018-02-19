@@ -1,3 +1,5 @@
+$(".booze-row").hide();
+$("#choose-your-booze-row").hide();
 $(document).ready(function(){
     // JAVASCRIPT FOR HAPPY HOUR PROJECT
     
