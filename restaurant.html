@@ -56,6 +56,33 @@
         border-style: solid;
         border-color: #ee6e73;
     } 
+    .map-overlay {
+    font:bold 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    position: absolute;
+    width: 25%;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    }
+    .map-overlay .map-overlay-inner {
+    background-color: #fff;
+    box-shadow:0 1px 2px rgba(0, 0, 0, 0.20);
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 10px;
+    }
+    .map-overlay label {
+    display: block;
+    margin: 0 0 10px;
+    }   
+    .map-overlay input {
+    background-color: transparent;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    cursor: ew-resize;
+    }
     </style>
 
 </head>
@@ -128,9 +155,9 @@
     mapboxgl.accessToken = 'pk.eyJ1IjoiY2hydXN0IiwiYSI6ImNqZHE2NmlpcDBuZ2YyeHFsMGw4cWlubHQifQ.yVPR_ekkoTim3eEElQt76w';
     var map = new mapboxgl.Map({
     style: 'mapbox://styles/mapbox/light-v9',
-    center: [-77.02, 38.89],
-    zoom: 15.5,
-    pitch: 60,
+    center: [-77.04268,38.921753],
+    zoom: 17,
+    pitch: 20,
     bearing: -17.6,
     hash: true,
     container: 'map'
@@ -190,8 +217,8 @@
                 "type": "FeatureCollection",
                 "features": [{
                     "type": "Feature",
-                    "properties": {
-                        "description": "<strong>Madam's Organ</strong><p><a href=\"http://www.madamsorgan.com/menu.html\" target=\"_blank\" title=\"Opens in a new window\">Madams Organ</a> Lively blues bar offers comfort food & drinks in mason jars along with music, dancing & a roof deck.</p>",
+                    "properties": { 
+                        "description": "<strong><u>Madam's Organ</u></strong><br><a href=\"http://www.madamsorgan.com/menu.html\" target=\"_blank\" title=\"Opens in a new window\">Madams Organ</a> Lively blues bar offers comfort food & drinks in mason jars along with music, dancing & a roof deck.</p><p>Happy Hours: Friday-Wednesday 5p-8p</p><p>Happy Hour Specials: Enjoy 1/2 price beer, wine, and rail drinks. Thursdays are $1 off ALL drinks to benefit our non-profit events.</p>",
                         "icon": "music"
                     },
                     "geometry": {
@@ -202,7 +229,7 @@
                     "type": "Feature",
                     "properties": {
                         "description": "<strong>Johnny's Half Shell</strong><p><a href=\"https://www.johnnyshalfshell.net/menu\" target=\"_blank\" title=\"Opens in a new window\">Johnny's Half Shell</a> Fried oysters, gumbo & chef-y seafood dishes in warm surrounds with a sociable bar & maritime feel.</p>",
-                        "icon": "bar"
+                        "icon": "alcohol-shop"
                     },
                     "geometry": {
                         "type": "Point",
@@ -212,7 +239,7 @@
                     "type": "Feature",
                     "properties": {
                         "description": "<strong>Smoke and Barrel</strong><p><a href=\"https://smokeandbarreldc.com/menu/\" target=\"_blank\" title=\"Opens in a new window\">Smoke and Barrel</a> Barbecue chow with vegan options & a rotating beer list with rare brews in a dramatic space.</p>",
-                        "icon": "bar"
+                        "icon": "circle"
                     },
                     "geometry": {
                         "type": "Point",
@@ -232,7 +259,7 @@
                     "type": "Feature",
                     "properties": {
                         "description": "<strong>Shenanign's Irish Pub</strong><p><a href=\"http://www.shenaniganspubdc.com/menu\" target=\"_blank\" title=\"Opens in a new window\">Shenanign's Irish Pub</a> Bi-level game day spot doling out burgers, sandwiches & other pub fare, plus many Irish beers.</p>",
-                        "icon": "bar"
+                        "icon": "beer"
                     },
                     "geometry": {
                         "type": "Point",
@@ -279,7 +306,7 @@
     });
 
     //Shows Neighborhood Circle//
-    var circle = L.circle([51.508, -0.11], {
+    var circle = L.circle([38.92193781,-77.04266433], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
