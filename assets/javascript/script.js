@@ -102,7 +102,6 @@ $(document).ready(function(){
         }
     }
     }
-    var selectedVal = "asdasda";
     // Triggers checkLocation when neighborhood is chosen
     $("#neighborhood-selector").change(function() {
         locationFiltered = [];
@@ -245,3 +244,177 @@ $(document).ready(function(){
 // [-76.9986338,38.8865922]
 // //----Columbia Heights----//
 // [-77.039649,38.9282274]
+
+mapboxgl.accessToken = 'pk.eyJ1IjoiY2hydXN0IiwiYSI6ImNqZHE2NmlpcDBuZ2YyeHFsMGw4cWlubHQifQ.yVPR_ekkoTim3eEElQt76w';
+    var map = new mapboxgl.Map({
+    style: 'mapbox://styles/mapbox/light-v9',
+    center: [-77.04268,38.921753],
+    zoom: 17,
+    pitch: 20,
+    bearing: -17.6,
+    hash: true,
+    container: 'map'
+    });
+
+    // The 'building' layer in the mapbox-streets vector source contains building-height
+    // data from OpenStreetMap.
+    map.on('load', function() {
+    // Insert the layer beneath any symbol layer.
+    var layers = map.getStyle().layers;
+
+    var labelLayerId;
+    for (var i = 0; i < layers.length; i++) {
+        if (layers[i].type === 'symbol' && layers[i].layout['text-field']) {
+            labelLayerId = layers[i].id;
+            break;
+        }
+    }
+
+    map.addLayer({
+        'id': '3d-buildings',
+        'source': 'composite',
+        'source-layer': 'building',
+        'filter': ['==', 'extrude', 'true'],
+        'type': 'fill-extrusion',
+        'minzoom': 15,
+        'paint': {
+            'fill-extrusion-color': '#aaa',
+
+            // use an 'interpolate' expression to add a smooth transition effect to the
+            // buildings as the user zooms in
+            'fill-extrusion-height': [
+                "interpolate", ["linear"], ["zoom"],
+                15, 0,
+                15.05, ["get", "height"]
+            ],
+            'fill-extrusion-base': [
+                "interpolate", ["linear"], ["zoom"],
+                15, 0,
+                15.05, ["get", "min_height"]
+            ],
+            'fill-extrusion-opacity': .6
+        }
+    }, labelLayerId);
+    });
+    //End of 3D Extrapulation//
+
+    //Beginning Icon Di//
+    map.on('load', function () {
+    // Add a layer showing the places.
+    map.addLayer({
+        "id": "places",
+        "type": "symbol",
+        "source": {
+            "type": "geojson",
+            "data": {
+                "type": "FeatureCollection",
+                "features": [{
+                    //--Adams Morgan--//
+                    "type": "Feature",
+                    "properties": { 
+                        "description": "<strong><u>Madam's Organ</u></strong><br><a href=\"http://www.madamsorgan.com/menu.html\" target=\"_blank\" title=\"Opens in a new window\">Madams Organ</a> Lively blues bar offers comfort food & drinks in mason jars along with music, dancing & a roof deck.</p><p>Happy Hours: Friday-Wednesday 5p-8p</p><p>Happy Hour Specials: Enjoy 1/2 price beer, wine, and rail drinks. Thursdays are $1 off ALL drinks to benefit our non-profit events.</p>",
+                        "icon": "music"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-77.0421372,38.922032]
+                    }
+                }, {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Johnny's Half Shell</strong><p><a href=\"https://www.johnnyshalfshell.net/menu\" target=\"_blank\" title=\"Opens in a new window\">Johnny's Half Shell</a> Fried oysters, gumbo & chef-y seafood dishes in warm surrounds with a sociable bar & maritime feel.</p>",
+                        "icon": "alcohol-shop"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-77.0435031,38.9218514]
+                    }
+                }, {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Smoke and Barrel</strong><p><a href=\"https://smokeandbarreldc.com/menu/\" target=\"_blank\" title=\"Opens in a new window\">Smoke and Barrel</a> Barbecue chow with vegan options & a rotating beer list with rare brews in a dramatic space.</p>",
+                        "icon": "circle"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-77.0422128,38.9223012]
+                    }
+                }, {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Roofers Union</strong><p><a href=\"https://roofersuniondc.com/dinner-menu/\" target=\"_blank\" title=\"Opens in a new window\">Roofers Union</a> Unique American fare & craft cocktails draw fans to this rustic, 3-story tavern with rooftop views.</p>",
+                        "icon": "bar"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-77.0427305,38.9218512]
+                    }
+                }, {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Shenanign's Irish Pub</strong><p><a href=\"http://www.shenaniganspubdc.com/menu\" target=\"_blank\" title=\"Opens in a new window\">Shenanign's Irish Pub</a> Bi-level game day spot doling out burgers, sandwiches & other pub fare, plus many Irish beers.</p>",
+                        "icon": "beer"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-77.04266433, 38.92193781]
+                    },
+                    //--H Street--//
+                }, {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Roofers Union</strong><p><a href=\"https://roofersuniondc.com/dinner-menu/\" target=\"_blank\" title=\"Opens in a new window\">Roofers Union</a> Unique American fare & craft cocktails draw fans to this rustic, 3-story tavern with rooftop views.</p>",
+                        "icon": "bar"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-77.0427305,38.9218512]
+                    }
+                    
+                
+                }]
+            }
+        },
+        "layout": {
+            "icon-image": "{icon}-15",
+            "icon-allow-overlap": true
+        }
+    });
+
+    // When a click event occurs on a feature in the places layer, open a popup at the
+    // location of the feature, with description HTML from its properties.
+    map.on('click', 'places', function (e) {
+        var coordinates = e.features[0].geometry.coordinates.slice();
+        var description = e.features[0].properties.description;
+
+        // Ensure that if the map is zoomed out such that multiple
+        // copies of the feature are visible, the popup appears
+        // over the copy being pointed to.
+        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+        }
+
+        new mapboxgl.Popup()
+            .setLngLat(coordinates)
+            .setHTML(description)
+            .addTo(map);
+    });
+
+    // Change the cursor to a pointer when the mouse is over the places layer.
+    map.on('mouseenter', 'places', function () {
+        map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'places', function () {
+        map.getCanvas().style.cursor = '';
+    });
+    });
+
+    //Shows Neighborhood Circle//
+    var circle = L.circle([38.92193781,-77.04266433], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 500
+    }).addTo(mymap);
