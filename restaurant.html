@@ -97,9 +97,8 @@
     <div class= "row">
         <div class="col s2"></div>
         <div class="col s8">
-            <div class="resultBox"></div>
             <!--Restaurant Name-->
-            <!-- <h2><span id= "restaurantName"></span></h2>
+            <h2><span id= "restaurantName"></span></h2>
             <div class="menu">
             <img src="assets/images/kingFisherImg.webp" alt="picture of kingfisher">
             <br>
@@ -116,12 +115,12 @@
                 <li>Daniel Digs: <span id = "daniel"></span></li>
                 <li>Adams Choice: <span id= "adam"></span></li>
             </ul>
-            </div> -->
+            </div>
         </div>
         <div class="col s2"></div>
     </div>
 
-    <!-- <div class= "row">   
+    <div class= "row">   
         <div class="col s3"></div>
         <div class="info">
             <div class="col s3">
@@ -217,6 +216,7 @@
             "data": {
                 "type": "FeatureCollection",
                 "features": [{
+                    //--Adams Morgan--//
                     "type": "Feature",
                     "properties": { 
                         "description": "<strong><u>Madam's Organ</u></strong><br><a href=\"http://www.madamsorgan.com/menu.html\" target=\"_blank\" title=\"Opens in a new window\">Madams Organ</a> Lively blues bar offers comfort food & drinks in mason jars along with music, dancing & a roof deck.</p><p>Happy Hours: Friday-Wednesday 5p-8p</p><p>Happy Hour Specials: Enjoy 1/2 price beer, wine, and rail drinks. Thursdays are $1 off ALL drinks to benefit our non-profit events.</p>",
@@ -265,7 +265,19 @@
                     "geometry": {
                         "type": "Point",
                         "coordinates": [-77.04266433, 38.92193781]
+                    },
+                    //--H Street--//
+                }, {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Roofers Union</strong><p><a href=\"https://roofersuniondc.com/dinner-menu/\" target=\"_blank\" title=\"Opens in a new window\">Roofers Union</a> Unique American fare & craft cocktails draw fans to this rustic, 3-story tavern with rooftop views.</p>",
+                        "icon": "bar"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-77.0427305,38.9218512]
                     }
+                    
                 
                 }]
             }
@@ -314,31 +326,14 @@
     radius: 500
     }).addTo(mymap);
 
-    <!-- <script>
-        var map = L.map('map',{
-        center: [38.9094011,-77.0321500],
-        zoom: 15
-        });
-       
-        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
+    </script>
+    
 
-        L.tileLayer.wms("http://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r.cgi", {
-    	layers: 'nexrad-n0r-900913',
-        format: 'image/png',
-        transparent: true,
-        attribution: "Weather data © 2012 IEM Nexrad"
-        }).addTo(map);
-
-        var marker = L.marker([38.9094011,-77.0321500]).addTo(map);
-    </script> -->
-    <br><br><br>
 </div>
 
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
-<script type="text/javascript" src="./assets/javascript/script.js"></script>
+<script type="text/javascript" src="assets/javascript/jPauls.js"></script>
 
 <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
