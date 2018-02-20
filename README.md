@@ -7,7 +7,7 @@ The project was conceived and organized by Adrian Kyzer.
 The app was developed by a four-person team over one week.
 The total time spent developing our app, including time spent learning new tools, is estimated at 80+.
 
-We utilized HTML, CSS with Materialize, JavaScript with JQuery, and Mapbox.
+We utilized Wireframe.cc, HTML with Materialize, JavaScript with JQuery and LetterFX, and Leaflet with Mapbox.
 Significant time was devoted to design elements, as well as ensuring mobile-compatibility.
 Internally, we created objects for each restaurant or bar, then added details such as GPS location, url, menu, and happy hour schedule. A map was created to give users the ability to select restaurants directly from it.
 
