@@ -16,7 +16,7 @@
    <body id="indexBody">
      <nav>
         <div class="nav-wrapper">
-          <center class="brand-logo center five-oclock" href="index.html"> <a href="index.html"> <img src="assets/images/5oclock.png" alt="It's five o'clock logo" height="150" width="150"> </a></center>
+          <center class="brand-logo center five-oclock" href="index.html"> <a href="index.html"> <img class="logoImg" src="assets/images/5oclock.png" alt="It's five o'clock logo"> </a></center>
         </div>
       </nav>
 
@@ -53,16 +53,29 @@
             </select>
           </div>
         </div>
-        <div id ="locationBanner"class="row result-row center-align">
 
-        </div>
+        <div id="locationBanner"class="row result-row center-align">  </div>
+
+        <!-- <div class="row result-row">
+          <div id="result-col" class="resultBox col m12 s12 flow-text center-align"></div>
+        </div> -->
+
         <div class="row result-row">
-          <div class="resultBox col m6 s12 offset-m3 flow-text center-align"></div>
+          <!-- <div id="result-col" class="resultBox col m12 s12 flow-text center-align"></div> -->
+          <table id="result-col" class="centered responsive-table highlight col m12 s12 flow-text center-align">
+           <tbody class="resultBox">
+             <tr >
+               <td>Alvin</td>
+               <td>Eclair</td>
+               <td>$0.87</td>
+             </tr>
+           </tbody>
+         </table>
         </div>
 
         <div class="valign-wrapper row result-row">
           <button class="waves-effect waves-light btn center-align col m2 offset-m5 s8 offset-s2" id="resetBtn" type="button">Choose again?</button>
-        </div>  
+        </div>
 
         <div class="row">
           <div class = "col s12 lg10 offset-l1">
@@ -76,8 +89,6 @@
      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
      <!-- Compiled and minified JavaScript -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-     <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
-
      <script type="text/javascript" src="assets/javascript/script.js"></script>
    </body>
  </html>

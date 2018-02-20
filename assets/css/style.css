@@ -2,23 +2,21 @@
  /* start of index.html css  */
  /*-------------------------*/
 
- body html {
-   font-family: 'Oxygen', sans-serif;
- }
-
  #indexBody {
    background-image: url(../images/yellowbackground.jpg);
    background-position: center;
    background-size: cover;
    background-color: #ffd900;
-   font-family: sans-serif;
-   /* height: 100vh; */
+   font-family: 'Oxygen', sans-serif;
+   height: 100vh;
  }
+
 .resultBox{
   /* background-color: #ee6e73; */
   background-image: url("../images/bar-background.jpg");
   background-position: center;
   background-size: cover;
+  border: 2px solid black;
   margin-top: 15px;
   color: whitesmoke;
   line-height: 175%;
@@ -28,6 +26,13 @@
   font-family: 'Oxygen', sans-serif;
   padding: 30px 0px 30px 0px;
 }
+.resultBox a {
+  color: #ee6e73;
+  text-decoration: none;
+}
+  .resultBox a:hover {
+    color: rgba(0, 221, 255, 0.69);
+  }
 #locationBanner{
   margin-top: 30px;
   color: #ee6e73;
@@ -37,15 +42,21 @@
 }
 #resetBtn{
   background-color: #ee6e73;
+  margin-top: 20px;
 }
  /* min css for LetterFX */
  .letterfx{display:inline-block;margin:0;padding:0;transition:all 1s;-ms-transition:all 1s;-webkit-transition:all 1s}.letterfx-spin-before{transform:rotate(3600deg);-ms-transform:rotate(3600deg);-webkit-transform:rotate(3600deg)}.letterfx-spin-after{transform:none}.letterfx-fade-before{opacity:0}.letterfx-grow-before{transform:scale(0,0);-ms-transform:scale(0,0);-webkit-transform:scale(0,0)}.letterfx-grow-after{transform:none}.letterfx-smear-before{color:transparent;text-shadow:-1px -1px 25px transparent}.letterfx-smear-after{color:inherit;text-shadow:0 0 #333}.letterfx-fall-before{visibility:hidden;transform:scale(3,3);-ms-transform:scale(3,3);-webkit-transform:scale(3,3)}.letterfx-fall-after{transform:scale(1,1);-ms-transform:scale(1,1);-webkit-transform:scale(1,1);text-shadow:0}.letterfx-swirl-before{visibility:hidden;transform:scale(3,3) rotate(3600deg);-ms-transform:scale(3,3) rotate(3600deg);-webkit-transform:scale(3,3) rotate(3600deg)}.letterfx-swirl-after{transform:none text-shadow:0}.letterfx-wave-container .letterfx{position:relative}.letterfx-wave-before{bottom:0}.letterfx-wave-after{bottom:15px}.letterfx-fly-left-container .letterfx,.letterfx-fly-right-container .letterfx,.letterfx-fly-top-container .letterfx,.letterfx-fly-bottom-container .letterfx{position:relative}.letterfx-fly-left-before{left:-50em}.letterfx-fly-left-after{left:0}.letterfx-fly-right-before{right:-50em}.letterfx-fly-right-after{right:0}.letterfx-fly-top-before{top:-20em}.letterfx-fly-top-after{top:0}.letterfx-fly-bottom-before{bottom:-20em}.letterfx-fly-bottom-after{bottom:0}
 
+
+/* Styling for landing page portion of index.html */
 nav {
   height: 75px;
-  margin-bottom: 90px;
+  margin-bottom: 85px;
+  position: sticky;
 }
-
+.logoImg {
+  height: 150px;
+}
 .booze-row {
   margin-top: 10%;
   margin-bottom: 80px;
@@ -76,7 +87,7 @@ nav {
   padding: 0;
 }
 .neighborhood-sel-row {
-  height: 80vh;
+  height: 60vh;
 }
 .neighborhood-selector {
   background-color: rgba(255, 255, 255, 0.3);
@@ -86,13 +97,23 @@ nav {
   font-size: 34px;
   height: 100px;
 }
+.submit-btn {
+  height: 200px;
+  width: 200px;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: #ee6e73;
+  color: whitesmoke;
+  margin: 10px;
+  font-size: 24px;
+}
 .browser-default option {
   text-align: center;
 }
 .nav-wrapper {
   z-index: 1;
 }
-.resultsImages {
+/* .resultsImages {
   width: 150px;
   height: 100%;
   vertical-align: middle;
@@ -109,62 +130,38 @@ position: relative;
 }
 .resultsCol2 {
 position: relative;
-}
+} */
 .resultsBox {
   margin-bottom: 10px;
-  margin-top: 10px;
-  width: 100%;
-  height: 200px;
-} */
-
-/* MAP CSS*/
-#map {
-  width: 100%;
-  height: 500px;
-  /* border-style: solid;
-  border-color: #ee6e73; */
-  border: 3px solid #ee6e73;
-  margin-bottom: 60px;
-  padding: 0;
-  /* margin-left: 100px; */
+  margin-top: 15px;
+  /* width: 100%;
+  height: 200px; */
 }
-.map-overlay {
-font:bold 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-position: absolute;
-width: 25%;
-top: 0;
-left: 0;
-/* padding: 10px; */
+#locationBanner {
+  margin-top: 25px;
 }
-.map-overlay .map-overlay-inner {
-background-color: #fff;
-box-shadow:0 1px 2px rgba(0, 0, 0, 0.20);
-border-radius: 3px;
-/* padding: 10px; */
-margin-bottom: 10px;
+#result-col {
+  padding: 5px 0;
 }
-.map-overlay label {
-display: block;
-margin: 0 0 10px;
+.dollarsign {
+  color: #0d9900;
 }
-.map-overlay input {
-background-color: transparent;
-display: inline-block;
-width: 100%;
-position: relative;
-margin: 0;
-cursor: ew-resize;
-}
-.mapboxgl-map {
-  margin: 0;
-  padding: 0;
+table.highlight tbody tr:hover {
+    background-color: rgba(255, 217, 0, 0.75) !important;
 }
 
 /*  start of @media query for smaller screen and phone sizes  */
 @media  only screen and (max-width: 375px) {
-  .brand-logo{
-    font-size: 30px;
+
+  nav {
+    height: 50px;
+    margin-bottom: 60px;
   }
+
+  .logoImg {
+    height: 100px;
+  }
+
   .booze-btn img {
     height: 100px;
     width: 100px;
@@ -178,15 +175,23 @@ cursor: ew-resize;
     margin-bottom: 50px;
     margin-left: 7px;
   }
+
   .neighborhood-selector {
     font-size: 16px;
+    height: 60px;
   }
+
 }
 /* end of @media for max width 375px for iphone 7 or less */
 /* @media for iphones 8-10 portrait mode */
 @media only screen and  (min-width: 376px) and (max-width: 414px){
-  .brand-logo{
-    font-size: 30px;
+
+  nav {
+    height: 50px;
+    margin-bottom: 60px;
+  }
+  .logoImg {
+    height: 100px;
   }
   .booze-btn img {
     height: 110px;
@@ -203,11 +208,20 @@ cursor: ew-resize;
   }
   .neighborhood-selector {
     font-size: 16px;
+    height: 60px;
   }
 }
   /* end of @media for min 375 max 414 for iphones 8-10 */
 /* @media for ipads portrait mode */
 @media only screen and  (min-width: 415px) and (max-width: 812px){
+
+  nav {
+    height: 50px;
+    margin-bottom: 60px;
+  }
+  .logoImg {
+    height: 100px;
+  }
   .booze-row {
     margin-top: 100px;
     margin-bottom: 100px;
