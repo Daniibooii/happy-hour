@@ -16,17 +16,17 @@ $(document).ready(function(){
     var sovereign = {listing: 3,name: "The Sovereign",location:"Georgetown",foodType: "European",price: "$$",cocktail: true,beer: true,wine: true,source:"http://thesovereigndc.com/#menus"};
     var theTombs = {listing: 4,name: "The Tombs",location:"Georgetown",foodType: "American",price: "$",cocktail: false,beer: true,wine: true,source:"http://www.tombs.com/#!menu"};
     // Friendship / Tenleytown
-    var chefGeoffs = {listing: 5,name: "Chef Geoff's",location:"Friendship Heights / Tenleytown",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.chefgeoff.com/menu/chef-geoffs",coordsX: -77.07861, coordsY: 38.95334};
-    var chatter = {listing: 6,name: "Chatter",location:"Friendship Heights / Tenleytown",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"https://docs.wixstatic.com/ugd/c2a145_505cbb0822af4f6994c566de5806ad6a.pdf"};
-    var casaLuca = {listing: 7,name: "Casa Luca",location:"Friendship Heights / Tenleytown",foodType: "Italian",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.casalucadc.com/menus/"};
-    var frontPage = {listing: 8,name: "Front Page DC",location:"Friendship Heights / Tenleytown",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.frontpagedc.com/happy-hour/"};
-    var yosaku = {listing: 9,name: "Yosaku Japanese",location:"Friendship Heights / Tenleytown",foodType: "Asian",price: "$$",cocktail: true,beer: true,wine: true,source:"https://www.yosakusushi.com/menu"};
+    var chefGeoffs = {listing: 5,name: "Chef Geoff's",location:"Friendship / Tenleytown",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.chefgeoff.com/menu/chef-geoffs",coordsX: -77.07861, coordsY: 38.95334};
+    var chatter = {listing: 6,name: "Chatter",location:"Friendship / Tenleytown",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"https://docs.wixstatic.com/ugd/c2a145_505cbb0822af4f6994c566de5806ad6a.pdf"};
+    var casaLuca = {listing: 7,name: "Casa Luca",location:"Friendship / Tenleytown",foodType: "Italian",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.casalucadc.com/menus/"};
+    var frontPage = {listing: 8,name: "Front Page DC",location:"Friendship / Tenleytown",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.frontpagedc.com/happy-hour/"};
+    var yosaku = {listing: 9,name: "Yosaku Japanese",location:"Friendship / Tenleytown",foodType: "Asian",price: "$$",cocktail: true,beer: true,wine: true,source:"https://www.yosakusushi.com/menu"};
     // ADAM'S MORGAN
-    var madamsOrgan = {listing: 10,name: "Madam's Organ",location:"Adams Morgan",foodType: "Southern",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.madamsorgan.com/menu.html",coordsX: -77.04268, coordsY: 38.921753};
-    var johnnys = {listing: 11,name: "Johnny's Half Shell",location:"Adams Morgan",foodType: "Seafood",price: "$$",cocktail: true,beer: true,wine: true,source:"https://www.johnnyshalfshell.net/menu"};
-    var smokeBarrel = {listing: 12,name: "Smoke and Barrel",location:"Adams Morgan",foodType: "Southern",price: "$$",cocktail: true,beer: true,wine: false,source:"https://smokeandbarreldc.com/menu/"};
-    var roofers = {listing: 13,name: "Roofer's Union",location:"Adams Morgan",foodType: "American",price:"$$$",cocktail: true,beer: true,wine: true,source:"https://roofersuniondc.com/dinner-menu/"};
-    var shenanigans = {listing: 14,name: "Shenanigan's Irish Pub",location:"Adams Morgan",foodType: "Irish",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.shenaniganspubdc.com/menu"};
+    var madamsOrgan = {listing: 10,name: "Madam's Organ",location:"Adam's Morgan",foodType: "Southern",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.madamsorgan.com/menu.html",coordsX: -77.04268, coordsY: 38.921753};
+    var johnnys = {listing: 11,name: "Johnny's Half Shell",location:"Adam's Morgan",foodType: "Seafood",price: "$$",cocktail: true,beer: true,wine: true,source:"https://www.johnnyshalfshell.net/menu"};
+    var smokeBarrel = {listing: 12,name: "Smoke and Barrel",location:"Adam's Morgan",foodType: "Southern",price: "$$",cocktail: true,beer: true,wine: false,source:"https://smokeandbarreldc.com/menu/"};
+    var roofers = {listing: 13,name: "Roofer's Union",location:"Adam's Morgan",foodType: "American",price:"$$$",cocktail: true,beer: true,wine: true,source:"https://roofersuniondc.com/dinner-menu/"};
+    var shenanigans = {listing: 14,name: "Shenanigan's Irish Pub",location:"Adam's Morgan",foodType: "Irish",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.shenaniganspubdc.com/menu"};
     // DuPont Circle
     var mission = {listing: 15,name: "Mission",location:"DuPont Circle",foodType: "Mexican",price: "$$",cocktail: true,beer: true,wine: true,source:"https://www.missionDuPontCircle.com/menus/#happy-hour",coordsX: -77.04421, coordsY: 38.90941};
     var hanksDP = {listing: 16,name: "Hank's Oyster Bar",location:"DuPont Circle",foodType: "Seafood",price:"$$$",cocktail: true,beer: true,wine: true,source:"https://hanksoysterbar.com/DuPontCircle-circle/menus/#happy-hour"};
