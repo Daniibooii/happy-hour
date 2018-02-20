@@ -247,13 +247,13 @@ $(document).ready(function(){
       })
     })
 
-    });  // end of $(document).ready(function())
+});  // end of $(document).ready(function())
 
 
 //----------------------Map Script------------------------------//
 mapboxgl.accessToken = 'pk.eyJ1IjoiY2hydXN0IiwiYSI6ImNqZHE2NmlpcDBuZ2YyeHFsMGw4cWlubHQifQ.yVPR_ekkoTim3eEElQt76w';
     var map = new mapboxgl.Map({
-    style: 'mapbox://styles/mapbox/light-v9',
+    style: 'mapbox://styles/mapbox/streets-v9',
     center: [-77.04268,38.921753],
     zoom: 17,
     pitch: 20,
