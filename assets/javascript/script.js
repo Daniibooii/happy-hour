@@ -10,13 +10,13 @@ $(document).ready(function(){
     // Declare restaurant objects
 
     //Georgetown
-    var jPauls = {listing: 0,name: "J. Pauls", location: "Georgetown",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://jpaulsdc.com/menus/",coordsX: -77.0712323, coordsY: 38.9048496};
+    var jPauls = {listing: 0,name: "J. Pauls", location: "Georgetown",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://jpaulsdc.com/menus/",coordsX: -77.06622, coordsY: 38.90412};
     var paradiso = {listing: 1,name: "Pizzeria Paradiso",location:"Georgetown",foodType: "Italian",price: "$$",cocktail: false,beer: true,wine: true, source:"https://www.eatyourpizza.com/happy-hour/"};
     var oldGlory = {listing: 2,name: "Old Glory BBQ",location:"Georgetown",foodType: "Southern",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.oldglorybbq.com/menus/happy-hour"};
     var sovereign = {listing: 3,name: "The Sovereign",location:"Georgetown",foodType: "European",price: "$$",cocktail: true,beer: true,wine: true,source:"http://thesovereigndc.com/#menus"};
     var theTombs = {listing: 4,name: "The Tombs",location:"Georgetown",foodType: "American",price: "$",cocktail: false,beer: true,wine: true,source:"http://www.tombs.com/#!menu"};
     // Friendship / Tenleytown
-    var chefGeoffs = {listing: 5,name: "Chef Geoff's",location:"Friendship / Tenleytown",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.chefgeoff.com/menu/chef-geoffs",coordsX: -77.0941572, coordsY: 38.9577264};
+    var chefGeoffs = {listing: 5,name: "Chef Geoff's",location:"Friendship / Tenleytown",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.chefgeoff.com/menu/chef-geoffs",coordsX: -77.07861, coordsY: 38.95334};
     var chatter = {listing: 6,name: "Chatter",location:"Friendship / Tenleytown",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"https://docs.wixstatic.com/ugd/c2a145_505cbb0822af4f6994c566de5806ad6a.pdf"};
     var casaLuca = {listing: 7,name: "Casa Luca",location:"Friendship / Tenleytown",foodType: "Italian",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.casalucadc.com/menus/"};
     var frontPage = {listing: 8,name: "Front Page DC",location:"Friendship / Tenleytown",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.frontpagedc.com/happy-hour/"};
@@ -28,7 +28,7 @@ $(document).ready(function(){
     var roofers = {listing: 13,name: "Roofer's Union",location:"Adam's Morgan",foodType: "American",price:"$$$",cocktail: true,beer: true,wine: true,source:"https://roofersuniondc.com/dinner-menu/"};
     var shenanigans = {listing: 14,name: "Shenanigan's Irish Pub",location:"Adam's Morgan",foodType: "Irish",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.shenaniganspubdc.com/menu"};
     // DuPont Circle
-    var mission = {listing: 15,name: "Mission",location:"DuPont Circle",foodType: "Mexican",price: "$$",cocktail: true,beer: true,wine: true,source:"https://www.missionDuPont Circle.com/menus/#happy-hour",coordsX: -77.0513678, coordsY: 38.9111212};
+    var mission = {listing: 15,name: "Mission",location:"DuPont Circle",foodType: "Mexican",price: "$$",cocktail: true,beer: true,wine: true,source:"https://www.missionDuPont Circle.com/menus/#happy-hour",coordsX: -77.04421, coordsY: 38.90941};
     var hanksDP = {listing: 16,name: "Hank's Oyster Bar",location:"DuPont Circle",foodType: "Seafood",price:"$$$",cocktail: true,beer: true,wine: true,source:"https://hanksoysterbar.com/DuPont Circle-circle/menus/#happy-hour"};
     var firefly = {listing: 17,name: "Firefly",location:"DuPont Circle",foodType: "American",price:"$$$",cocktail: true,beer: true,wine: true,source:"http://www.firefly-dc.com/en-us/menus/food-drinks.htm"};
     var sette = {listing: 18,name: "Sette Osteria",location:"DuPont Circle",foodType: "Italian",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.setteosteria.com/DuPont Circle-menu.html"};
@@ -45,13 +45,13 @@ $(document).ready(function(){
     var stationFour = {listing: 23,name: "Station 4",location:"Southwest Waterfront",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://033ec7e.netsolhost.com/menu/happy-hour-baseball-specials/"};
     var cityBar = {listing: 24,name: "City Bar",location:"Southwest Waterfront",foodType: "American",price:"$$$",cocktail: true,beer: true,wine: true,source:"http://www.citybardc.com/menu/"};
     // Petworth
-    var airedale = {listing: 25,name: "The Airedale",location:"Petworth",foodType: "American",price: "$",cocktail: true,beer: true,wine: true,source:"http://www.airedaledc.com/menu-marquee/",coordsX: -77.0326865, coordsY: 38.9425372};
+    var airedale = {listing: 25,name: "The Airedale",location:"Petworth",foodType: "American",price: "$",cocktail: true,beer: true,wine: true,source:"http://www.airedaledc.com/menu-marquee/",coordsX: -77.02898, coordsY: 38.93342};
     var lookingGlass = {listing: 26,name: "Looking Glass",location:"Petworth",foodType: "American",price: "$",cocktail: true,beer: true,wine: true,source:"http://www.thelookingglasslounge.com/menu/"};
     var tenTigers = {listing: 27,name: "Ten Tigers",location:"Petworth",foodType: "Asian",price: "$",cocktail: true,beer: true,wine: true,source:"http://www.tentigersdc.com/happy-hour/"};
     var reynolds = {listing: 28,name: "DC Reynolds",location:"Petworth",foodType: "American",price: "$",cocktail: true,beer: true,wine: true,source:"http://washingtondc.menupages.com/restaurants/dc-reynolds/"};
     var thePitch = {listing: 29,name: "The Pitch",location:"Petworth",foodType: "American",price: "$",cocktail: true,beer: true,wine: true,source:"https://www.thepitchtavern.com/menus-2"};
     //CAPTIOL HILL
-    var boxcar = {listing: 30,name: "Boxcar Tavern",location:"Capitol Hill",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://boxcartaverndc.com//happy-hour?_ga=2.197806761.744928053.1518799018-1523407922.1518555652",coordsX: -77.0074869, coordsY: 38.8867099};
+    var boxcar = {listing: 30,name: "Boxcar Tavern",location:"Capitol Hill",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://boxcartaverndc.com//happy-hour?_ga=2.197806761.744928053.1518799018-1523407922.1518555652",coordsX: -76.99948, coordsY: 38.88647};
     var hawkDove = {listing: 31,name: "Hawk 'n' Dove",location:"Capitol Hill",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://hawkndovethehill.com/happy-hour"};
     var lavagna = {listing: 32,name: "Lavagna",location:"Capitol Hill",foodType: "Italian",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.lavagnadc.com/"};
     var uglyMugCH = {listing: 33,name: "The Ugly Mug",location:"Capitol Hill",foodType: "American",price: "$",cocktail: true,beer: true,wine: true,source:"http://www.uglymugdc.com/food-drink/"};
@@ -65,7 +65,7 @@ $(document).ready(function(){
     var hCC = {listing: 38,name: "H St Country Club",location:"H. Street",foodType: "Mexican",price: "$$",cocktail: true,beer: true,wine: false,source:"https://static1.squarespace.com/static/5327507de4b0c44d90acc3c5/t/5a0336319140b7583646359a/1510159921295/MENU-DRINKS-WINTER-2017.pdf"};
     var pursuit = {listing: 39,name: "Pursuit Wine Bar",location:"H. Street",foodType: "European",price:"$$$",cocktail: true,beer: true,wine: true,source:"http://www.thepursuitwinebar.com/"};
     // Logan Circle CIRCLE
-    var kingFisher = {listing: 40,name: "Kingfisher",location:"Logan Circle",foodType: "American",price: "$$",cocktail: false,beer: true,wine: false,source:"http://www.kingfisherdc.com/",coordsX: -77.0345797, coordsY: 38.9098115};
+    var kingFisher = {listing: 40,name: "Kingfisher",location:"Logan Circle",foodType: "American",price: "$$",cocktail: false,beer: true,wine: false,source:"http://www.kingfisherdc.com/",coordsX: -77.030805, coordsY: 38.909694};
     var churchKey = {listing: 41,name: "Church Key",location:"Logan Circle",foodType: "American",price: "$$",cocktail: false,beer: true,wine: false,source:"http://churchkeydc.com/#menus"};
     var draftTable = {listing: 42,name: "Draft Table",location:"Logan Circle",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.draftingtabledc.com/menu/"};
     var loganTavern = {listing: 43,name: "Logan Circle Tavern",location:"Logan Circle",foodType: "European",price:"$$$",cocktail: true,beer: true,wine: true,source:"http://Logan Circletavern.com/menu/"};
@@ -76,7 +76,7 @@ $(document).ready(function(){
     var radiator = {listing: 68,name: "Radiator",location:"Logan Circle",foodType: "Spanish/Tapas",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.radiatordc.com/en-us/menus/menus.htm"};
     var thePig = {listing: 69,name: "The Pig",location:"Logan Circle",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.thepigdc.com/#menus_happy-hour"};
     // SHAW   && U ST
-    var brixton = {listing: 45,name: "The Brixton",location:"Shaw / U. Street",foodType: "Irish",price: "$$",cocktail: true,beer: true,wine: true,source:"http://brixtondc.com/#/menu",coordsX: -77.0275162, coordsY: 38.9170045};
+    var brixton = {listing: 45,name: "The Brixton",location:"Shaw / U. Street",foodType: "Irish",price: "$$",cocktail: true,beer: true,wine: true,source:"http://brixtondc.com/#/menu",coordsX: -77.02898, coordsY: 38.93342};
     var chaplins = {listing: 46,name: "Chaplin's",location:"Shaw / U. Street",foodType: "Asian",price: "$$",cocktail: true,beer: true,wine: true,source:"http://chaplinsdc.com/chaplins-desserts_in_dc/"};
     var dacha = {listing: 47,name: "Dacha Beer Garden",location:"Shaw / U. Street",foodType: "European",price: "$$",cocktail: true,beer: true,wine: true,source:"https://dachadc.com/beergarden/"};
     var drift = {listing: 48,name: "Drift on 7th",location:"Shaw / U. Street",foodType: "Seafood",price: "$$",cocktail: true,beer: true,wine: true,source:"http://drifton7th.com/images/menus/Drift-Happy-Hour-Menu.pdf"};
@@ -88,7 +88,7 @@ $(document).ready(function(){
     var radici = {listing: 53,name: "Radici",location:"Eastern Market",foodType: "Italian",price: "$$",cocktail: false,beer: true,wine: true,source:"http://www.radici-market.com/pranzo-lunch/"};
     var uglyMug = {listing: 54,name: "The Ugly Mug",location:"Eastern Market",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.uglymugdc.com/food-drink/"};
     // COLUMBIA HEIGHTS
-    var bravo = {listing: 55,name: "BravoBar",location:"Columbia Heights",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"https://www.facebook.com/Bravo-Bar-247126958778878/",coordsX: -77.039649, coordsY: 38.9282274};
+    var bravo = {listing: 55,name: "BravoBar",location:"Columbia Heights",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"https://www.facebook.com/Bravo-Bar-247126958778878/",coordsX: -77.02898, coordsY: 38.93342};
     var theCoupe = {listing: 56,name: "The Coupe",location:"Columbia Heights",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.thecoupedc.com/menudinner/happy-hour/"};
     var elChucho = {listing: 57,name: "El Chucho",location:"Columbia Heights",foodType: "Mexican",price: "$$",cocktail: true,beer: true,wine: false,source:"https://www.elchuchodc.com/"};
     var theHeights = {listing: 58,name: "The Heights",location:"Columbia Heights",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"https://www.theheightstaproom.com/print-menu"};
@@ -196,7 +196,7 @@ $(document).ready(function(){
             center: [locationFiltered[0].coordsX,locationFiltered[0].coordsY],
             zoom: 15,
             pitch: 20,
-            bearing: -17.6,
+            bearing: -1,
         });
     }
 
