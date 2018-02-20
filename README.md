@@ -1,8 +1,5 @@
 # happy-hour
 
-## HAPPY HOUR TO DOs
-* figure out how to get dropdown box to scale correctly in mobile
-
 ## Project Description
 This project represents a group effort to create a DC-specific happy hour app.
 Existing apps were found severely-lacking in their UI elements.
