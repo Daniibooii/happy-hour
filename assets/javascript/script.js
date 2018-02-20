@@ -28,10 +28,10 @@ $(document).ready(function(){
     var roofers = {listing: 13,name: "Roofer's Union",location:"Adam's Morgan",foodType: "American",price:"$$$",cocktail: true,beer: true,wine: true,source:"https://roofersuniondc.com/dinner-menu/"};
     var shenanigans = {listing: 14,name: "Shenanigan's Irish Pub",location:"Adam's Morgan",foodType: "Irish",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.shenaniganspubdc.com/menu"};
     // DuPont Circle
-    var mission = {listing: 15,name: "Mission",location:"DuPont Circle",foodType: "Mexican",price: "$$",cocktail: true,beer: true,wine: true,source:"https://www.missionDuPont Circle.com/menus/#happy-hour",coordsX: -77.04421, coordsY: 38.90941};
-    var hanksDP = {listing: 16,name: "Hank's Oyster Bar",location:"DuPont Circle",foodType: "Seafood",price:"$$$",cocktail: true,beer: true,wine: true,source:"https://hanksoysterbar.com/DuPont Circle-circle/menus/#happy-hour"};
+    var mission = {listing: 15,name: "Mission",location:"DuPont Circle",foodType: "Mexican",price: "$$",cocktail: true,beer: true,wine: true,source:"https://www.missionDuPontCircle.com/menus/#happy-hour",coordsX: -77.04421, coordsY: 38.90941};
+    var hanksDP = {listing: 16,name: "Hank's Oyster Bar",location:"DuPont Circle",foodType: "Seafood",price:"$$$",cocktail: true,beer: true,wine: true,source:"https://hanksoysterbar.com/DuPontCircle-circle/menus/#happy-hour"};
     var firefly = {listing: 17,name: "Firefly",location:"DuPont Circle",foodType: "American",price:"$$$",cocktail: true,beer: true,wine: true,source:"http://www.firefly-dc.com/en-us/menus/food-drinks.htm"};
-    var sette = {listing: 18,name: "Sette Osteria",location:"DuPont Circle",foodType: "Italian",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.setteosteria.com/DuPont Circle-menu.html"};
+    var sette = {listing: 18,name: "Sette Osteria",location:"DuPont Circle",foodType: "Italian",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.setteosteria.com/DuPontCircle-menu.html"};
     var beacon = {listing: 19,name: "Beacon Bar & Grill",location:"DuPont Circle",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://bbgwdc.com/happy-hour-bar-menu/"};
     var bigHunt = {listing: 60,name: "The Big Hunt",location:"DuPont Circle",foodType: "Pub",price: "$",cocktail: true,beer: true,wine: false,source:"http://thebighunt.net/menu/"};
     var barLounge1831 = {listing: 61,name: "1831 Bar and Lounge",location:"DuPont Circle",foodType: "American",price:"$$",cocktail: true,beer: true,wine: true,source:"https://www.1831dc.com/happy-hour"};
@@ -39,7 +39,7 @@ $(document).ready(function(){
     var dukes = {listing: 63,name: "Dukes Grocery",location:"DuPont Circle",foodType: "American",price:"$$",cocktail: true,beer: true,wine: true,source:"http://dukesgrocery.com/files/dukes-drinks.pdf"};
     var cityTapHouse = {listing: 64,name: "City Tap House",location:"DuPont Circle",foodType: "American",price:"$$$",cocktail: true,beer: true,wine: true,source:"http://www.dupont.citytap.com"};
     // SOUTHWEST WATERFRONT
-    var hanksSW = {listing: 20,name: "Hank's Oyster Bar",location:"Southwest Waterfront",foodType: "Seafood",price: "$$",cocktail: true,beer: true,wine:true,source:"https://hanksoysterbar.com/the-Southwest Waterfront/menus/",coordsX: -77.0222012, coordsY: 38.8734137};
+    var hanksSW = {listing: 20,name: "Hank's Oyster Bar",location:"Southwest Waterfront",foodType: "Seafood",price: "$$",cocktail: true,beer: true,wine:true,source:"https://hanksoysterbar.com/the-SouthwestWaterfront/menus/",coordsX: -77.0222012, coordsY: 38.8734137};
     var jennys = {listing: 21,name: "Jenny's",location:"Southwest Waterfront",foodType: "Asian",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.jennysdc.com/media/docs/JennysMenuMay2015.pdf"};
     var masalaArt = {listing: 22,name: "Masala Art",location:"Southwest Waterfront",foodType: "Indian",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.masalaartdc.com/southwest-categry/happy-hour-at-bar-only/"};
     var stationFour = {listing: 23,name: "Station 4",location:"Southwest Waterfront",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://033ec7e.netsolhost.com/menu/happy-hour-baseball-specials/"};
@@ -68,7 +68,7 @@ $(document).ready(function(){
     var kingFisher = {listing: 40,name: "Kingfisher",location:"Logan Circle",foodType: "American",price: "$$",cocktail: false,beer: true,wine: false,source:"http://www.kingfisherdc.com/",coordsX: -77.030805, coordsY: 38.909694};
     var churchKey = {listing: 41,name: "Church Key",location:"Logan Circle",foodType: "American",price: "$$",cocktail: false,beer: true,wine: false,source:"http://churchkeydc.com/#menus"};
     var draftTable = {listing: 42,name: "Draft Table",location:"Logan Circle",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.draftingtabledc.com/menu/"};
-    var loganTavern = {listing: 43,name: "Logan Circle Tavern",location:"Logan Circle",foodType: "European",price:"$$$",cocktail: true,beer: true,wine: true,source:"http://Logan Circletavern.com/menu/"};
+    var loganTavern = {listing: 43,name: "Logan Tavern",location:"Logan Circle",foodType: "European",price:"$$$",cocktail: true,beer: true,wine: true,source:"http://logantavern.com/menu/"};
     var sotto = {listing: 44,name: "Sotto",location:"Logan Circle",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.sottodc.com/dinner/"};
     var theCommodore = {listing: 65,name: "The Commodore Public House and Kitchen",location:"Logan Circle",foodType: "Sounhern",price: "$$",cocktail: true,beer: false,wine: false,source:"http://thecommodoredc.com/files/2017/12/industrynights.pdf"};
     var stoneys = {listing: 66,name: "Stoney's",location:"Logan Circle",foodType: "Pub",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.stoneys-dc.com/menu/happyhour/"};
@@ -80,7 +80,7 @@ $(document).ready(function(){
     var chaplins = {listing: 46,name: "Chaplin's",location:"Shaw / U. Street",foodType: "Asian",price: "$$",cocktail: true,beer: true,wine: true,source:"http://chaplinsdc.com/chaplins-desserts_in_dc/"};
     var dacha = {listing: 47,name: "Dacha Beer Garden",location:"Shaw / U. Street",foodType: "European",price: "$$",cocktail: true,beer: true,wine: true,source:"https://dachadc.com/beergarden/"};
     var drift = {listing: 48,name: "Drift on 7th",location:"Shaw / U. Street",foodType: "Seafood",price: "$$",cocktail: true,beer: true,wine: true,source:"http://drifton7th.com/images/menus/Drift-Happy-Hour-Menu.pdf"};
-    var shawsTavern = {listing: 49,name: "Shaw ' s Tavern",location:"Shaw / U. Street",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.shaw s tavern.com/menu/dinner-menu/"};
+    var shawsTavern = {listing: 49,name: "Shaw ' s Tavern",location:"Shaw / U. Street",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.shawstavern.com/menu/dinner-menu/"};
     // EASTERN MARKET
     var belga = {listing: 50,name: "Belga Cafe",location:"Eastern Market",foodType: "European",price: "$$",cocktail: true,beer: true,wine: true,source:"https://cdn-assets.indigenous.io/account_1346/Happy_Hour_food_2017_06_27_JZ_1515530138399.pdf",coordsX: -76.9986338, coordsY: 38.8865922};
     var placitas = {listing: 51,name: "Las Placitas",location:"Eastern Market",foodType: "Mexican",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.lasplacitasrestaurant.com/8th_Menu.html"};
