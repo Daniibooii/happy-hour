@@ -20,11 +20,9 @@
   background-position: center;
   background-size: cover;
   border: 2px solid black;
-  margin-top: 15px;
+  /* margin-top: 5px; */
 }
 .resultBox{
-  /* background-color: #ee6e73; */
-
   /* color: rgb(70, 156, 247); */
   color: white;
   line-height: 175%;
@@ -112,30 +110,6 @@ height: 150px;
 .nav-wrapper {
   z-index: 1;
 }
-/* .resultsImages {
-  width: 150px;
-  height: 100%;
-  vertical-align: middle;
-  float: left;
-}
-.resultsInfo {
-width: 400px;
-height: 200px;
-padding-right: 10px;
-padding-top: 10px;
-}
-.resultsCol1 {
-position: relative;
-}
-.resultsCol2 {
-position: relative;
-}
-.resultsBox {
-  margin-bottom: 10px;
-  margin-top: 10px;
-  width: 100%;
-  height: 200px;
-} */
 
 /* MAP CSS*/
 #map {
@@ -145,7 +119,7 @@ position: relative;
   border-color: #ee6e73;
   border: 3px solid black;
   padding: 0;
-  /* margin-left: 100px; */
+  margin-bottom: 100px;
 }
 .map-overlay {
 font:bold 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -153,7 +127,6 @@ position: absolute;
 width: 25%;
 top: 0;
 left: 0;
-/* padding: 10px; */
 }
 .map-overlay .map-overlay-inner {
 background-color: #fff;
