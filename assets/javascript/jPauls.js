@@ -58,6 +58,8 @@ var redRocks = {listing: 72,name: "Red Rocks",location:"Columbia Heights",foodTy
 var meridianPint = {listing: 73,name: "Meridian Pint",location:"Columbia Heights",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"https://meridianpint.com/weekly-specials/"};
 var maple = {listing: 74,name: "Maple",location:"Columbia Heights",foodType: "Italian",price: "$$",cocktail: false,beer: true,wine: true,source:"http://www.dc-maple.com/menu/"};
 
+var theAlibi = {listing: 75,name: "The Alibi",location:"Capitol Hill",foodType: "European",price: "$S",cocktail: true,beer: true,wine: true,source:"http://thealibidc.com/happy-hour.html"};
+var BeuchertsSaloon = {listing: 76,name: "Beuchert's Saloon",location:"Capitol Hill",foodType: "European",price: "$S",cocktail: true,beer: true,wine: true,source:"http://www.beuchertssaloon.com/#!/menu"};
 
 
 

@@ -1,5 +1,6 @@
-// $(".booze-row").hide();
-// $("#choose-your-booze-row").hide();
+$(".booze-row").hide();
+$("#choose-your-booze-row").hide();
+
 $(document).ready(function(){
     // JAVASCRIPT FOR HAPPY HOUR PROJECT
 
@@ -55,6 +56,8 @@ $(document).ready(function(){
     var lavagna = {listing: 32,name: "Lavagna",location:"Capitol Hill",foodType: "Italian",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.lavagnadc.com/"};
     var uglyMugCH = {listing: 33,name: "The Ugly Mug",location:"Capitol Hill",foodType: "American",price: "$",cocktail: true,beer: true,wine: true,source:"http://www.uglymugdc.com/food-drink/"};
     var ambar = {listing: 34,name: "Ambar",location:"Capitol Hill",foodType: "European",price: "$",cocktail: true,beer: true,wine: true,source:"https://www.ambarrestaurant.com/menu-washington/"};
+    var theAlibi = {listing: 75,name: "The Alibi",location:"Capitol Hill",foodType: "European",price: "$S",cocktail: true,beer: true,wine: true,source:"http://thealibidc.com/happy-hour.html"};
+    var BeuchertsSaloon = {listing: 76,name: "Beuchert's Saloon",location:"Capitol Hill",foodType: "European",price: "$S",cocktail: true,beer: true,wine: true,source:"http://www.beuchertssaloon.com/#!/menu"};
     // H STREET
     var bigBoard = {listing: 35,name: "The Big Board",location:"H. Street",foodType: "American",price: "$$",cocktail: false,beer: true,wine: true,source:"http://thebigboarddc.com/",coordsX: -77.0023317, coordsY: 38.9001383};
     var smith = {listing: 36,name: "Smith Commons",location:"H. Street",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.smithcommonsdc.com/menu2"};
@@ -72,7 +75,6 @@ $(document).ready(function(){
     var blackjack = {listing: 67,name: "Black Jack",location:"Logan Circle",foodType: "Southern",price: "$$",cocktail: false,beer: true,wine: true,source:"http://www.blackjackdc.com/daily-specials/"};
     var radiator = {listing: 68,name: "Radiator",location:"Logan Circle",foodType: "Spanish/Tapas",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.radiatordc.com/en-us/menus/menus.htm"};
     var thePig = {listing: 69,name: "The Pig",location:"Logan Circle",foodType: "American",price: "$$",cocktail: true,beer: true,wine: true,source:"http://www.thepigdc.com/#menus_happy-hour"};
-
     // SHAW   && U ST
     var brixton = {listing: 45,name: "The Brixton",location:"Shaw / U. Street",foodType: "Irish",price: "$$",cocktail: true,beer: true,wine: true,source:"http://brixtondc.com/#/menu",coordsX: -77.0275162, coordsY: 38.9170045};
     var chaplins = {listing: 46,name: "Chaplin's",location:"Shaw / U. Street",foodType: "Asian",price: "$$",cocktail: true,beer: true,wine: true,source:"http://chaplinsdc.com/chaplins-desserts_in_dc/"};
@@ -112,7 +114,8 @@ $(document).ready(function(){
     belga, placitas, mrHenrys, radici, uglyMug,
     bravo, theCoupe, elChucho, theHeights, wonderland, bigHunt, barLounge1831,
     emissary, dukes, cityTapHouse, theCommodore, stoneys, blackjack,
-    radiator, thePig, redDerby, unionDrinkery, redRocks, meridianPint, maple]
+    radiator, thePig, redDerby, unionDrinkery, redRocks, meridianPint, maple,
+    theAlibi, BeuchertsSaloon]
 
     // Pushes venues from chosen location from venueArray into a new array
     var locationFiltered = [];
@@ -121,7 +124,7 @@ $(document).ready(function(){
             if (venueArray[i].location ===place){
                 locationFiltered.push(venueArray[i]);
         }
-    }
+      }
     }
     // hide theses select element until one of the neighborhood selected and booze icons are clicked
     $(".booze-wrapper").hide();
