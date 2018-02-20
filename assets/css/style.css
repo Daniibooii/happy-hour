@@ -14,13 +14,17 @@
    font-family: 'Oxygen', sans-serif;
    height: 100vh;
  }
-.resultBox{
-  /* background-color: #ee6e73; */
+
+#result-col {
   background-image: url("../images/bar-background.jpg");
   background-position: center;
   background-size: cover;
   border: 2px solid black;
   margin-top: 15px;
+}
+.resultBox{
+  /* background-color: #ee6e73; */
+
   /* color: rgb(70, 156, 247); */
   color: white;
   line-height: 175%;
@@ -46,7 +50,7 @@
 }
 #resetBtn{
   background-color: #ee6e73;
-  margin-top: 15px;
+  margin-top: 10px;
   margin-bottom: 10px;
 
 }
