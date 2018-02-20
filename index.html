@@ -17,7 +17,7 @@
    <body id="indexBody">
      <nav>
         <div class="nav-wrapper">
-          <center class="brand-logo center five-oclock"><a href="index.html"><img src="./assets/images/5oclock.png" alt="It's five o'clock logo" height="150" width="150"> </a></center>
+          <center class="brand-logo center five-oclock" href="index.html"> <a href="index.html"> <img class="logoImg" src="assets/images/5oclock.png" alt="It's five o'clock logo"> </a></center>
         </div>
       </nav>
 
@@ -58,7 +58,16 @@
 
         </div>
         <div class="row result-row">
-          <div class="resultBox col m6 s12 offset-m3 flow-text center-align"></div>
+          <table id="result-col" class="centered responsive-table highlight col m12 s12 flow-text center-align">
+           <tbody class="resultBox">
+             <tr >
+               <td>Name</td>
+               <td>Cuisine</td>
+               <td>Prie</td>
+               <td>Menu</td>
+             </tr>
+           </tbody>
+         </table>
         </div>
 
         <div class="valign-wrapper row result-row">
@@ -66,8 +75,8 @@
         </div>
 
         <div class="row">
-        <div class="center-align"id="map" class = "col m12 s12 l8 offsetl-2"></div>
-        </div>                
+        <div id="map" class = "col m12 s12 l10 "></div>
+        </div>
 
      <!--Import jQuery before materialize.js-->
      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
