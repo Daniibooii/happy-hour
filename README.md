@@ -1,5 +1,6 @@
 # happy-hour
 
+2/21/2018:
 This was a group project done by myself and three other students at George Washington University's coding bootcamp. It was our first group project, and was done between our third and fourth weeks of class. The project evolved from having three primary HTML pages to just one. In the process, we came to focus primarily on our map feature.
 
 Much of what we hoped to accomplish with this project was difficult without our having learned databases in class yet; future additions may reflect that and significantly clean up/simplify our code. Some of the changes mentioned are represented here in terms of deleted files; others have been left for possible future work, or to record processes learned, discarded, etc.
