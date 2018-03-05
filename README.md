@@ -1,9 +1,11 @@
 # happy-hour
 
-2/21/2018:<br></br>
-This was a group project done by myself and three other students at George Washington University's coding bootcamp. It was our first group project, and was done between our third and fourth weeks of class. The project evolved from having three primary HTML pages to just one. In the process, we came to focus primarily on our map feature.
+# Project Description
+This was a group project completed by myself and three other relative programming "beginners." For each of us, it represented our first large-scale group effort. The project evolved from having three primary HTML pages to just one. In the process, we came to focus primarily on our map feature.
 
-Much of what we hoped to accomplish with this project was difficult without our having learned databases in class yet; future additions may reflect that and significantly clean up/simplify our code. Some of the changes mentioned are represented here in terms of deleted files; others have been left for possible future work, or to record processes learned, discarded, etc.
+My fork of the project may be viewed at: https://daniibooii.github.io/happy-hour/
+
+Much of what we hoped to accomplish with this project was difficult without our having learned how to use databases/access APIs; future additions may reflect that and significantly clean up/simplify our code. Some of the changes mentioned are represented here in terms of deleted files; others have been left for possible future work, or to record processes learned, discarded, etc.
 
 My work on the project initially consisted of the second of our HTML pages, results.html. I also contributed roughly one third to the restaurant data and, later, one half of the map data. I contributed to design elements including favicons, images, nav bar, color selection, etc. I wrote the README. I did a lot of legwork tracking down elements we later decided against including, such as restaurant images.
 
@@ -11,7 +13,7 @@ One remaining issue that requires troubleshooting is the saving of GPS coordinat
 
 On the whole, this was a very fulfilling first project, and an excellent learning experience. I regret not having been able to contribute more to the JavaScript components, and hope to do so on future projects, or if I return to this one.
 
-Below represents the original README file, as seen when our project was presented and submitted:
+Below represents the original, shared, README file.
 
 ## Project Description
 This project represents a group effort to create a DC-specific happy hour app.
