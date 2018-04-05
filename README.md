@@ -10,6 +10,9 @@ We utilized HTML, CSS with Materialze, Javascript with JQuery and LetterFX, plus
 Access the app directly at: https://daniibooii.github.io/happy-hour/<br>
 or DL the repo, then open index.html in your browser of choice!
 
+Once in the app, the user will be prompted to make a series of selections regarding their happy hour preferences.<br>
+The app will take care of the rest; you'll be drinking a mimosa in no time.<br>
+
 The original project notes may be found immediately below.
 <br>
 <br>
