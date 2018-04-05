@@ -7,7 +7,7 @@ It is a fully-functional, DC-specific, happy-hour-finder!
 We utilized HTML, CSS with Materialze, Javascript with JQuery and LetterFX, plus Leaflet with MapBox.
 
 # How to Use
-Access the app directly at: https://daniibooii.github.io/happy-hour/
+Access the app directly at: https://daniibooii.github.io/happy-hour/<br>
 or DL the repo, then open index.html in your browser of choice!
 
 The original project notes may be found immediately below.
