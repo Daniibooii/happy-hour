@@ -1,6 +1,6 @@
 # happy-hour
 
-<img src="https://github.com/Daniibooii/happy-hour/blob/master/assets/images/HappyHourPHImage.PNG"><br>
+<img src="https://github.com/Daniibooii/happy-hour/blob/master/assets/images/HappyHourPHImage.PNG" height=350px width=380px><br>
 
 # Project Description
 This is my fork of a group project.<br>
