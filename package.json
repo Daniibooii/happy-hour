@@ -1,0 +1,19 @@
+{
+  "name": "happy-hour",
+  "version": "1.0.0",
+  "description": "This project represents a group effort to create a DC-specific happy hour app.\r Existing apps were found severely-lacking in their UI elements.\r The project was conceived and organized by Adrian Kyzer.\r The app was developed by a four-person team over one week.\r The total time spent developing our app, including time spent learning new tools, is estimated at 80+.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ASKyzer/happy-hour.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ASKyzer/happy-hour/issues"
+  },
+  "homepage": "https://github.com/ASKyzer/happy-hour#readme"
+}

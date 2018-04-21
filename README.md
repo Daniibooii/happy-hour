@@ -1,5 +1,7 @@
 # happy-hour
 
+<img src="https://github.com/Daniibooii/happy-hour/blob/master/assets/images/HappyHourPHImage.png"><br>
+
 ## Project Description
 This project represents a group effort to create a DC-specific happy hour app.
 Existing apps were found severely-lacking in their UI elements.
