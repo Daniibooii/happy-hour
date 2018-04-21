@@ -2,6 +2,19 @@
 
 <img src="https://github.com/Daniibooii/happy-hour/blob/master/assets/images/HappyHourPHImage.PNG"><br>
 
+# Project Description
+This is my fork of a group project.<br>
+It is a fully-functional, DC-specific, happy-hour-finder!<br>
+
+We utilized HTML, CSS with Materialze, Javascript with JQuery and LetterFX, plus Leaflet with MapBox.<br>
+
+# How to Use
+Access the app directly at: https://daniibooii.github.io/happy-hour/<br>
+or DL the repo, then open index.html in your browser of choice!<br>
+
+The original project notes may be found immediately below.<br>
+<br>
+<br>
 ## Project Description
 This project represents a group effort to create a DC-specific happy hour app.
 Existing apps were found severely-lacking in their UI elements.
